@@ -71,11 +71,8 @@ some elementary techniques.
 
 #### Course Materials {-}
 
--   **Coursepack**: This coursepack is the main course text. Printed
-    copies of this coursepack will be available for purchase at the
-    beginning of each term, and instructions on how to obtain a hard
-    copy will be given at the first lecture and on the MY451 Moodle
-    page. Digital copies of this coursepack are available for download
+-   **Coursepack**: This coursepack is the main course text. 
+    Digital copies of this coursepack (i.e., what you're looking at now) are available for download
     for free from the Moodle page.
 
 -   **Lecture slides**: Copies of most of the slides displayed during
