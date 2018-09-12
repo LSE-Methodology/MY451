@@ -92,9 +92,7 @@ some elementary techniques.
     Earlier editions are also suitable. While neither of these books is
     absolutely required, we recommend that you purchase one if you would
     like to have additional explanation, examples and exercises to
-    supplement the coursepack. Please note that during the examination
-    you will be allowed to use the coursepack and any other notes or
-    books that you find useful. Of these two, Agresti and Finlay is a
+    supplement the coursepack. Of these two, Agresti and Finlay is a
     bit more advanced. It is also the recommended additional course text
     for MY452 (which also has a coursepack similar to this one), so you
     may want to purchase it if you are planning to also take
