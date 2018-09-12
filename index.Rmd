@@ -44,13 +44,11 @@ some elementary techniques.
 
 #### Staff {-}
 
--   **Teachers responsible**: Jonathan Jackson (MT) & Ben Lauderdale (LT)
-
--   **Other Lecturers**: Ellie Power (LT)
+-   **Teachers responsible**: Eleanor Power (MT) & Jonathan Jackson (LT)
 
 -   **Course Administrator**: Esther Heyhoe, email `e.heyhoe@lse.ac.uk`
 
--   **Class Teachers**: MT: Sophie Loup, Jenny Chanfraeu, Yan Wang, George Maier, Tamara Shengelia, Joel Suss, Vikas Chandra, Cong Peng, Nelson Ruiz-Guarin, Matt Sharp, Baris Ari, Tom Paskhalis and Thiago Oliveira
+-   **Class Teachers**: MT: Tamara Shengelia & Vikas Chandra
 
 \newpage
 
@@ -58,8 +56,7 @@ some elementary techniques.
 
 -   **Lectures**: Ten two-hour lectures in weeks 1 - 5 and 7 - 11:
 
-    -   Michaelmas Term (MY451M): Thu 2.00pm - 4.00pm in the Peacock
-        Theatre
+    -   Michaelmas Term (MY451M): Thu 2.00pm - 4.00pm in the Tower 1 Lecture Theatre
 
     -   Lent Term (MY451L): Wed 2.00pm - 4.00pm in the Hong Kong
         Theatre (CLM.G.02)
@@ -186,10 +183,8 @@ ways of helping you get to grips with this material.
 
 #### Examinations/assessment {-}
 
-There will be a **two-hour examination in the Summer Term 2016**. This
-is an **open-book examination**, to which you are allowed to bring in
-any written material, including the coursepack and any text book with
-your notes. You are required to bring your own calculators for the
+There will be a **two-hour examination in the Summer Term 2016**. You are allowed to bring in
+limited notes to the examination. You are required to bring your own calculators for the
 examination. Examination papers from previous years are available for
 revision purposes at the LSE library web site. Students should
 understand that past examinations should only be used as rough guides to
