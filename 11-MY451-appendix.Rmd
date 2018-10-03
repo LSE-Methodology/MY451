@@ -16,13 +16,13 @@ instructions for individual computer classes.
 
 -   To access IT facilities at LSE you need an IT account with its
     **Username** and **Password**. Please see
-    <http://www.lse.ac.uk/intranet/LSEServices/IMT/guides/accounts/activateAccount.aspx> for instructions on how to
+    <https://info.lse.ac.uk/staff/divisions/imt/help/guides-faqs/accounts> for instructions on how to
     activate your account. In case of any problems, please ask for
     assistance at the IT help desk (Library 1st floor).
 
 -   Various introductory **documents** can be accessed through the IMT
     services web pages at
-    <http://www.lse.ac.uk/intranet/LSEServices/IMT/home.aspx>.
+    <https://info.lse.ac.uk/current-students/imt>.
 
 -   **Logging in** to use Windows: When you arrive at a networked
     computer, wait for Windows to start up (if the machine is not
@@ -277,7 +277,7 @@ included in the data set.
 All the computers in the public rooms are connected to one of the laser
 printers. When you print a document or a part of it, you need to have
 credit on your printing account. See
-<http://www.lse.ac.uk/intranet/LSEServices/IMT/guides/printing.aspx> for further information.
+<https://info.lse.ac.uk/staff/divisions/imt/help/guides-faqs/campus-facilities> for further information.
 
 -   You can print your results from the Output Viewer either by
     selecting **File/Print** or by clicking on Print on the toolbar (the
@@ -347,7 +347,7 @@ Social Survey (Round 5). The questions in the survey that you see here
 were designed By Dr Jonathan Jackson and his team as part of a module
 investigating public trust in the criminal justice system. Further
 information about the study can be found at\
-<http://www.lse.ac.uk/methodology/whosWho/Jackson/jackson_ESS.aspx>^[ESS Round 5: European Social Survey Round 5 Data (2010). Data file
+<https://www.europeansocialsurvey.org/docs/findings/ESS5_toplines_issue_1_trust_in_justice.pdf>^[ESS Round 5: European Social Survey Round 5 Data (2010). Data file
 edition 2.0. Norwegian Social Science Data Services, Norway - Data
 Archive and distributor of ESS data. The full data can be obtained
 from <http://ess.nsd.uib.no/ess/round5/>.]
@@ -617,14 +617,14 @@ the level of measurement of some different variables.
 33 London boroughs obtained from the *London Datastore*, which publishes
 a range of statistical data about the city, collated by the Greater
 London Authority’s *GLA Intelligence Unit*.^[The data were obtained from
-<http://data.london.gov.uk/datastore/package/london-borough-profiles>.
+<https://data.london.gov.uk/dataset/london-borough-profiles>.
 
 If you download the "Profiles in Excel" workbook, you will
 find that one of the pages contains a map of the boroughs, and a
 tool for visualising the data on that map. A regular map of the
 boroughs can be found at for example at
 
-<http://www.londoncouncils.gov.uk/londonfacts/londonlocalgovernment/londonmapandlinks/default.htm>.]
+<https://en.wikipedia.org/wiki/London_boroughs>.
 
 
 #### Descriptive statistics in SPSS {-}
