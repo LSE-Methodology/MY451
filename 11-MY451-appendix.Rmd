@@ -617,14 +617,11 @@ the level of measurement of some different variables.
 33 London boroughs obtained from the *London Datastore*, which publishes
 a range of statistical data about the city, collated by the Greater
 London Authority’s *GLA Intelligence Unit*.^[The data were obtained from
-<https://data.london.gov.uk/dataset/london-borough-profiles>.
-
+<https://data.london.gov.uk/dataset/london-borough-profiles>. 
 If you download the "Profiles in Excel" workbook, you will
 find that one of the pages contains a map of the boroughs, and a
 tool for visualising the data on that map. A regular map of the
-boroughs can be found at for example at
-
-<https://en.wikipedia.org/wiki/London_boroughs>.
+boroughs can be found at for example at <https://en.wikipedia.org/wiki/London_boroughs>.]
 
 
 #### Descriptive statistics in SPSS {-}
