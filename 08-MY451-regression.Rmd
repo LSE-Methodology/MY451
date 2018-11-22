@@ -977,7 +977,7 @@ value is here larger than the fitted value, the residual is positive and
 the observed value is above the fitted line, as shown in Figure
 \@ref(fig:f-residuals).
 
-![(\#fig:f-residuals)Illustration of the quantities involved in the definitions of least squares estimates and the coefficient of determination $R^{2}$. See the text for explanation.](lmresids){width="13.5cm"}
+![(\#fig:f-residuals)Illustration of the quantities involved in the definitions of least squares estimates and the coefficient of determination $R^{2}$. See the text for explanation.](lmresids1){width="13.5cm"}
 
 <!--
 $Y_{i}-\hat{Y}_{i}$
