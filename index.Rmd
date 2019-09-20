@@ -2,7 +2,7 @@
 title: "MY451 Introduction to Quantitative Analysis"
 author:
     - "Jouni Kuha, Department of Methodology, London School of Economics and Political Science"
-date: "2018-2019"
+date: "2019-2020"
 site: bookdown::bookdown_site
 documentclass: book
 link-citations: yes
@@ -44,7 +44,7 @@ some elementary techniques.
 
 #### Staff {-}
 
--   **Teachers responsible**: Eleanor Power (MT) & Jonathan Jackson (LT)
+-   **Teachers responsible**: Indraneel Sircar (MT) & Jonathan Jackson (LT)
 
 -   **Course Administrator**: Esther Heyhoe, email `e.heyhoe@lse.ac.uk`
 
@@ -178,7 +178,7 @@ ways of helping you get to grips with this material.
 
 #### Examinations/assessment {-}
 
-There will be a **two-hour examination in the Summer Term 2016**. 
+There will be a **two-hour examination in the Summer Term**. 
 You may bring one, two-sided A4 sheet of reference material to consult 
 during the exam. This can be typed or handwritten, and prepared yourself 
 or in collaboration with others.You are required to bring your own 
