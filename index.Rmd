@@ -2,7 +2,7 @@
 title: "MY451 Introduction to Quantitative Analysis"
 author:
     - "Jouni Kuha, Department of Methodology, London School of Economics and Political Science"
-date: "2019-2020"
+date: "2020-2021"
 site: bookdown::bookdown_site
 documentclass: book
 link-citations: yes
