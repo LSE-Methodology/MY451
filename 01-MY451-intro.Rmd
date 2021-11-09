@@ -176,7 +176,7 @@ teacher for clarification.
 Table \@ref(tab:t-datamatrix) shows a small set of quantitative data. Once
 collected, the data are typically arranged and stored in this kind of
 spreadsheet-type rectangular table, known as a **data matrix**. In the
-computer classes you will see data in this form in SPSS.
+computer classes you will see data in this form in R.
 
 ---------------------------------------------------------------------------
     Id   *age*   *sex*   *educ*   *wrkstat*   *life*   *income4*   *pres92*
@@ -319,7 +319,7 @@ example, any analysis of the data in Table \@ref(tab:t-datamatrix) which
 involved the variable *income4* would then exclude all the data for
 subjects 6 and 18. This method of “complete-case analysis” is usually
 applied automatically by most statistical software packages, including
-SPSS. It is, however, not a very good approach. For example, it means
+R. It is, however, not a very good approach. For example, it means
 that a lot of information will be thrown away if there are many subjects
 with some observations missing. Statisticians have developed better ways
 of dealing with missing data, but they are unfortunately beyond the
@@ -857,20 +857,18 @@ that follow the computer classes contain examples of both of these types
 of questions.
 
 The software package used in the computer classes of this course is
-called SPSS. There are other comparable packages, for example SAS,
-Minitab, Stata and R. Any one of them could be used for the analyses on
-this course, and the exact choice does not matter very much. SPSS is
-convenient for our purposes, because it is widely used, has a reasonably
-user-friendly menu interface, and is available on a cheap licence even
-for the personal computers of LSE students.
+called R There are other comparable packages, for example SAS,
+Minitab, Stata and SPSS. Any one of them could be used for the analyses on
+this course, and the exact choice does not matter very much. R is
+convenient for our purposes, because it is widely used and it is free.
 
-Sometimes you may see a phrase such as “SPSS course” used apparently as
+Sometimes you may see a phrase such as “R course” used apparently as
 a synonym for “Statistics course”. This makes as little sense as
 treating an introduction to Microsoft Word as a course on how to write
 good English. It is not possible to learn quantitative data analysis
-well by just sitting down in front of SPSS or any other statistics
+well by just sitting down in front of R or any other statistics
 package and trying to figure out what all those menus are for. On the
-other hand, using SPSS to apply statistical methods to analyse real data
+other hand, using R to apply statistical methods to analyse real data
 is an effective way of strengthening the understanding of those methods
 *after* they have first been introduced in lectures. That is why this
 course has weekly computer classes.
@@ -878,25 +876,13 @@ course has weekly computer classes.
 The software-specific questions on how to carry out statistical analyses
 are typically of a lesser order of difficulty once the methods
 themselves are reasonably well understood. In other words, once you have
-a clear idea of what you want to do, finding out how to do it in SPSS
-tends not to be that difficult. For example, in the next chapter we will
-discuss the mean, one simple tool of descriptive statistics. Suppose
-that you then want to calculate the mean of a variable called *Age* in a
-data set. Learning how to do this in SPSS is then a matter of (1)
-finding the menu item where SPSS can be told to calculate a mean, (2)
-finding out which part of that menu is used to tell SPSS that you want
-the mean of *Age* specifically, and (3) finding the part of the SPSS
-output where the calculated mean of *Age* is reported. Instructions for
-steps like this for techniques covered on this course are given in the
-descriptions of the corresponding computer classes.
+a clear idea of what you want to do, finding out how to do it in R
+tends not to be that difficult. 
 
 There are, however, some tasks which have more to do with specific
-software packages than with statistics in general. For example, the fact
-that SPSS has a menu interface, and the general style of those menus,
-need to be understood first. You also need to learn how to get data into
-SPSS in the first place, how to manipulate the data in various ways, and
-how to export output from the analyses to other packages. Some
-instructions on how to do such things are given in the first computer
-class. The introduction to the computer classes also includes details of some SPSS guidebooks and
+software packages than with statistics in general. For example, you need to learn how to get data into
+R in the first place, how to manipulate the data in various ways, and
+how to export output from the analyses. Some
+instructions on how to do such things are given in the first seminar. The introduction to the seminars also includes details of some R guidebooks and
 other sources of information which you may find useful if you want to
 know more about the program.
