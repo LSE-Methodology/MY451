@@ -857,7 +857,7 @@ that follow the computer classes contain examples of both of these types
 of questions.
 
 The software package used in the computer classes of this course is
-called R There are other comparable packages, for example SAS,
+called R. There are other comparable packages, for example SAS,
 Minitab, Stata and SPSS. Any one of them could be used for the analyses on
 this course, and the exact choice does not matter very much. R is
 convenient for our purposes, because it is widely used and it is free.
