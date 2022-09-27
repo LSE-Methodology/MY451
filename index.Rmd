@@ -207,33 +207,29 @@ the current revision.
 
 Lecture                         Course overview and organisation. Introduction to basic concepts
 
-Class                           **No class**
-
 Coursepack                      Chapter \@ref(c-intro)
 
 **Week 2**
 
 Lecture                         Descriptive statistics for categorical variables
 
-Class                           Introduction to SPSS. Descriptive statistics for categorical variables
-
 Coursepack                      Sections \@ref(s-descr1-intro)–\@ref(s-descr1-2cat) and \@ref(s-descr1-presentation)
 
 **Week 3**
 
-Lecture & Class                 Descriptive statistics for continuous variables
+Lecture                         Descriptive statistics for continuous variables
 
 Coursepack                      Sections \@ref(s-descr1-1cont)–\@ref(s-descr1-2cont)
 
 **Week 4**
 
-Lecture & Class                 Analysis of two-way contingency tables
+Lecture                         Analysis of two-way contingency tables
 
 Coursepack                      Chapters \@ref(c-samples) and \@ref(c-tables)
 
 **Week 5**
 
-Lecture & Class                 Inference for means in two populations
+Lecture                         Inference for means in two populations
 
 Coursepack                      Chapters \@ref(c-contd) and \@ref(c-means)
 
@@ -243,13 +239,13 @@ Reading Week                    **No lecture, no class**. Revision quiz availabl
 
 **Week 7**
 
-Lecture & Class                 Inference for proportions in one and two populations
+Lecture                         Inference for proportions in one and two populations
 
 Coursepack                      Chapter \@ref(c-probs)
 
 **Week 8**
 
-Lecture & Class                 Correlation and simple linear regression as descriptive methods
+Lecture                         Correlation and simple linear regression as descriptive methods
 
 Coursepack                      Sections \@ref(s-regression-intro)–\@ref(ss-regression-simple-est)
 
@@ -261,21 +257,17 @@ Hour 1                          Inference for the simple linear regression model
 
 Hour 2                          Three-way contingency tables
 
-Class                           Simple linear regression
-
 Coursepack                      Section \@ref(ss-regression-simple-inf) (Hour 1); Section \@ref(s-regression-causality) and Chapter \@ref(c-3waytables) (Hour 2)
 
 **Week 10**
 
-Lecture & Class                 Multiple linear regression
+Lecture                         Multiple linear regression
 
 Coursepack                      Sections \@ref(s-regression-multiple)–\@ref(s-regression-rest)
 
 **Week 11**
 
 Lecture                         Review and further statistical methods
-
-Class                           Discussion and additional exercise on multiple linear regression
 
 Coursepack                      Chapter \@ref(c-more)
 ------------------------------- ----------------------------------------------------------------------------------------------------------------------------------
