@@ -30,10 +30,6 @@ Observational and Experimental Studies), MY459 (Quantitative Text
 Analysis), ST416 (Multilevel Modelling), and ST442 (Longitudinal Data
 Analysis).
 
-Please note that up to 2010-11 the course was called MI451, so older
-materials will bear that code. For example, you will find past
-examination papers on the Library website under MI451.
-
 #### Course Objectives {-}
 
 This course aims to impart a level of familiarity suitable for a
@@ -43,11 +39,12 @@ some elementary techniques.
 
 #### Staff {-}
 
--   **Teachers responsible**:Patrick Sturgis (MT) & Marion Lieutaud (LT)
+-   **Teachers responsible**:Jonathan Jackson (MT) & Tom Robinson (LT)
 
 -   **Course Administrator**: Lucia Pedrioli, email `methodology.admin@lse.ac.uk`
 
--   **Class Teachers**: MT: Camille Bou, Vikas Chandra, Arianna Gentilini, Tamara Shengelia
+-   **Class Teachers**: MT: Aqeel Awan, Michaela Sedovicova, Nora Yitong Qiu,
+Pinar Jenkins, Sazid Ahmad, Tamara Shengelia, Vikas Chandra & Zuzana Dančíková
 
 \newpage
 
@@ -55,10 +52,9 @@ some elementary techniques.
 
 -   **Lectures**: Ten two-hour lectures in weeks 1 - 5 and 7 - 11:
 
-    -   Michaelmas Term (MY451M): Thu 2.00pm - 4.00pm in the Tower 1 Lecture Theatre
+    -   Michaelmas Term (MY451M): Thu 2.00pm - 4.00pm in Clement House CLM.5.02
 
-    -   Lent Term (MY451L): Wed 2.00pm - 4.00pm in the Hong Kong
-        Theatre (CLM.G.02)
+    -   Lent Term (MY451L): TBC
 
 -   **classes**: Each student will attend a one-hour class each
     week, **starting in Week 2**. Please see on-line timetables for the
@@ -70,7 +66,7 @@ some elementary techniques.
 
 #### Course Materials {-}
 
--   **Coursepack**: This coursepack is the main course text. 
+-   **Coursepack**: This coursepack is the main course text.
     Digital copies of this coursepack (i.e., what you're looking at now) are available for download
     for free from the Moodle page.
 
@@ -107,27 +103,6 @@ some elementary techniques.
         statistics or SPSS. If, however, you feel otherwise, some such
         books are mentioned in the Appendix.
 
-#### Homework {-}
-
-There will be homework assignments each week. These are your opportunity
-to practice interpreting the results of the types of analyses that are
-introduced in the lectures and then carried out in the computer classes.
-The homework questions are also broadly similar in style to typical
-examination questions for MY451. The questions are based on results of
-the computer class exercises or of further similar analyses. For the
-homework, you can use output that you produced yourself in the class or
-afterwards. Alternatively, all the computer outputs that are required to
-answer the homework questions can be downloaded from the Moodle page.
-
-Homework should be submitted by Monday after its distribution in class,
-at the latest by 5pm in MT and by 10am in LT. Please see the MY451
-Moodle page for instructions on how to submit your homeworks. Homework
-submitted in time will be corrected and returned at the next class.
-Please make sure to clearly indicate your name, and the time, class
-number and class teacher of your computer class on all homework
-assignments. For the homework assignments, students are encouraged to
-work together.
-
 #### MY451 on Moodle {-}
 <!-- {#sss-moodle} -->
 
@@ -142,7 +117,7 @@ announcements.
 
 #### Advisory Sessions {-}
 
-There will be a time each week during the Michaelmas and Lent terms
+There will be times each week during the Michaelmas and Lent terms
 during which a member of the teaching team will be available at the
 Department of Methodology in Columbia House to answer questions about
 the course. Information on the times of the advisory hours will be given
@@ -177,11 +152,11 @@ ways of helping you get to grips with this material.
 
 #### Examinations/assessment {-}
 
-There will be a **two-hour examination in the Summer Term**. 
-You may bring one, two-sided A4 sheet of reference material to consult 
-during the exam. This can be typed or handwritten, and prepared yourself 
-or in collaboration with others.You are required to bring your own 
-calculators for the examination. Examination papers from previous years 
+There will be a **two-hour examination in the Summer Term**.
+You may bring one, two-sided A4 sheet of reference material to consult
+during the exam. This can be typed or handwritten, and prepared yourself
+or in collaboration with others.You are required to bring your own
+calculators for the examination. Examination papers from previous years
 are available for revision purposes at the LSE library web site. Students should
 understand that past examinations should only be used as rough guides to
 the types of questions that are likely to appear on the examination.
@@ -203,9 +178,7 @@ computing class of the course.
 
 #### Software availability {-}
 
-A personal copy of the program SPSS for Windows can be bought by course
-participants (maximum 1 copy per person) for the price of £10 from IT
-services, **not** the Department of Methodology.
+We use RStudio, which is free.
 
 #### Feedback {-}
 
@@ -217,10 +190,6 @@ please let us know if you find any errors or omissions in the
 coursepack, so that we can correct them for next year.
 
 #### Acknowledgements {-}
-
-The computer classes were extensively revised for 2012-13. The hard work
-of designing the new exercises and writing the revised instructions was
-done by Sally Stares.
 
 This coursepack bears many traces of previous materials and all of their
 authors, Colm O’Muircheartaigh, Colin Mills, Matt Mulford, Fiona Steele,
@@ -315,29 +284,6 @@ Coursepack                      Chapter \@ref(c-more)
 
 #### FAQ: Frequently Asked Questions {-}
 
-**Why do we use SPSS? I’ve heard that SAS/STATA/MINITAB/R/LIMDEP is much
-better.** At this level it does not matter which program you use since
-we are learning standard procedures that are common to all programs. In
-favour of SPSS is that it has an easy to learn interface and that it is
-widely available at sites both within and outside the UK.
-
-**Can I get a copy of the SPSS software to use on my home computer?**
-Yes, for a small fee from IT Services helpdesk, not from the Department
-of Methodology.
-
-**I’m taking MY451 because I want to learn how to use SPSS but we don’t
-seem to learn very much about the program. Why is that?** MY451 is not a
-course about learning to use SPSS. We use the program merely to
-facilitate data analysis and interpretation. Some options for learning
-more about SPSS will be mentioned in the first lecture.
-
-**I’m taking MY451 to help me analyse data for my dissertation. Can I
-discuss my data and my specific problems with the lecturers?** Yes, but
-not during the course. Staff of the Department of Methodology will be
-happy to talk to you about problems specific to your dissertation during
-the weekly sessions of the Methodology Surgery (see the website of the
-department for more information).
-
 **Does the coursepack contain everything I need to know for the exam?**
 Yes. However, you will stand by far the best chance in the exam if you
 also attend the lectures, where the lecturers emphasise and explain the
@@ -353,47 +299,7 @@ posted in the MY451 Moodle site. All of the material required for the
 exam is contained in the coursepack, with the posted lecture notes as
 additional clarification.
 
-**Do I need to bring my coursepack to lectures and classes?** Yes,
-because some of the material displayed during the lectures will be
-graphs or tables straight from the coursepack. However, an even more
-important way of using the coursepack is to read the relevant parts of
-it *before* each lecture. In addition, you will find the instructions
-for the class exercises at the end of the coursepack.
-
-**I can’t make it to the advisory hour. Why aren’t there more of them?**
-Advisory hours are offered in addition to the normal support
-arrangements for School courses and rely on the goodwill and enthusiasm
-of the course team. Given that most team members also offer their time
-to support advisory hours for other courses there is a limit to how much
-time they can volunteer. If you genuinely are unable to attend an
-advisory hour, but desperately need advice, lecturers will always see
-you in their personal office hours. If these are inconvenient you may be
-able to set up an appointment at another time by special arrangement.
-
 \newpage
-
-**There was a long queue at advisory and I didn’t get much/any time to
-discuss my particular problem. Isn’t there a better way to arrange
-things?** Advisory sessions are meant for quick feedback and
-clarification of problems on a first-come first served basis. They are
-not meant to be personal tutorials, seminars or impromptu lectures. They
-are also not meant to be a substitute for attending the lectures;
-reading the course-pack; doing the homework; thinking. Priority is
-always given to problems related to the previous week’s lecture
-material. If several people have the same problem it will usually be
-possible to talk to everyone together, but there is a finite limit to
-how many people can be crammed into an office at the same time!
-
-**I want to bring my homework to the advisory session because I couldn’t
-understand the class teacher’s comments. Is that OK?** Yes, but it is
-unlikely that the person that wrote the comments on your homework will
-be taking the advisory hour. Usually it will be much better to discuss
-homework comments directly with your class teacher in class.
-
-**Can I work together on the homework with my friends?** Yes, we
-positively encourage you to discuss the homework assignments with your
-colleagues. If you do this, please submit **one** copy to be marked
-rather than multiple copies of the same answers.
 
 **If I get less than 50% in the exam what happens now?** Candidates sit
 MY451 under different examination regulations depending on which
