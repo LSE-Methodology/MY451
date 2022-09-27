@@ -37,6 +37,29 @@ moderately critical understanding of the statistical material in the
 journals commonly used by students in their work and the ability to use
 some elementary techniques.
 
+\newpage
+
+#### Teaching {-}
+
+-   **Lectures**: 2-hour in-person lecture every week.
+
+-   **Applied exercises**: Each week there will be an exercise for students to complete
+    in which the ideas covered in the lecture for that week will be applied to a real
+    data set using the software package R/RStudio. Each exercise will have an accompanying
+    explanatory video and a multiple-choice quiz to be completed on Moodle to check
+    your learning.
+
+-   **Seminars**: Students will attend a one-hour seminar each
+    week, **starting in Week 2**. The seminars will go over the material covered
+    in that week's lecture, the corresponding applied exercise and provide a forum
+    for students to ask questions and discuss the material covered in the course.
+    Seminars will be available to attend in person and online.
+    Please consult the on-line timetables for the times and locations of the class groups.
+    The allocation of students to seminars is done through LSE for You.
+    This will be explained in the first lecture and on the Moodle page.
+    Please contact the course administrator listed on the Moodle
+    page if you have any issues.
+
 #### Staff {-}
 
 -   **Teachers responsible**:Jonathan Jackson (MT) & Tom Robinson (LT)
@@ -207,11 +230,15 @@ the current revision.
 
 Lecture                         Course overview and organisation. Introduction to basic concepts
 
+Exercise                        Familiarisation with R/RStudio (no seminar week 1)
+
 Coursepack                      Chapter \@ref(c-intro)
 
 **Week 2**
 
 Lecture                         Descriptive statistics for categorical variables
+
+Exercise/seminar                Loading data into R/RStudio, descriptive statistics
 
 Coursepack                      Sections \@ref(s-descr1-intro)–\@ref(s-descr1-2cat) and \@ref(s-descr1-presentation)
 
@@ -219,11 +246,15 @@ Coursepack                      Sections \@ref(s-descr1-intro)–\@ref(s-descr1-
 
 Lecture                         Descriptive statistics for continuous variables
 
+Exercise/seminar                 Descriptive statistics for categorical variables
+
 Coursepack                      Sections \@ref(s-descr1-1cont)–\@ref(s-descr1-2cont)
 
 **Week 4**
 
 Lecture                         Analysis of two-way contingency tables
+
+Exercise/seminar                Descriptive statistics for continuous variables
 
 Coursepack                      Chapters \@ref(c-samples) and \@ref(c-tables)
 
@@ -231,15 +262,19 @@ Coursepack                      Chapters \@ref(c-samples) and \@ref(c-tables)
 
 Lecture                         Inference for means in two populations
 
+Exercise/seminar                Analysis of two-way contingency tables
+
 Coursepack                      Chapters \@ref(c-contd) and \@ref(c-means)
 
 **Week 6**
 
-Reading Week                    **No lecture, no class**. Revision quiz available on Moodle.
+Reading Week                    **No lecture, no exercise/seminar**
 
 **Week 7**
 
 Lecture                         Inference for proportions in one and two populations
+
+Exercise/seminar                Inference for means in two populations
 
 Coursepack                      Chapter \@ref(c-probs)
 
@@ -247,15 +282,15 @@ Coursepack                      Chapter \@ref(c-probs)
 
 Lecture                         Correlation and simple linear regression as descriptive methods
 
+Exercise/seminar                Inference for proportions in one and two populations
+
 Coursepack                      Sections \@ref(s-regression-intro)–\@ref(ss-regression-simple-est)
 
 **Week 9**
 
-Lectures          
+Lecture                          Inference for the simple linear regression model, 3-way contingency tables
 
-Hour 1                          Inference for the simple linear regression model
-
-Hour 2                          Three-way contingency tables
+Exercise/seminar                 Correlation and simple linear regression
 
 Coursepack                      Section \@ref(ss-regression-simple-inf) (Hour 1); Section \@ref(s-regression-causality) and Chapter \@ref(c-3waytables) (Hour 2)
 
@@ -263,11 +298,15 @@ Coursepack                      Section \@ref(ss-regression-simple-inf) (Hour 1)
 
 Lecture                         Multiple linear regression
 
+Exercise/seminar                More on linear regression
+
 Coursepack                      Sections \@ref(s-regression-multiple)–\@ref(s-regression-rest)
 
 **Week 11**
 
-Lecture                         Review and further statistical methods
+Lecture                         Review and exam preparation
+
+Exercise/seminar                Multiple linear regression
 
 Coursepack                      Chapter \@ref(c-more)
 ------------------------------- ----------------------------------------------------------------------------------------------------------------------------------
@@ -275,6 +314,27 @@ Coursepack                      Chapter \@ref(c-more)
 \newpage
 
 #### FAQ: Frequently Asked Questions {-}
+
+**Why do we use R/RStudio? I’ve heard that SAS/STATA/MINITAB/SPSS/LIMDEP is
+better.** At this level it does not matter which program you use since
+we are learning standard procedures that are common to all programs. In
+favour of R/RStudio is that it is free, flexible and extremely powerful.
+
+**Can I get a copy of the R/RStudio software to use on my home computer?**
+Yes, this will be explained in weeks 1 and 2 applied exercises and classes.
+
+**I’m taking MY451 because I want to learn how to use R/RStudio but we don’t
+seem to learn very much about the program. Why is that?** MY451 is not a
+course about learning to use R/RStudio. We use the program merely to
+facilitate data analysis and interpretation. Some options for learning
+more about R/RStudio will be mentioned in the first lecture.
+
+**I’m taking MY451 to help me analyse data for my dissertation. Can I
+discuss my data and my specific problems with the lecturers?** Yes, but
+not during the course. Staff of the Department of Methodology will be
+happy to talk to you about problems specific to your dissertation during
+the weekly sessions of the Methodology Surgery (see the website of the
+department for more information).
 
 **Does the coursepack contain everything I need to know for the exam?**
 Yes. However, you will stand by far the best chance in the exam if you
@@ -291,48 +351,10 @@ posted in the MY451 Moodle site. All of the material required for the
 exam is contained in the coursepack, with the posted lecture notes as
 additional clarification.
 
-\newpage
-
-**If I get less than 50% in the exam what happens now?** Candidates sit
-MY451 under different examination regulations depending on which
-department they are in and what degree they are registered for. For some
-degrees a pass in MY451 is required, for others the mark from MY451 is
-just one component of an overall course mark (implying a “pass” mark in
-MY451 is not required). The regulations for your degree are not set by
-Methodology, but by your home department. To find out whether a pass in
-MY451 is required, consult your degree regulations or ask the tutor
-responsible for your program in your home department. Candidates who
-fail at the first attempt and whose degree regulations require a pass
-are, as per the usual School examination rules, entitled, at the next
-available opportunity, to ONE more attempt. This will be in the Summer
-Term of the next Session.
-
-**Why don’t we get our examination scripts returned after they have been
-marked?** Written work is of two sorts, formative and summative. The
-former, for example the homework exercises, is meant to give you
-feedback on how you are doing and will, where appropriate, be returned
-with comments. The latter, for example the examination, is meant to
-evaluate your performance, not explain to you where you have gone wrong,
-or for that matter where you have done exceptionally well.
-
-**If I don’t agree with the mark, how do I appeal?** The cultural norm
-in the UK is that marks are not arrived at by a process of
-teacher-student negotiation. You can make a formal appeal through the
-School’s appeal process (see the appropriate section of the website for
-details). NB: appeals cannot be made on grounds of academic substance,
-only on grounds of procedural irregularities. In other words an appeal
-will not be allowed if the only grounds you have for appealing is that
-you/your friend/your personal advisor/your spiritual guru think your
-script was worth more marks than the examiners did.
-
-**The class teachers are always very busy during class helping people
-with problems and I can’t get enough personal attention. Why can’t there
-be more class teachers in the classroom?** For MY451 there will usually
-be two class teachers per classroom i.e. double the normal complement.
-Even so we realise that you may not be able to get attention at the
-exact moment you want it. Please be patient and if help is not
-immediately available you can always try asking the person who is
-sitting next to you!
+**Can I work together on the applied exercises with my friends?** Yes, we
+positively encourage you to discuss the exercises with your
+colleagues. If you do this, please make sure you complete the multiple-choice
+quiz yourself.
 
 **I’m not registered at the LSE but at another University of London
 college. Can I attend this course?** Normally yes, but you will have to
