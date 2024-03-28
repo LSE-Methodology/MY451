@@ -3,7 +3,7 @@ pandoc_version: 2.2
 cache: packages
 env:
   global:
-  - GITHUB_REPO="LSE-Methodology/MY464"
+  - GITHUB_REPO="LSE-Methodology/MY451"
 before_install:
 - tlmgr option repository http://mirror.ctan.org/systems/texlive/tlnet
 - tlmgr update --self
