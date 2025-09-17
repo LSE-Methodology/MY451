@@ -5,6 +5,8 @@ bookdown::pdf_book:
     - "--default-image-extension=pdf"
     - "--template"
     - "./pandoc-conversion-templates/template.latex"
+  includes:
+    in_header: preamble.tex
 bookdown::epub_book:
   pandoc_args:
     - "--default-image-extension=png"
