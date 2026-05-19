@@ -39,7 +39,7 @@ bookdown::render_book("index.Rmd", "bookdown::bs4_book")  # HTML only
 
 For an authoring reference (Markdown, tables, figures, equations, cross-references), see [`AUTHORING.md`](AUTHORING.md).
 
-For details on the deploy workflow, see [`devel.md`](devel.md).
+For details on the deploy workflow, see [`.github/workflows/deploy_bookdown.yml`](.github/workflows/deploy_bookdown.yml).
 
 ## License
 
