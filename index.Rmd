@@ -13,7 +13,7 @@ description: "This course is intended for those with little or no past training 
 
 ![image](images/dept_of_methodology.png){height="2.2cm"}\hfill![image](images/lse.png){height="2.2cm"}
 
-#### Course Description {-}
+## Course Description {-}
 
 This course is intended for those with little or no past training in
 quantitative methods. The course is an intensive introduction to some of
@@ -30,7 +30,7 @@ Observational and Experimental Studies), MY459 (Quantitative Text
 Analysis), ST416 (Multilevel Modelling), and ST442 (Longitudinal Data
 Analysis).
 
-#### Course Objectives {-}
+## Course Objectives {-}
 
 This course aims to impart a level of familiarity suitable for a
 moderately critical understanding of the statistical material in the
@@ -39,7 +39,7 @@ some elementary techniques.
 
 \newpage
 
-#### Teaching {-}
+## Teaching {-}
 
 -   **Lectures**: 2-hour in-person lecture every week.
 
@@ -60,7 +60,7 @@ some elementary techniques.
     Please contact the course administrator listed on the Moodle
     page if you have any issues.
 
-#### Staff {-}
+## Staff {-}
 
 -   **Teacher responsible**: Sally Stares
 
@@ -71,7 +71,7 @@ some elementary techniques.
 
 \newpage
 
-#### Course Materials {-}
+## Course Materials {-}
 
 -   **Coursepack**: This coursepack is the main course text.
     Digital copies of this coursepack (i.e., what you're looking at now) are available for download
@@ -109,7 +109,7 @@ some elementary techniques.
         consider them necessary for this course, but see the Moodle
         page for details of further support in using R/RStudio.
 
-#### MY451 on Moodle {-}
+## MY451 on Moodle {-}
 <!-- {#sss-moodle} -->
 
 The course materials are all available on Moodle. Go to
@@ -121,7 +121,7 @@ readings, weekly computer class assignments and the associated data
 sets, coursepack and other materials, as well as a section on news and
 announcements.
 
-#### Advisory Sessions {-}
+## Advisory Sessions {-}
 
 There will be times each week during the Autumn and Winter terms
 during which a member of the teaching team will be available at the
@@ -137,7 +137,7 @@ term, when the advisory sessions can be very busy, we cannot guarantee
 that your questions from earlier sessions will be covered. **There will
 be no advisory sessions after the end of Winter Term.**
 
-#### Notes on studying for the course {-}
+## Notes on studying for the course {-}
 
 To learn the material from this course you must do the work every week
 since it is cumulative; if you miss a week or two (or sleep through it!)
@@ -155,7 +155,7 @@ in the lectures. If you are having any trouble this will reveal what the
 problem is. Thus the course is designed to have multiple, reinforcing
 ways of helping you get to grips with this material.
 
-#### Examinations/assessment {-}
+## Examinations/assessment {-}
 
 There will be a **two-hour examination in the Spring Term**.
 You may bring two, two-sided A4 sheets of reference material to consult
@@ -171,18 +171,18 @@ with a course code from your home department. If this is the case, your
 result for MY451 will contribute only part of the final mark for the
 package, with a weight determined by the regulations.
 
-#### Computing {-}
+## Computing {-}
 
 Students must know their Username and Password in time for the first
 class. This information can be obtained from IT Help Desk (Library, 1st
 floor). The statistical package being used is R and the interface RStudio, 
 which is introduced in the first homework exercise for the course.
 
-#### Software availability {-}
+## Software availability {-}
 
 We use RStudio, which is free.
 
-#### Feedback {-}
+## Feedback {-}
 
 We would welcome any comments you have on the course. If there are any
 problems that we can deal with, we will attempt to do so as quickly as
@@ -191,7 +191,7 @@ departmental supervisor if you feel that would be easier for you. Also
 please let us know if you find any errors or omissions in the
 coursepack, so that we can correct them for next year.
 
-#### Acknowledgements {-}
+## Acknowledgements {-}
 
 This coursepack bears many traces of previous materials and all of their
 authors, Colm O’Muircheartaigh, Colin Mills, Matt Mulford, Fiona Steele,
@@ -203,7 +203,7 @@ the current revision.
 
 \newpage
 
-#### FAQ: Frequently Asked Questions {-}
+## FAQ: Frequently Asked Questions {-}
 
 **Why do we use R/RStudio? I’ve heard that SAS/STATA/MINITAB/SPSS/LIMDEP is
 better.** At this level it does not matter which program you use since
