@@ -1,17 +1,28 @@
+/* Light tweaks on top of bookdown::bs4_book defaults. */
+
 p.caption {
   color: #777;
   margin-top: 10px;
 }
+
 p code {
   white-space: inherit;
 }
+
 pre {
   word-break: normal;
   word-wrap: normal;
 }
+
 pre code {
   white-space: inherit;
 }
+
 p {
-line-height: 1.5
+  line-height: 1.55;
+}
+
+/* Slightly tighter heading rhythm. */
+h1, h2, h3 {
+  margin-top: 1.5em;
 }

@@ -1,298 +1,75 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 8 Linear regression models | MY451 Introduction to Quantitative Analysis</title>
-  <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Chapter 8 Linear regression models | MY451 Introduction to Quantitative Analysis" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="github-repo" content="LSE-Methodology/MY451" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 8 Linear regression models | MY451 Introduction to Quantitative Analysis" />
-  
-  <meta name="twitter:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  
-
-<meta name="author" content="Jouni Kuha, Department of Methodology, London School of Economics and Political Science" />
-
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="c-means.html"/>
-<link rel="next" href="c-3waytables.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 8 Linear regression models | MY451 Introduction to Quantitative Analysis</title>
+<meta name="author" content="Jouni Kuha, Department of Methodology, London School of Economics and Political Science">
+<meta name="description" content="8.1 Introduction This chapter continues the theme of analysing statistical associations between variables. The methods described here are appropriate when the response variable \(Y\) is a...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Chapter 8 Linear regression models | MY451 Introduction to Quantitative Analysis">
+<meta property="og:type" content="book">
+<meta property="og:description" content="8.1 Introduction This chapter continues the theme of analysing statistical associations between variables. The methods described here are appropriate when the response variable \(Y\) is a...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 8 Linear regression models | MY451 Introduction to Quantitative Analysis">
+<meta name="twitter:description" content="8.1 Introduction This chapter continues the theme of analysing statistical associations between variables. The methods described here are appropriate when the response variable \(Y\) is a...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">MY451 Introduction to Quantitative Analysis</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course information</a></li>
-<li class="chapter" data-level="1" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>1.1</b> What is the purpose of this course?</a></li>
-<li class="chapter" data-level="1.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>1.2</b> Some basic definitions</a>
-<ul>
-<li class="chapter" data-level="1.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>1.2.1</b> Subjects and variables</a></li>
-<li class="chapter" data-level="1.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>1.2.2</b> Types of variables</a></li>
-<li class="chapter" data-level="1.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>1.2.3</b> Description and inference</a></li>
-<li class="chapter" data-level="1.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>1.2.4</b> Association and causation</a></li>
-</ul></li>
-<li class="chapter" data-level="1.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>1.3</b> Outline of the course</a></li>
-<li class="chapter" data-level="1.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>1.4</b> The use of mathematics and computing</a>
-<ul>
-<li class="chapter" data-level="1.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>1.4.1</b> Symbolic mathematics and mathematical notation</a></li>
-<li class="chapter" data-level="1.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>1.4.2</b> Computing</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>2</b> Descriptive statistics</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
-<li class="chapter" data-level="2.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>2.2</b> Example data sets</a></li>
-<li class="chapter" data-level="2.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>2.3</b> Single categorical variable</a>
-<ul>
-<li class="chapter" data-level="2.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>2.3.1</b> Describing the sample distribution</a></li>
-<li class="chapter" data-level="2.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>2.3.2</b> Tabular methods: Tables of frequencies</a></li>
-<li class="chapter" data-level="2.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>2.3.3</b> Graphical methods: Bar charts</a></li>
-<li class="chapter" data-level="2.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>2.3.4</b> Simple descriptive statistics</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>2.4</b> Two categorical variables</a>
-<ul>
-<li class="chapter" data-level="2.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>2.4.1</b> Two-way contingency tables</a></li>
-<li class="chapter" data-level="2.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>2.4.2</b> Conditional proportions</a></li>
-<li class="chapter" data-level="2.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>2.4.3</b> Conditional distributions and associations</a></li>
-<li class="chapter" data-level="2.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>2.4.4</b> Describing an association using conditional proportions</a></li>
-<li class="chapter" data-level="2.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>2.4.5</b> A measure of association for ordinal variables</a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>2.5</b> Sample distributions of a single continuous variable</a>
-<ul>
-<li class="chapter" data-level="2.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>2.5.1</b> Tabular methods</a></li>
-<li class="chapter" data-level="2.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>2.5.2</b> Graphical methods</a></li>
-</ul></li>
-<li class="chapter" data-level="2.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>2.6</b> Numerical descriptive statistics</a>
-<ul>
-<li class="chapter" data-level="2.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>2.6.1</b> Measures of central tendency</a></li>
-<li class="chapter" data-level="2.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>2.6.2</b> Measures of variation</a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>2.7</b> Associations which involve continuous variables</a></li>
-<li class="chapter" data-level="2.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>2.8</b> Presentation of tables and graphs</a></li>
-<li class="chapter" data-level="2.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>2.9</b> Appendix: Country data</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>3</b> Samples and populations</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
-<li class="chapter" data-level="3.2" data-path="c-samples.html"><a href="c-samples.html#s-samples-finpops"><i class="fa fa-check"></i><b>3.2</b> Finite populations</a></li>
-<li class="chapter" data-level="3.3" data-path="c-samples.html"><a href="c-samples.html#s-samples-samples"><i class="fa fa-check"></i><b>3.3</b> Samples from finite populations</a></li>
-<li class="chapter" data-level="3.4" data-path="c-samples.html"><a href="c-samples.html#s-samples-infpops"><i class="fa fa-check"></i><b>3.4</b> Conceptual and infinite populations</a></li>
-<li class="chapter" data-level="3.5" data-path="c-samples.html"><a href="c-samples.html#s-samples-popdistrs"><i class="fa fa-check"></i><b>3.5</b> Population distributions</a></li>
-<li class="chapter" data-level="3.6" data-path="c-samples.html"><a href="c-samples.html#s-samples-inference"><i class="fa fa-check"></i><b>3.6</b> Need for statistical inference</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="c-tables.html"><a href="c-tables.html"><i class="fa fa-check"></i><b>4</b> Statistical inference for two-way tables</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="c-tables.html"><a href="c-tables.html#s-tables-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
-<li class="chapter" data-level="4.2" data-path="c-tables.html"><a href="c-tables.html#s-tables-tests"><i class="fa fa-check"></i><b>4.2</b> Significance tests</a></li>
-<li class="chapter" data-level="4.3" data-path="c-tables.html"><a href="c-tables.html#s-tables-chi2test"><i class="fa fa-check"></i><b>4.3</b> The chi-square test of independence</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-null"><i class="fa fa-check"></i><b>4.3.1</b> Hypotheses</a></li>
-<li class="chapter" data-level="4.3.2" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-ass"><i class="fa fa-check"></i><b>4.3.2</b> Assumptions of a significance test</a></li>
-<li class="chapter" data-level="4.3.3" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-stat"><i class="fa fa-check"></i><b>4.3.3</b> The test statistic</a></li>
-<li class="chapter" data-level="4.3.4" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-sdist"><i class="fa fa-check"></i><b>4.3.4</b> The sampling distribution of the test statistic</a></li>
-<li class="chapter" data-level="4.3.5" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-Pval"><i class="fa fa-check"></i><b>4.3.5</b> The P-value</a></li>
-<li class="chapter" data-level="4.3.6" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-conclusions"><i class="fa fa-check"></i><b>4.3.6</b> Drawing conclusions from a test</a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="c-tables.html"><a href="c-tables.html#s-tables-summary"><i class="fa fa-check"></i><b>4.4</b> Summary of the chi-square test of independence</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="c-probs.html"><a href="c-probs.html"><i class="fa fa-check"></i><b>5</b> Inference for population proportions</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-intro"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
-<li class="chapter" data-level="5.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-examples"><i class="fa fa-check"></i><b>5.2</b> Examples</a></li>
-<li class="chapter" data-level="5.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-distribution"><i class="fa fa-check"></i><b>5.3</b> Probability distribution of a dichotomous variable</a></li>
-<li class="chapter" data-level="5.4" data-path="c-probs.html"><a href="c-probs.html#s-probs-pointest"><i class="fa fa-check"></i><b>5.4</b> Point estimation of a population probability</a></li>
-<li class="chapter" data-level="5.5" data-path="c-probs.html"><a href="c-probs.html#s-probs-test1sample"><i class="fa fa-check"></i><b>5.5</b> Significance test of a single proportion</a>
-<ul>
-<li class="chapter" data-level="5.5.1" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-hypotheses"><i class="fa fa-check"></i><b>5.5.1</b> Null and alternative hypotheses</a></li>
-<li class="chapter" data-level="5.5.2" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-teststatistic"><i class="fa fa-check"></i><b>5.5.2</b> The test statistic</a></li>
-<li class="chapter" data-level="5.5.3" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-samplingd"><i class="fa fa-check"></i><b>5.5.3</b> The sampling distribution of the test statistic and P-values</a></li>
-<li class="chapter" data-level="5.5.4" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-conclusions"><i class="fa fa-check"></i><b>5.5.4</b> Conclusions from the test</a></li>
-<li class="chapter" data-level="5.5.5" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-summary"><i class="fa fa-check"></i><b>5.5.5</b> Summary of the test</a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci"><i class="fa fa-check"></i><b>5.6</b> Confidence interval for a single proportion</a>
-<ul>
-<li class="chapter" data-level="5.6.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-intro"><i class="fa fa-check"></i><b>5.6.1</b> Introduction</a></li>
-<li class="chapter" data-level="5.6.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-calc"><i class="fa fa-check"></i><b>5.6.2</b> Calculation of the interval</a></li>
-<li class="chapter" data-level="5.6.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>5.6.3</b> Interpretation of confidence intervals</a></li>
-<li class="chapter" data-level="5.6.4" data-path="c-probs.html"><a href="c-probs.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>5.6.4</b> Confidence intervals vs. significance tests</a></li>
-</ul></li>
-<li class="chapter" data-level="5.7" data-path="c-probs.html"><a href="c-probs.html#s-probs-2samples"><i class="fa fa-check"></i><b>5.7</b> Inference for comparing two proportions</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="c-contd.html"><a href="c-contd.html"><i class="fa fa-check"></i><b>6</b> Continuous variables: Population and sampling distributions</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="c-contd.html"><a href="c-contd.html#s-contd-intro"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
-<li class="chapter" data-level="6.2" data-path="c-contd.html"><a href="c-contd.html#s-contd-popdistrs"><i class="fa fa-check"></i><b>6.2</b> Population distributions of continuous variables</a>
-<ul>
-<li class="chapter" data-level="6.2.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-popdistrs-params"><i class="fa fa-check"></i><b>6.2.1</b> Population parameters and their point estimates</a></li>
-</ul></li>
-<li class="chapter" data-level="6.3" data-path="c-contd.html"><a href="c-contd.html#s-contd-probdistrs"><i class="fa fa-check"></i><b>6.3</b> Probability distributions of continuous variables</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-general"><i class="fa fa-check"></i><b>6.3.1</b> General comments</a></li>
-<li class="chapter" data-level="6.3.2" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-normal"><i class="fa fa-check"></i><b>6.3.2</b> The normal distribution as a population distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="c-contd.html"><a href="c-contd.html#s-contd-clt"><i class="fa fa-check"></i><b>6.4</b> The normal distribution as a sampling distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="c-means.html"><a href="c-means.html"><i class="fa fa-check"></i><b>7</b> Analysis of population means</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="c-means.html"><a href="c-means.html#s-means-intro"><i class="fa fa-check"></i><b>7.1</b> Introduction and examples</a></li>
-<li class="chapter" data-level="7.2" data-path="c-means.html"><a href="c-means.html#s-means-descr"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics for comparisons of groups</a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="c-means.html"><a href="c-means.html#ss-means-descr-graphs"><i class="fa fa-check"></i><b>7.2.1</b> Graphical methods of comparing sample distributions</a></li>
-<li class="chapter" data-level="7.2.2" data-path="c-means.html"><a href="c-means.html#ss-means-descr-tables"><i class="fa fa-check"></i><b>7.2.2</b> Comparing summary statistics</a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="c-means.html"><a href="c-means.html#s-means-inference"><i class="fa fa-check"></i><b>7.3</b> Inference for two means from independent samples</a>
-<ul>
-<li class="chapter" data-level="7.3.1" data-path="c-means.html"><a href="c-means.html#ss-means-inference-intro"><i class="fa fa-check"></i><b>7.3.1</b> Aims of the analysis</a></li>
-<li class="chapter" data-level="7.3.2" data-path="c-means.html"><a href="c-means.html#ss-means-inference-test"><i class="fa fa-check"></i><b>7.3.2</b> Significance testing: The two-sample t-test</a></li>
-<li class="chapter" data-level="7.3.3" data-path="c-means.html"><a href="c-means.html#ss-means-inference-ci"><i class="fa fa-check"></i><b>7.3.3</b> Confidence intervals for a difference of two means</a></li>
-<li class="chapter" data-level="7.3.4" data-path="c-means.html"><a href="c-means.html#ss-means-inference-variants"><i class="fa fa-check"></i><b>7.3.4</b> Variants of the test and confidence interval</a></li>
-</ul></li>
-<li class="chapter" data-level="7.4" data-path="c-means.html"><a href="c-means.html#s-means-1sample"><i class="fa fa-check"></i><b>7.4</b> Tests and confidence intervals for a single mean</a></li>
-<li class="chapter" data-level="7.5" data-path="c-means.html"><a href="c-means.html#s-means-dependent"><i class="fa fa-check"></i><b>7.5</b> Inference for dependent samples</a></li>
-<li class="chapter" data-level="7.6" data-path="c-means.html"><a href="c-means.html#s-means-tests3"><i class="fa fa-check"></i><b>7.6</b> Further comments on significance tests</a>
-<ul>
-<li class="chapter" data-level="7.6.1" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-errors"><i class="fa fa-check"></i><b>7.6.1</b> Different types of error</a></li>
-<li class="chapter" data-level="7.6.2" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-power"><i class="fa fa-check"></i><b>7.6.2</b> Power of significance tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-importance"><i class="fa fa-check"></i><b>7.6.3</b> Significance vs. importance</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="c-regression.html"><a href="c-regression.html"><i class="fa fa-check"></i><b>8</b> Linear regression models</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="c-regression.html"><a href="c-regression.html#s-regression-intro"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.2" data-path="c-regression.html"><a href="c-regression.html#s-regression-descr"><i class="fa fa-check"></i><b>8.2</b> Describing association between two continuous variables</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-intro"><i class="fa fa-check"></i><b>8.2.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.2.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-plots"><i class="fa fa-check"></i><b>8.2.2</b> Graphical methods</a></li>
-<li class="chapter" data-level="8.2.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-assoc"><i class="fa fa-check"></i><b>8.2.3</b> Linear associations</a></li>
-<li class="chapter" data-level="8.2.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-corr"><i class="fa fa-check"></i><b>8.2.4</b> Measures of association: covariance and correlation</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="c-regression.html"><a href="c-regression.html#s-regression-simple"><i class="fa fa-check"></i><b>8.3</b> Simple linear regression models</a>
-<ul>
-<li class="chapter" data-level="8.3.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-intro"><i class="fa fa-check"></i><b>8.3.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.3.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-def"><i class="fa fa-check"></i><b>8.3.2</b> Definition of the model</a></li>
-<li class="chapter" data-level="8.3.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-int"><i class="fa fa-check"></i><b>8.3.3</b> Interpretation of the model parameters</a></li>
-<li class="chapter" data-level="8.3.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-est"><i class="fa fa-check"></i><b>8.3.4</b> Estimation of the parameters</a></li>
-<li class="chapter" data-level="8.3.5" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-inf"><i class="fa fa-check"></i><b>8.3.5</b> Statistical inference for the regression coefficients</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="c-regression.html"><a href="c-regression.html#s-regression-causality"><i class="fa fa-check"></i><b>8.4</b> Interlude: Association and causality</a></li>
-<li class="chapter" data-level="8.5" data-path="c-regression.html"><a href="c-regression.html#s-regression-multiple"><i class="fa fa-check"></i><b>8.5</b> Multiple linear regression models</a>
-<ul>
-<li class="chapter" data-level="8.5.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-intro"><i class="fa fa-check"></i><b>8.5.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.5.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-def"><i class="fa fa-check"></i><b>8.5.2</b> Definition of the model</a></li>
-<li class="chapter" data-level="8.5.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-unchanged"><i class="fa fa-check"></i><b>8.5.3</b> Unchanged elements from simple linear models</a></li>
-<li class="chapter" data-level="8.5.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-beta"><i class="fa fa-check"></i><b>8.5.4</b> Interpretation and inference for the regression coefficients</a></li>
-</ul></li>
-<li class="chapter" data-level="8.6" data-path="c-regression.html"><a href="c-regression.html#s-regression-dummies"><i class="fa fa-check"></i><b>8.6</b> Including categorical explanatory variables</a>
-<ul>
-<li class="chapter" data-level="8.6.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>8.6.1</b> Dummy variables</a></li>
-<li class="chapter" data-level="8.6.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>8.6.2</b> A second example</a></li>
-</ul></li>
-<li class="chapter" data-level="8.7" data-path="c-regression.html"><a href="c-regression.html#s-regression-rest"><i class="fa fa-check"></i><b>8.7</b> Other issues in linear regression modelling</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>9</b> Analysis of 3-way contingency tables</a></li>
-<li class="chapter" data-level="10" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>10</b> More statistics…</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix</a>
-<ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#computer-classes"><i class="fa fa-check"></i>Computer classes</a>
-<ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#general-instructions"><i class="fa fa-check"></i>General instructions</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#introduction-to-spss"><i class="fa fa-check"></i>Introduction to SPSS</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-2-class-descriptive-statistics-for-categorical-data-and-entering-data"><i class="fa fa-check"></i>WEEK 2 class: Descriptive statistics for categorical data, and entering data</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-3-class-descriptive-statistics-for-continuous-variables"><i class="fa fa-check"></i>WEEK 3 class: Descriptive statistics for continuous variables</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-4-class-two-way-contingency-tables"><i class="fa fa-check"></i>WEEK 4 class: Two-way contingency tables</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-5-class-inference-for-two-population-means"><i class="fa fa-check"></i>WEEK 5 class: Inference for two population means</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-7-class-inference-for-population-proportions"><i class="fa fa-check"></i>WEEK 7 class: Inference for population proportions</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-8-class-correlation-and-simple-linear-regression-1"><i class="fa fa-check"></i>WEEK 8 class: Correlation and simple linear regression 1</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-9-class-simple-linear-regression-and-3-way-tables"><i class="fa fa-check"></i>WEEK 9 class: Simple linear regression and 3-way tables</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-10-class-multiple-linear-regression"><i class="fa fa-check"></i>WEEK 10 class: Multiple linear regression</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-11-class-review-and-multiple-linear-regression"><i class="fa fa-check"></i>WEEK 11 class: Review and Multiple linear regression</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#statistical-tables"><i class="fa fa-check"></i>Statistical tables</a>
-<ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-standard-normal-tail-probabilities"><i class="fa fa-check"></i>Table of standard normal tail probabilities</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-critical-values-for-t-distributions"><i class="fa fa-check"></i>Table of critical values for t-distributions</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-critical-values-for-chi-square-distributions"><i class="fa fa-check"></i>Table of critical values for chi-square distributions</a></li>
-</ul></li>
-</ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">MY451 Introduction to Quantitative Analysis</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY451 Introduction to Quantitative Analysis</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Course information</a></li>
+<li><a class="" href="c-intro.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="c-descr1.html"><span class="header-section-number">2</span> Descriptive statistics</a></li>
+<li><a class="" href="c-samples.html"><span class="header-section-number">3</span> Samples and populations</a></li>
+<li><a class="" href="c-tables.html"><span class="header-section-number">4</span> Statistical inference for two-way tables</a></li>
+<li><a class="" href="c-probs.html"><span class="header-section-number">5</span> Inference for population proportions</a></li>
+<li><a class="" href="c-contd.html"><span class="header-section-number">6</span> Continuous variables: Population and sampling distributions</a></li>
+<li><a class="" href="c-means.html"><span class="header-section-number">7</span> Analysis of population means</a></li>
+<li><a class="active" href="c-regression.html"><span class="header-section-number">8</span> Linear regression models</a></li>
+<li><a class="" href="c-3waytables.html"><span class="header-section-number">9</span> Analysis of 3-way contingency tables</a></li>
+<li><a class="" href="c-more.html"><span class="header-section-number">10</span> More statistics…</a></li>
+<li><a class="" href="appendix.html">Appendix</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/LSE-Methodology/MY451">View book source <i class="fab fa-github"></i></a></p>
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="c-regression" class="section level1 hasAnchor" number="8">
-<h1><span class="header-section-number">Chapter 8</span> Linear regression models<a href="c-regression.html#c-regression" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="s-regression-intro" class="section level2 hasAnchor" number="8.1">
-<h2><span class="header-section-number">8.1</span> Introduction<a href="c-regression.html#s-regression-intro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="c-regression" class="section level1" number="8">
+<h1>
+<span class="header-section-number">8</span> Linear regression models<a class="anchor" aria-label="anchor" href="#c-regression"><i class="fas fa-link"></i></a>
+</h1>
+<div id="s-regression-intro" class="section level2" number="8.1">
+<h2>
+<span class="header-section-number">8.1</span> Introduction<a class="anchor" aria-label="anchor" href="#s-regression-intro"><i class="fas fa-link"></i></a>
+</h2>
 <p>This chapter continues the theme of analysing statistical associations
 between variables. The methods described here are appropriate when the
 response variable <span class="math inline">\(Y\)</span> is a continuous, interval level variable. We will
@@ -324,7 +101,10 @@ Section <a href="c-regression.html#s-regression-dummies">8.6</a>.</p>
 chapter:</p>
 <p><strong>Example 8.1: Indicators of Global Civil Society</strong></p>
 <p>The <em>Global Civil Society 2004/5</em> yearbook gives tables of a range of
-characteristics of the countries of the world.<a href="#fn39" class="footnote-ref" id="fnref39"><sup>39</sup></a> The following
+characteristics of the countries of the world.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Anheier, H., Glasius, M. and Kaldor, M. (eds.) (2005). &lt;em&gt;Global
+Civil Society 2004/5&lt;/em&gt;. London: Sage. The book gives detailed
+references to the indices considered here. Many thanks to Sally
+Stares for providing the data in an electronic form.&lt;/p&gt;"><sup>39</sup></a> The following
 measures will be considered in this chapter:</p>
 <ul>
 <li><p>Gross Domestic Product (<strong>GDP</strong>) per capita in 2001 (in current
@@ -352,10 +132,14 @@ countries. The full data set used here includes 165 countries. Many of
 the variables are not available for all of them, so most of the analyses
 below use a smaller number of countries.</p>
 </div>
-<div id="s-regression-descr" class="section level2 hasAnchor" number="8.2">
-<h2><span class="header-section-number">8.2</span> Describing association between two continuous variables<a href="c-regression.html#s-regression-descr" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="ss-regression-descr-intro" class="section level3 hasAnchor" number="8.2.1">
-<h3><span class="header-section-number">8.2.1</span> Introduction<a href="c-regression.html#ss-regression-descr-intro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="s-regression-descr" class="section level2" number="8.2">
+<h2>
+<span class="header-section-number">8.2</span> Describing association between two continuous variables<a class="anchor" aria-label="anchor" href="#s-regression-descr"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ss-regression-descr-intro" class="section level3" number="8.2.1">
+<h3>
+<span class="header-section-number">8.2.1</span> Introduction<a class="anchor" aria-label="anchor" href="#ss-regression-descr-intro"><i class="fas fa-link"></i></a>
+</h3>
 <p>Suppose for now that we are considering data on two continuous
 variables. The descriptive techniques discussed in this section do not
 strictly speaking require a distinction between an explanatory variable
@@ -376,10 +160,13 @@ numerical summary measures for such associations in Section
 <a href="c-regression.html#ss-regression-descr-corr">8.2.4</a>. Statistical <em>inference</em> for the
 associations will be considered in Section <a href="c-regression.html#s-regression-simple">8.3</a>.</p>
 </div>
-<div id="ss-regression-descr-plots" class="section level3 hasAnchor" number="8.2.2">
-<h3><span class="header-section-number">8.2.2</span> Graphical methods<a href="c-regression.html#ss-regression-descr-plots" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="scatterplots" class="section level4 unnumbered hasAnchor">
-<h4>Scatterplots<a href="c-regression.html#scatterplots" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="ss-regression-descr-plots" class="section level3" number="8.2.2">
+<h3>
+<span class="header-section-number">8.2.2</span> Graphical methods<a class="anchor" aria-label="anchor" href="#ss-regression-descr-plots"><i class="fas fa-link"></i></a>
+</h3>
+<div id="scatterplots" class="section level4 unnumbered">
+<h4>Scatterplots<a class="anchor" aria-label="anchor" href="#scatterplots"><i class="fas fa-link"></i></a>
+</h4>
 <p>The standard statistical graphic for summarising the association between
 two continuous variables is a <strong>scatterplot</strong>. An example of it is given
 in Figure <a href="c-regression.html#fig:f-corruption1">8.1</a>, which shows a scatterplot of Control of
@@ -391,9 +178,9 @@ of corruption, is conventionally used for the explanatory variable <span class="
 and is often referred to as the <strong>X-axis</strong>. The vertical axis, here used
 for GDP per capita, then corresponds to the response variable <span class="math inline">\(Y\)</span>, and
 is known as the <strong>Y-axis</strong>.</p>
-<div class="float"><span style="display:block;" id="fig:f-corruption1"></span>
-<img src="corruption1.png" style="width:13.5cm" alt="A scatterplot of Control of corruption vs. GDP per capita in the Global Civil Society data set, for 61 countries with Control of corruption at least 60. The dotted lines are drawn to the point corresponding to the United Kingdom." />
-<div class="figcaption">Figure 8.1: A scatterplot of Control of corruption vs. GDP per capita in the Global Civil Society data set, for 61 countries with Control of corruption at least 60. The dotted lines are drawn to the point corresponding to the United Kingdom.</div>
+<div class="float">
+<span style="display:block;" id="fig:f-corruption1"></span>
+<img src="corruption1.png" style="width:13.5cm" alt="A scatterplot of Control of corruption vs. GDP per capita in the Global Civil Society data set, for 61 countries with Control of corruption at least 60. The dotted lines are drawn to the point corresponding to the United Kingdom."><div class="figcaption">Figure 8.1: A scatterplot of Control of corruption vs. GDP per capita in the Global Civil Society data set, for 61 countries with Control of corruption at least 60. The dotted lines are drawn to the point corresponding to the United Kingdom.</div>
 </div>
 <p>The observed data are shown as points in the scatterplot, one for each
 of the <span class="math inline">\(n\)</span> units. The location of each point is determined by its values
@@ -432,8 +219,9 @@ will resume the discussion of these issues in Section
 digress briefly from the main thrust of this chapter in order to
 describe a slightly different kind of scatterplot.</p>
 </div>
-<div id="line-plots-for-time-series" class="section level4 unnumbered hasAnchor">
-<h4>Line plots for time series<a href="c-regression.html#line-plots-for-time-series" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="line-plots-for-time-series" class="section level4 unnumbered">
+<h4>Line plots for time series<a class="anchor" aria-label="anchor" href="#line-plots-for-time-series"><i class="fas fa-link"></i></a>
+</h4>
 <p>A very common special case of a scatterplot is one where the
 observations correspond to measurements of a variable for the same unit
 at several occasions over time. This is illustrated by the following
@@ -442,7 +230,9 @@ example (another one is Figure <a href="c-descr1.html#fig:f-houseprices">2.9</a>
 <p>Figure <a href="c-regression.html#fig:f-temperatures">8.2</a> summarises data on average annual
 temperatures over the past century in five locations. The data were
 obtained from the GISS Surface Temperature (GISTEMP) database maintained
-by the NASA Goddard Institute for Space Studies.<a href="#fn40" class="footnote-ref" id="fnref40"><sup>40</sup></a> The database
+by the NASA Goddard Institute for Space Studies.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Accessible at &lt;code&gt;data.giss.nasa.gov/gistemp/&lt;/code&gt;. The temperatures used
+here are those listed in the data base under “after combining
+sources at same location”.&lt;/p&gt;"><sup>40</sup></a> The database
 contains time series of average monthly surface temperatures from
 several hundred meterological stations across the world. The five sites
 considered here are Haparanda in Northern Sweden, Independence, Kansas
@@ -453,10 +243,15 @@ with the aim of obtaining a geographically scattered set of rural or
 small urban locations (to avoid issues with the heating effects of large
 urban areas). The temperature for each year at each location is here
 recorded as the difference from the temperature at that location in
-1903.<a href="#fn41" class="footnote-ref" id="fnref41"><sup>41</sup></a></p>
-<div class="float"><span style="display:block;" id="fig:f-temperatures"></span>
-<img src="temperplot.png" style="width:13cm" alt="Changes of average annual temperature (11-year moving averages) from 1903 in five locations. See the text for further details. Source: The GISTEMP database &lt;data.giss.nasa.gov/gistemp/&gt;" />
-<div class="figcaption">Figure 8.2: Changes of average annual temperature (11-year moving averages) from 1903 in five locations. See the text for further details. Source: The GISTEMP database &lt;data.giss.nasa.gov/gistemp/&gt;</div>
+1903.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;More specifically, the differences are between 11-year &lt;em&gt;moving
+averages&lt;/em&gt;, where each year is represented by the average of the
+temperature for that year and the five years before and five after
+it (except at the ends of the series, where fewer observations are
+used). This is done to smooth out short-term fluctuations from the
+data, so that longer-term trends become more clearly visible.&lt;/p&gt;"><sup>41</sup></a></p>
+<div class="float">
+<span style="display:block;" id="fig:f-temperatures"></span>
+<img src="temperplot.png" style="width:13cm" alt="Changes of average annual temperature (11-year moving averages) from 1903 in five locations. See the text for further details. Source: The GISTEMP database &lt;data.giss.nasa.gov/gistemp/&gt;"><div class="figcaption">Figure 8.2: Changes of average annual temperature (11-year moving averages) from 1903 in five locations. See the text for further details. Source: The GISTEMP database &lt;data.giss.nasa.gov/gistemp/&gt;</div>
 </div>
 <p>Consider first the data for Haparanda only. Here we have two variables,
 year and temperature, and 102 pairs of observations of them, one for
@@ -498,8 +293,10 @@ however, does not prevent us from using a plot like Figure
 <a href="c-regression.html#fig:f-temperatures">8.2</a> to <em>describe</em> such data.</p>
 </div>
 </div>
-<div id="ss-regression-descr-assoc" class="section level3 hasAnchor" number="8.2.3">
-<h3><span class="header-section-number">8.2.3</span> Linear associations<a href="c-regression.html#ss-regression-descr-assoc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-regression-descr-assoc" class="section level3" number="8.2.3">
+<h3>
+<span class="header-section-number">8.2.3</span> Linear associations<a class="anchor" aria-label="anchor" href="#ss-regression-descr-assoc"><i class="fas fa-link"></i></a>
+</h3>
 <p>Consider again statistically independent observations of <span class="math inline">\((X_{i},
 Y_{i})\)</span>, such as those displayed in Figure <a href="c-regression.html#fig:f-corruption1">8.1</a>. Recall
 the definition that two variables are associated if the conditional
@@ -512,9 +309,9 @@ compare conditional distributions given each of them. We will begin with
 a rather informal discussion of how this might be done. This will lead
 directly to a more precise and formal definition introduced in Section
 <a href="c-regression.html#s-regression-simple">8.3</a>.</p>
-<div class="float"><span style="display:block;" id="fig:f-corruption2"></span>
-<img src="corruption2.png" style="width:13.5cm" alt="The same scatterplot of Control of corruption vs. GDP per capita as in Figure 8.1, augmented by the best-fitting (least squares) straight line (solid line) and reference lines for two example values of Control of corruption (dotted lines)." />
-<div class="figcaption">Figure 8.3: The same scatterplot of Control of corruption vs. GDP per capita as in Figure <a href="c-regression.html#fig:f-corruption1">8.1</a>, augmented by the best-fitting (least squares) straight line (solid line) and reference lines for two example values of Control of corruption (dotted lines).</div>
+<div class="float">
+<span style="display:block;" id="fig:f-corruption2"></span>
+<img src="corruption2.png" style="width:13.5cm" alt="The same scatterplot of Control of corruption vs. GDP per capita as in Figure 8.1, augmented by the best-fitting (least squares) straight line (solid line) and reference lines for two example values of Control of corruption (dotted lines)."><div class="figcaption">Figure 8.3: The same scatterplot of Control of corruption vs. GDP per capita as in Figure <a href="c-regression.html#fig:f-corruption1">8.1</a>, augmented by the best-fitting (least squares) straight line (solid line) and reference lines for two example values of Control of corruption (dotted lines).</div>
 </div>
 <p>Figure <a href="c-regression.html#fig:f-corruption2">8.3</a> shows the same scatterplot as Figure
 <a href="c-regression.html#fig:f-corruption1">8.1</a>. Consider first one value of <span class="math inline">\(X\)</span> (Control of
@@ -525,7 +322,14 @@ value of <span class="math inline">\(X\)</span> is close to 65. These correspond
 vertical line drawn at <span class="math inline">\(X=65\)</span> in Figure <a href="c-regression.html#fig:f-corruption2">8.3</a>. This can be
 repeated for any value of <span class="math inline">\(X\)</span>; for example, Figure <a href="c-regression.html#fig:f-corruption2">8.3</a>
 also includes a vertical reference line at <span class="math inline">\(X=95\)</span>, for examining the
-conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=95\)</span>.<a href="#fn42" class="footnote-ref" id="fnref42"><sup>42</sup></a></p>
+conditional distribution of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X=95\)</span>.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;This discussion is obviously rather approximate. Strictly
+speaking, the conditional distribution of &lt;span class="math inline"&gt;\(Y\)&lt;/span&gt; given, say, &lt;span class="math inline"&gt;\(X=65\)&lt;/span&gt;
+refers only to units with &lt;span class="math inline"&gt;\(X\)&lt;/span&gt; exactly rather than approximately
+equal to 65. This, however, is difficult to illustrate using a
+sample, because most values of a continuous &lt;span class="math inline"&gt;\(X\)&lt;/span&gt; appear at most once
+in a sample. For reasons discussed later in this chapter, the
+present approximate treatment still provides a reasonable general
+idea of the nature of the kinds of associations considered here.&lt;/p&gt;'><sup>42</sup></a></p>
 <p>As in Chapter <a href="c-means.html#c-means">7</a>, associations between variables will here be
 considered almost solely in terms of differences in the <em>means</em> of the
 conditional distributions of <span class="math inline">\(Y\)</span> at different values of <span class="math inline">\(X\)</span>. For
@@ -538,7 +342,9 @@ conditional mean of <span class="math inline">\(Y\)</span> appears to increase w
 increasingly large values of <span class="math inline">\(X\)</span>, indicating that higher levels of
 Control of corruption are associated with higher average levels of GDP.
 This is often expressed by saying that the conditional mean of <span class="math inline">\(Y\)</span>
-increases when we “increase” <span class="math inline">\(X\)</span>.<a href="#fn43" class="footnote-ref" id="fnref43"><sup>43</sup></a> This is the sense in which we will
+increases when we “increase” <span class="math inline">\(X\)</span>.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;This wording is commonly used for convenience even in cases where
+the nature of &lt;span class="math inline"&gt;\(X\)&lt;/span&gt; is such that its values can never actually be
+manipulated.&lt;/p&gt;'><sup>43</sup></a> This is the sense in which we will
 examine associations between continuous variables: does the conditional
 mean of <span class="math inline">\(Y\)</span> change (increase or decrease) when we increase <span class="math inline">\(X\)</span>? If it
 does, the two variables are associated; if it does not, there is no
@@ -570,9 +376,9 @@ between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y
 examining associations between continuous variables, and often the only
 ones considered. In this chapter we too will focus almost completely on
 them.</p>
-<div class="float"><span style="display:block;" id="fig:f-scatterplots"></span>
-<img src="scatterplots.png" style="width:13.5cm" alt="Scatterplots of artificial data sets of two variables. Each plot also shows the best-fitting (least squares) straight line and the correlation coefficient r." />
-<div class="figcaption">Figure 8.4: Scatterplots of artificial data sets of two variables. Each plot also shows the best-fitting (least squares) straight line and the correlation coefficient <span class="math inline">\(r\)</span>.</div>
+<div class="float">
+<span style="display:block;" id="fig:f-scatterplots"></span>
+<img src="scatterplots.png" style="width:13.5cm" alt="Scatterplots of artificial data sets of two variables. Each plot also shows the best-fitting (least squares) straight line and the correlation coefficient r."><div class="figcaption">Figure 8.4: Scatterplots of artificial data sets of two variables. Each plot also shows the best-fitting (least squares) straight line and the correlation coefficient <span class="math inline">\(r\)</span>.</div>
 </div>
 <p>In plot (a) of Figure <a href="c-regression.html#fig:f-scatterplots">8.4</a> all the points are exactly on
 the straight line. This indicates a <em>perfect</em> linear association, where
@@ -626,9 +432,9 @@ components (<span class="math inline">\(Y\)</span>) on their age (<span class="m
 rates were high early (from quick failures of flawed components) and
 late on (from inevitable wear and tear) and lowest in between for
 “middle-aged but healthy” components.</p>
-<div class="float"><span style="display:block;" id="fig:f-corruption3"></span>
-<img src="corruption3.png" style="width:13.5cm" alt="A scatterplot of Control of corruption vs. GDP per capita for 163 countries in the Global Civil Society data set. The solid line is the best-fitting (least squares) straight line for the points." />
-<div class="figcaption">Figure 8.5: A scatterplot of Control of corruption vs. GDP per capita for 163 countries in the Global Civil Society data set. The solid line is the best-fitting (least squares) straight line for the points.</div>
+<div class="float">
+<span style="display:block;" id="fig:f-corruption3"></span>
+<img src="corruption3.png" style="width:13.5cm" alt="A scatterplot of Control of corruption vs. GDP per capita for 163 countries in the Global Civil Society data set. The solid line is the best-fitting (least squares) straight line for the points."><div class="figcaption">Figure 8.5: A scatterplot of Control of corruption vs. GDP per capita for 163 countries in the Global Civil Society data set. The solid line is the best-fitting (least squares) straight line for the points.</div>
 </div>
 <p>Returning to real data, recall that we have so far considered control of
 corruption and GDP per capita only among countries with a Control of
@@ -653,7 +459,11 @@ straight line fitted to the plot identifies the overall positive
 association, but cannot describe its nonlinearity. This example further
 illustrates how scatterplots can be used to examine relationships
 between variables and to assess whether they can be best described as
-linear or nonlinear associations.<a href="#fn44" class="footnote-ref" id="fnref44"><sup>44</sup></a></p>
+linear or nonlinear associations.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;In this particular example, a more closely linear association is
+obtained by considering the logarithm of GDP as the response
+variable instead of GDP itself. This approach, which is common in
+dealing with skewed variables such as income, is, however, beyond
+the scope of this course.&lt;/p&gt;"><sup>44</sup></a></p>
 <p>So far we have said nothing about how the exact location and direction
 of the straight lines shown in the figures have been selected. These are
 determined so that the fitted line is in a certain sense the best
@@ -664,8 +474,10 @@ description of them until Section <a href="c-regression.html#ss-regression-simpl
 now we can treat the line simply as a visual summary of the linear
 association in a scatterplot.</p>
 </div>
-<div id="ss-regression-descr-corr" class="section level3 hasAnchor" number="8.2.4">
-<h3><span class="header-section-number">8.2.4</span> Measures of association: covariance and correlation<a href="c-regression.html#ss-regression-descr-corr" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-regression-descr-corr" class="section level3" number="8.2.4">
+<h3>
+<span class="header-section-number">8.2.4</span> Measures of association: covariance and correlation<a class="anchor" aria-label="anchor" href="#ss-regression-descr-corr"><i class="fas fa-link"></i></a>
+</h3>
 <p>A scatterplot is a very powerful tool for examining sample associations
 of pairs of variables in detail. Sometimes, however, this is more than
 we really need for an initial summary of a data set, especially if there
@@ -713,7 +525,9 @@ This is the (sample) <strong>correlation</strong> coefficient, or
 correlation for short, between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>. It is also often (e.g. in
 SPSS) known as <em>Pearson’s</em> correlation coefficient after Karl Pearson
 (of the <span class="math inline">\(\chi^{2}\)</span> test, see first footnote in Chapter <a href="c-tables.html#c-tables">4</a>), although both
-the word and the statistic are really due to Sir Francis Galton.<a href="#fn45" class="footnote-ref" id="fnref45"><sup>45</sup></a></p>
+the word and the statistic are really due to Sir Francis Galton.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Galton, F. (1888). “Co-relations and their measurement, chiefly
+from anthropometric data”. &lt;em&gt;Proceedings of the Royal Society of
+London&lt;/em&gt;, &lt;strong&gt;45&lt;/strong&gt;, 135–145.&lt;/p&gt;"><sup>45</sup></a></p>
 <p>The properties of the correlation coefficient can be described by going
 through the same list as for the <span class="math inline">\(\gamma\)</span> coefficient in Section
 <a href="c-descr1.html#ss-descr1-2cat-gamma">2.4.5</a>. While doing so, it is useful to refer to the
@@ -769,12 +583,12 @@ upper triangle and once in the lower. The triangles are separated by a
 list of ones on the diagonal of the matrix. This simply indicates that
 the correlation of any variable with itself is 1, which is true by
 definition and thus of no real interest.</p>
-<table>
-<caption><span id="tab:t-civilsoc-r">Table 8.1: </span>Correlation matrix of six continuous variables in the Global Civil
+<div class="inline-table"><table class="table table-sm">
+<caption>
+<span id="tab:t-civilsoc-r">Table 8.1: </span>Correlation matrix of six continuous variables in the Global Civil
 Society data set. See Example 8.1 for more information
 on the variables.</caption>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="right">Variable</th>
 <th align="right">GDP</th>
 <th align="right">Gini</th>
@@ -782,8 +596,7 @@ on the variables.</caption>
 <th align="right">Corrupt. </th>
 <th align="right">School</th>
 <th align="right">IMR</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="right">GDP per capita [GDP ]</td>
@@ -840,7 +653,7 @@ on the variables.</caption>
 <td align="right">1</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>All of the observed associations in this example are in unsurprising
 directions. For example, School enrolment is positively correlated with
 GDP, Political rights and Control of corruption, and negatively
@@ -876,10 +689,14 @@ provides a different set of tools for inference on population
 associations.</p>
 </div>
 </div>
-<div id="s-regression-simple" class="section level2 hasAnchor" number="8.3">
-<h2><span class="header-section-number">8.3</span> Simple linear regression models<a href="c-regression.html#s-regression-simple" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="ss-regression-simple-intro" class="section level3 hasAnchor" number="8.3.1">
-<h3><span class="header-section-number">8.3.1</span> Introduction<a href="c-regression.html#ss-regression-simple-intro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="s-regression-simple" class="section level2" number="8.3">
+<h2>
+<span class="header-section-number">8.3</span> Simple linear regression models<a class="anchor" aria-label="anchor" href="#s-regression-simple"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ss-regression-simple-intro" class="section level3" number="8.3.1">
+<h3>
+<span class="header-section-number">8.3.1</span> Introduction<a class="anchor" aria-label="anchor" href="#ss-regression-simple-intro"><i class="fas fa-link"></i></a>
+</h3>
 <p>The rest of this course is devoted to the method of linear regression
 modelling. Its purpose is the analysis of associations in cases where
 the response variable is a continuous, interval level variable, and the
@@ -925,27 +742,28 @@ countries for which all of the five variables are recorded. For this
 reason the correlations in Table <a href="c-regression.html#tab:t-imrvars">8.2</a> differ slightly from
 those in Table <a href="c-regression.html#tab:t-civilsoc-r">8.1</a>, where each correlation was calculated
 for all the countries with non-missing values of that pair of variables.</p>
-<div class="float"><span style="display:block;" id="fig:f-imr1"></span>
-<img src="imr1.png" style="width:13.5cm" alt="A scatterplot of net primary school enrolment ratio vs. Infant mortality rate for countries in the Global Civil Society data set (n=111). The solid line is the best-fitting (least squares) straight line for the points." />
-<div class="figcaption">Figure 8.6: A scatterplot of net primary school enrolment ratio vs. Infant mortality rate for countries in the Global Civil Society data set (<span class="math inline">\(n=111\)</span>). The solid line is the best-fitting (least squares) straight line for the points.</div>
+<div class="float">
+<span style="display:block;" id="fig:f-imr1"></span>
+<img src="imr1.png" style="width:13.5cm" alt="A scatterplot of net primary school enrolment ratio vs. Infant mortality rate for countries in the Global Civil Society data set (n=111). The solid line is the best-fitting (least squares) straight line for the points."><div class="figcaption">Figure 8.6: A scatterplot of net primary school enrolment ratio vs. Infant mortality rate for countries in the Global Civil Society data set (<span class="math inline">\(n=111\)</span>). The solid line is the best-fitting (least squares) straight line for the points.</div>
 </div>
-<table style="width:98%;">
-<caption><span id="tab:t-imrvars">Table 8.2: </span>Summary statistics for Infant Mortality Rate (IMR) and explanatory
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<caption>
+<span id="tab:t-imrvars">Table 8.2: </span>Summary statistics for Infant Mortality Rate (IMR) and explanatory
 variables for it considered in the examples of Sections
 <a href="c-regression.html#s-regression-simple">8.3</a> and <a href="c-regression.html#s-regression-multiple">8.5</a> (<span class="math inline">\(n=111\)</span>).
 See Example 8.1 for further information on the
 variables.</caption>
 <colgroup>
-<col width="53%" />
-<col width="7%" />
-<col width="11%" />
-<col width="12%" />
-<col width="12%" />
+<col width="53%">
+<col width="7%">
+<col width="11%">
+<col width="12%">
+<col width="12%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th></th>
-<th align="right"><br />
+<th align="right">
+<br>
 IMR</th>
 <th align="right">School
 enrolment</th>
@@ -953,8 +771,7 @@ enrolment</th>
 corruption</th>
 <th align="right">Income
 inequality</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td><em>Summary statistics</em></td>
@@ -1055,10 +872,12 @@ inequality</th>
 <td align="right">32.0</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
-<div id="ss-regression-simple-def" class="section level3 hasAnchor" number="8.3.2">
-<h3><span class="header-section-number">8.3.2</span> Definition of the model<a href="c-regression.html#ss-regression-simple-def" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-regression-simple-def" class="section level3" number="8.3.2">
+<h3>
+<span class="header-section-number">8.3.2</span> Definition of the model<a class="anchor" aria-label="anchor" href="#ss-regression-simple-def"><i class="fas fa-link"></i></a>
+</h3>
 <p>The simple linear regression model defined in this section is a
 statistical model for a continuous, interval level response variable <span class="math inline">\(Y\)</span>
 given a single explanatory variable <span class="math inline">\(X\)</span>, such as IMR given School
@@ -1122,24 +941,33 @@ model</strong>:</p>
 to <em>multiple</em> linear regression models which will have more
 than one.</p></li>
 <li><p><strong>Linear</strong> because it specifies a linear association between <span class="math inline">\(X\)</span> and
-<span class="math inline">\(Y\)</span>.<a href="#fn46" class="footnote-ref" id="fnref46"><sup>46</sup></a></p></li>
+<span class="math inline">\(Y\)</span>.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;This is slightly misleading: what actually matters in general is
+that the conditional mean is a linear function of the &lt;em&gt;parameters&lt;/em&gt;
+&lt;span class="math inline"&gt;\(\alpha\)&lt;/span&gt; and &lt;span class="math inline"&gt;\(\beta\)&lt;/span&gt;. This need not concern us at this stage.&lt;/p&gt;'><sup>46</sup></a></p></li>
 <li><p><strong>Regression</strong>: This is now an established part of the name of the
 model, although the origins of the word are not central to the use
-of the model.<a href="#fn47" class="footnote-ref" id="fnref47"><sup>47</sup></a></p></li>
-<li><p><strong>Model</strong>, because this is a statistical model in the sense
+of the model.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Galton, F. (1886). “Regression towards mediocrity in hereditary
+stature”. &lt;em&gt;Journal of the Anthropological Institute&lt;/em&gt;, &lt;strong&gt;15&lt;/strong&gt;,
+246–263. The original context is essentially the one discussed on
+courses on research design as “regression toward the mean”.&lt;/p&gt;"><sup>47</sup></a></p></li>
+<li>
+<p><strong>Model</strong>, because this is a statistical model in the sense
 discussed in the middle of Section <a href="c-contd.html#ss-contd-probdistrs-general">6.3.1</a>. In other words, the model is
 always only a simplified abstraction of the true, immeasurably
 complex processes which determine the values of <span class="math inline">\(Y\)</span>. Nevertheless,
 it is believed that a well-chosen model can be useful for explaining
 and predicting observed values of <span class="math inline">\(Y\)</span>. This spirit is captured by
-the well-known statement by the statistician George Box:<a href="#fn48" class="footnote-ref" id="fnref48"><sup>48</sup></a></p>
+the well-known statement by the statistician George Box:<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;This exact phrase apparently first appears in Box, G.E.P. (1979).
+Robustness in the strategy of scientific model building. In Launer,
+R.L. and Wilkinson, G.N., &lt;em&gt;Robustness in Statistics&lt;/em&gt;, pp. 201–236.&lt;/p&gt;"><sup>48</sup></a></p>
 <blockquote>
 <p><em>All models are wrong, but some are useful.</em></p>
 </blockquote>
 <p>A model like this has the advantage that it reduces the examination
 of associations in the population to estimation and inference on a
 small number of model parameters, in the case of the simple linear
-regression model just <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\sigma^{2}\)</span>.</p></li>
+regression model just <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\sigma^{2}\)</span>.</p>
+</li>
 </ul>
 <p>Of course, not all models are equally appropriate for given data, and
 some will be both wrong and useless. The results from a model should
@@ -1150,8 +978,10 @@ can be partly done by examining whether the scatterplot between <span class="mat
 further comments on the assessment of model adequacy will be given in
 Section <a href="c-regression.html#s-regression-rest">8.7</a>.</p>
 </div>
-<div id="ss-regression-simple-int" class="section level3 hasAnchor" number="8.3.3">
-<h3><span class="header-section-number">8.3.3</span> Interpretation of the model parameters<a href="c-regression.html#ss-regression-simple-int" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-regression-simple-int" class="section level3" number="8.3.3">
+<h3>
+<span class="header-section-number">8.3.3</span> Interpretation of the model parameters<a class="anchor" aria-label="anchor" href="#ss-regression-simple-int"><i class="fas fa-link"></i></a>
+</h3>
 <p>The simple linear regression model (<a href="c-regression.html#eq:slinmodel">(8.4)</a>) has three
 parameters, <span class="math inline">\(\alpha\)</span>, <span class="math inline">\(\beta\)</span> and <span class="math inline">\(\sigma^{2}\)</span>. Each of these has its
 own interpretation, which are explained in this section. Sometimes it
@@ -1163,9 +993,9 @@ to illustrate the interpretation of the <em>population</em> parameters in the
 model, they are of course only estimates (of a kind explained in the
 next section) of those parameters. Other parts of the SPSS output will
 be explained later in this chapter.</p>
-<div class="float"><span style="display:block;" id="fig:f-spss-linreg"></span>
-<img src="spsslinreg.png" style="width:15.5cm" alt="SPSS output for a simple linear regression model for Infant mortality rate given School enrolment in the Global Civil Society data." />
-<div class="figcaption">Figure 8.7: SPSS output for a simple linear regression model for Infant mortality rate given School enrolment in the Global Civil Society data.</div>
+<div class="float">
+<span style="display:block;" id="fig:f-spss-linreg"></span>
+<img src="spsslinreg.png" style="width:15.5cm" alt="SPSS output for a simple linear regression model for Infant mortality rate given School enrolment in the Global Civil Society data."><div class="figcaption">Figure 8.7: SPSS output for a simple linear regression model for Infant mortality rate given School enrolment in the Global Civil Society data.</div>
 </div>
 <p>According to the model, the conditional mean (also often known as the
 conditional <strong>expected value</strong>) of <span class="math inline">\(Y\)</span> given <span class="math inline">\(X\)</span> in the population is
@@ -1186,11 +1016,11 @@ can be derived as follows:</p>
 <li><p>When <span class="math inline">\(X=0\)</span>, the mean of <span class="math inline">\(Y\)</span> is
 <span class="math inline">\(\mu=\alpha+\beta X=\alpha+\beta\times 0
 =\alpha+0=\alpha\)</span>.</p></li>
-<li><p>Compare two observations, one with value <span class="math inline">\(X\)</span> of the explanatory
+<li>
+<p>Compare two observations, one with value <span class="math inline">\(X\)</span> of the explanatory
 variable, and the other with one unit more, i.e. <span class="math inline">\(X+1\)</span>. The
 corresponding means of <span class="math inline">\(Y\)</span> are</p>
-<table>
-<tbody>
+<table class="table table-sm"><tbody>
 <tr class="odd">
 <td align="right">with <span class="math inline">\(X+1\)</span>:</td>
 <td align="left"><span class="math inline">\(\mu\)</span></td>
@@ -1209,15 +1039,15 @@ corresponding means of <span class="math inline">\(Y\)</span> are</p>
 <td align="left"></td>
 <td align="left"><span class="math inline">\(\beta\)</span></td>
 </tr>
-</tbody>
-</table></li>
+</tbody></table>
+</li>
 </ul>
 <p>which completes the proof of the claims above — Q.E.D. In case you
 prefer a graphical summary, this is given in Figure
 <a href="c-regression.html#fig:f-linmod-params">8.8</a>.</p>
-<div class="float"><span style="display:block;" id="fig:f-linmod-params"></span>
-<img src="lmparams.png" style="width:12.5cm" alt="Illustration of the interpretation of the regression coefficients of a simple linear regression model." />
-<div class="figcaption">Figure 8.8: Illustration of the interpretation of the regression coefficients of a simple linear regression model.</div>
+<div class="float">
+<span style="display:block;" id="fig:f-linmod-params"></span>
+<img src="lmparams.png" style="width:12.5cm" alt="Illustration of the interpretation of the regression coefficients of a simple linear regression model."><div class="figcaption">Figure 8.8: Illustration of the interpretation of the regression coefficients of a simple linear regression model.</div>
 </div>
 <p>The most important parameter of the model, and usually the only one
 really discussed in interpreting the results, is <span class="math inline">\(\beta\)</span>, the regression
@@ -1318,8 +1148,10 @@ example the estimate of <span class="math inline">\(\sigma\)</span> is 2.6173 (a
 will be a necessary component of some parts of the analysis discussed
 below.</p>
 </div>
-<div id="ss-regression-simple-est" class="section level3 hasAnchor" number="8.3.4">
-<h3><span class="header-section-number">8.3.4</span> Estimation of the parameters<a href="c-regression.html#ss-regression-simple-est" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-regression-simple-est" class="section level3" number="8.3.4">
+<h3>
+<span class="header-section-number">8.3.4</span> Estimation of the parameters<a class="anchor" aria-label="anchor" href="#ss-regression-simple-est"><i class="fas fa-link"></i></a>
+</h3>
 <p>Since the regression coefficients <span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span> and the residual
 standard deviation <span class="math inline">\(\sigma\)</span> are unknown population parameters, we will
 need to use the observed data to obtain sensible estimates for them. How
@@ -1354,9 +1186,9 @@ the residual <span class="math inline">\(Y_{i}-\hat{Y}_{i}=14.1-12.0=2.1\)</span
 value is here larger than the fitted value, the residual is positive and
 the observed value is above the fitted line, as shown in Figure
 <a href="c-regression.html#fig:f-residuals">8.9</a>.</p>
-<div class="float"><span style="display:block;" id="fig:f-residuals"></span>
-<img src="lmresids.png" style="width:13.5cm" alt="Illustration of the quantities involved in the definitions of least squares estimates and the coefficient of determination R^{2}. See the text for explanation." />
-<div class="figcaption">Figure 8.9: Illustration of the quantities involved in the definitions of least squares estimates and the coefficient of determination <span class="math inline">\(R^{2}\)</span>. See the text for explanation.</div>
+<div class="float">
+<span style="display:block;" id="fig:f-residuals"></span>
+<img src="lmresids.png" style="width:13.5cm" alt="Illustration of the quantities involved in the definitions of least squares estimates and the coefficient of determination R^{2}. See the text for explanation."><div class="figcaption">Figure 8.9: Illustration of the quantities involved in the definitions of least squares estimates and the coefficient of determination <span class="math inline">\(R^{2}\)</span>. See the text for explanation.</div>
 </div>
 <!--
 $Y_{i}-\hat{Y}_{i}$
@@ -1415,7 +1247,11 @@ where <span class="math inline">\(\bar{Y}\)</span>, <span class="math inline">\(
 usual sample means, standard deviations and covariances for <span class="math inline">\(Y\)</span> and <span class="math inline">\(X\)</span>.
 These are known as the <strong>least squares estimates</strong> of the regression
 coefficients (or as Ordinary Least Squares or OLS estimates), and the
-reasoning used to obtain them is the <strong>method of least squares</strong>.<a href="#fn49" class="footnote-ref" id="fnref49"><sup>49</sup></a>
+reasoning used to obtain them is the <strong>method of least squares</strong>.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;This is another old idea. Different approaches to the problem of
+fitting curves to observations were gradually developed by Tobias
+Mayer, Rudjer Bošković and Pierre Simon Laplace from the 1750s
+onwards, and the method of least squares itself was presented by
+Adrien Marie Legendre in 1805.&lt;/p&gt;"><sup>49</sup></a>
 Least squares estimates are almost always used for linear regression
 models, and they are the ones displayed by SPSS and other software. For
 our model for IMR given School enrolment, the estimates are the
@@ -1478,8 +1314,9 @@ observations, <span class="math inline">\(k=0\)</span> and <span class="math inl
 (<a href="c-regression.html#eq:sigma-linreg">(8.7)</a>) shows that <span class="math inline">\(\hat{\sigma}\)</span> is then equal to the
 usual sample standard deviation <span class="math inline">\(s_{y}\)</span> of <span class="math inline">\(Y_{i}\)</span>.</p></li>
 </ul>
-<div id="coefficient-of-determination-r2" class="section level4 unnumbered hasAnchor">
-<h4>Coefficient of determination (<span class="math inline">\(R^{2}\)</span>)<a href="c-regression.html#coefficient-of-determination-r2" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="coefficient-of-determination-r2" class="section level4 unnumbered">
+<h4>Coefficient of determination (<span class="math inline">\(R^{2}\)</span>)<a class="anchor" aria-label="anchor" href="#coefficient-of-determination-r2"><i class="fas fa-link"></i></a>
+</h4>
 <!--{#p-R2}-->
 <p>The <strong>coefficient of determination</strong>, more commonly known as
 <span class="math inline">\(\mathbf{R^{2}}\)</span> (“R-squared”), is a measure of association very often
@@ -1513,17 +1350,18 @@ with the regression model, instead of predicting <span class="math inline">\(\ba
 observations. In slightly informal language, <span class="math inline">\(SSM\)</span> is the part of the
 total variation <span class="math inline">\(TSS\)</span> “explained” by the fitted regression model. In
 this language, (<a href="c-regression.html#eq:ss-decomp">(8.8)</a>) can be stated as</p>
-<table style="width:98%;">
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
 <colgroup>
-<col width="29%" />
-<col width="7%" />
-<col width="25%" />
-<col width="7%" />
-<col width="28%" />
+<col width="29%">
+<col width="7%">
+<col width="25%">
+<col width="7%">
+<col width="28%">
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="center">Total variation of <span class="math inline">\(Y\)</span></td>
+<td align="center">Total variation of <span class="math inline">\(Y\)</span>
+</td>
 <td align="center">=</td>
 <td align="center">Variation explained
 by regression</td>
@@ -1538,7 +1376,7 @@ by regression</td>
 <td align="center"><span class="math inline">\(SSE\)</span></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>The <span class="math inline">\(R^{2}\)</span> statistic is defined as
 <span class="math display" id="eq:R2">\[\begin{equation}
 R^{2}= \frac{TSS-SSE}{TSS} = 1-\frac{SSE}{TSS}=1-\frac{\sum (Y_{i}-\hat{Y}_{i})^{2}}{\sum (Y_{i}-\bar{Y})^{2}}.
@@ -1618,8 +1456,10 @@ has large residual standard error and thus small <span class="math inline">\(R^{
 </ul>
 </div>
 </div>
-<div id="ss-regression-simple-inf" class="section level3 hasAnchor" number="8.3.5">
-<h3><span class="header-section-number">8.3.5</span> Statistical inference for the regression coefficients<a href="c-regression.html#ss-regression-simple-inf" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-regression-simple-inf" class="section level3" number="8.3.5">
+<h3>
+<span class="header-section-number">8.3.5</span> Statistical inference for the regression coefficients<a class="anchor" aria-label="anchor" href="#ss-regression-simple-inf"><i class="fas fa-link"></i></a>
+</h3>
 <p>The only parameter of the simple linear regression model for which we
 will describe methods of statistical inference is the slope coefficient
 <span class="math inline">\(\beta\)</span>. Tests and confidence intervals for population values of the
@@ -1649,7 +1489,10 @@ statistic for <span class="math inline">\(\rho=0\)</span>. A test of <span class
 as a test of no correlation in the population.</p>
 <p>The tests and confidence intervals involve both the estimate
 <span class="math inline">\(\hat{\beta}\)</span> and its estimated standard error, which we will here
-denote <span class="math inline">\(\hat{\text{se}}(\hat{\beta})\)</span>.<a href="#fn50" class="footnote-ref" id="fnref50"><sup>50</sup></a> It is calculated as
+denote <span class="math inline">\(\hat{\text{se}}(\hat{\beta})\)</span>.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;It would have been more consistent with related notation used in
+Chapter &lt;a href="c-means.html#c-means"&gt;7&lt;/a&gt; to denote it something like
+&lt;span class="math inline"&gt;\(\hat{\sigma}_{\hat{\beta}}\)&lt;/span&gt;, but this would later become somewhat
+cumbersome.&lt;/p&gt;'><sup>50</sup></a> It is calculated as
 <span class="math display" id="eq:sebeta">\[\begin{equation}
 \hat{\text{se}}(\hat{\beta})=\frac{\hat{\sigma}}{\sqrt{\sum\left(X_{i}-\bar{X}\right)^{2}}}=\frac{\hat{\sigma}}{s_{x}\sqrt{n-1}}
 \tag{8.12}
@@ -1753,17 +1596,19 @@ points.</p>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
-<div id="s-regression-causality" class="section level2 hasAnchor" number="8.4">
-<h2><span class="header-section-number">8.4</span> Interlude: Association and causality<a href="c-regression.html#s-regression-causality" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="s-regression-causality" class="section level2" number="8.4">
+<h2>
+<span class="header-section-number">8.4</span> Interlude: Association and causality<a class="anchor" aria-label="anchor" href="#s-regression-causality"><i class="fas fa-link"></i></a>
+</h2>
 <blockquote>
-<p>Felix, qui potuit rerum cognoscere causas,<br />
-atque metus omnis et inexorabile fatum<br />
+<p>Felix, qui potuit rerum cognoscere causas,<br>
+atque metus omnis et inexorabile fatum<br>
 subiecit pedibus strepitumque Acherontis avari</p>
-<p>Blessed is he whose mind had power to probe<br />
-The causes of things and trample underfoot<br />
-All terrors and inexorable fate<br />
+<p>Blessed is he whose mind had power to probe<br>
+The causes of things and trample underfoot<br>
+All terrors and inexorable fate<br>
 And the clamour of devouring Acheron</p>
-<p>(Publius Vergilius Maro: <em>Georgica</em> (37-30 BCE), 2.490-492;<br />
+<p>(Publius Vergilius Maro: <em>Georgica</em> (37-30 BCE), 2.490-492;<br>
 translation by L. P. Wilkinson)</p>
 </blockquote>
 <p>These verses from Virgil’s Georgics are the source of the LSE motto —
@@ -1787,7 +1632,8 @@ about causal effects.</p>
 <p>Definition and analysis of causal effects are considered in more detail
 on the course MY400 and in much greater depth still on MY457. Here we
 will discuss only the following simplified empirical version of the
-question.<a href="#fn51" class="footnote-ref" id="fnref51"><sup>51</sup></a> Suppose we are considering two variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, and
+question.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Here adapted from a discussion in Agresti and Finlay,
+&lt;em&gt;Statistical Methods for the Social Sciences&lt;/em&gt; (1997).&lt;/p&gt;"><sup>51</sup></a> Suppose we are considering two variables <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, and
 suspect that <span class="math inline">\(X\)</span> is a cause of <span class="math inline">\(Y\)</span>. To support such a claim, we must be
 able to show that the following three conditions are satisfied:</p>
 <ol style="list-style-type: decimal">
@@ -1831,9 +1677,9 @@ as in the graph in Figure <a href="c-regression.html#fig:f-xyzspurious">8.10</a>
 <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, they will appear to be associated, but the connection is
 not a causal one. Instead, it is a <strong>spurious association</strong> induced by
 the dependence on both variables on the common cause <span class="math inline">\(Z\)</span>.</p>
-<div class="float"><span style="display:block;" id="fig:f-xyzspurious"></span>
-<img src="xyzspurious.png" style="width:3.7cm" alt="A graphical representation of a spurious association between X and Y, explained by dependence on a common cause Z." />
-<div class="figcaption">Figure 8.10: A graphical representation of a spurious association between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, explained by dependence on a common cause <span class="math inline">\(Z\)</span>.</div>
+<div class="float">
+<span style="display:block;" id="fig:f-xyzspurious"></span>
+<img src="xyzspurious.png" style="width:3.7cm" alt="A graphical representation of a spurious association between X and Y, explained by dependence on a common cause Z."><div class="figcaption">Figure 8.10: A graphical representation of a spurious association between <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>, explained by dependence on a common cause <span class="math inline">\(Z\)</span>.</div>
 </div>
 <p>To illustrate a spurious association with a silly but memorable teaching
 example, suppose that we examine a sample of house fires in London, and
@@ -1885,10 +1731,14 @@ When all the variables are categorical, one simple way of achieving the
 control is analysis of multiway contingency tables, which is described
 in Chapter <a href="c-3waytables.html#c-3waytables">9</a>.</p>
 </div>
-<div id="s-regression-multiple" class="section level2 hasAnchor" number="8.5">
-<h2><span class="header-section-number">8.5</span> Multiple linear regression models<a href="c-regression.html#s-regression-multiple" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="ss-regression-multiple-intro" class="section level3 hasAnchor" number="8.5.1">
-<h3><span class="header-section-number">8.5.1</span> Introduction<a href="c-regression.html#ss-regression-multiple-intro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="s-regression-multiple" class="section level2" number="8.5">
+<h2>
+<span class="header-section-number">8.5</span> Multiple linear regression models<a class="anchor" aria-label="anchor" href="#s-regression-multiple"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ss-regression-multiple-intro" class="section level3" number="8.5.1">
+<h3>
+<span class="header-section-number">8.5.1</span> Introduction<a class="anchor" aria-label="anchor" href="#ss-regression-multiple-intro"><i class="fas fa-link"></i></a>
+</h3>
 <p>Simple linear regression becomes multiple linear regression when more
 than one explanatory variable is included in the model. How this is done
 is explained in Section <a href="c-regression.html#ss-regression-multiple-def">8.5.2</a> below. The
@@ -1917,31 +1767,32 @@ format in which results of regression models are typically reported.
 Presenting raw computer output such as that in Figure
 <a href="c-regression.html#fig:f-spss-linreg">8.7</a> is normally not appropriate in formal research
 reports.</p>
-<table style="width:98%;">
-<caption><span id="tab:t-imr-m2">Table 8.3: </span>Response variable: Infant Mortality Rate (%). Results for a linear regression model for Infant mortality rate
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<caption>
+<span id="tab:t-imr-m2">Table 8.3: </span>Response variable: Infant Mortality Rate (%). Results for a linear regression model for Infant mortality rate
 given three explanatory variables in the Global Civil Society
-data. <span class="math inline">\(\hat{\sigma}=2.23\)</span>; <span class="math inline">\(R^{2}=0.692\)</span>; <span class="math inline">\(n=111\)</span>; <span class="math inline">\(df=107\)</span></caption>
+data. <span class="math inline">\(\hat{\sigma}=2.23\)</span>; <span class="math inline">\(R^{2}=0.692\)</span>; <span class="math inline">\(n=111\)</span>; <span class="math inline">\(df=107\)</span>
+</caption>
 <colgroup>
-<col width="27%" />
-<col width="15%" />
-<col width="11%" />
-<col width="8%" />
-<col width="12%" />
-<col width="21%" />
+<col width="27%">
+<col width="15%">
+<col width="11%">
+<col width="8%">
+<col width="12%">
+<col width="21%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="left">Explanatory
 variable</th>
 <th align="right">Coefficient</th>
 <th align="right">Standard
 error</th>
 <th align="right"><span class="math inline">\(t\)</span></th>
-<th align="right"><span class="math inline">\(P\)</span>-value</th>
+<th align="right">
+<span class="math inline">\(P\)</span>-value</th>
 <th align="center">95 % Confidence
 interval</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">Constant</td>
@@ -1976,10 +1827,12 @@ interval</th>
 <td align="center">(0.011; 0.098)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 </div>
-<div id="ss-regression-multiple-def" class="section level3 hasAnchor" number="8.5.2">
-<h3><span class="header-section-number">8.5.2</span> Definition of the model<a href="c-regression.html#ss-regression-multiple-def" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-regression-multiple-def" class="section level3" number="8.5.2">
+<h3>
+<span class="header-section-number">8.5.2</span> Definition of the model<a class="anchor" aria-label="anchor" href="#ss-regression-multiple-def"><i class="fas fa-link"></i></a>
+</h3>
 <p>Having multiple explanatory variables requires a slight extension of
 notation. Let us denote the number of explanatory variables in the model
 by <span class="math inline">\(k\)</span>; in our example <span class="math inline">\(k=3\)</span>. Individual explanatory variables are then
@@ -2036,8 +1889,10 @@ not usually the only or main criterion for selecting a good regression
 model, for reasons discussed in Section
 <a href="c-regression.html#ss-regression-multiple-beta">8.5.4</a> below.</p>
 </div>
-<div id="ss-regression-multiple-unchanged" class="section level3 hasAnchor" number="8.5.3">
-<h3><span class="header-section-number">8.5.3</span> Unchanged elements from simple linear models<a href="c-regression.html#ss-regression-multiple-unchanged" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-regression-multiple-unchanged" class="section level3" number="8.5.3">
+<h3>
+<span class="header-section-number">8.5.3</span> Unchanged elements from simple linear models<a class="anchor" aria-label="anchor" href="#ss-regression-multiple-unchanged"><i class="fas fa-link"></i></a>
+</h3>
 <p>As mentioned at the beginning of this section, most elements of the
 multiple linear regression model are the same or very similar as for the
 simple model, and require little further explanation:</p>
@@ -2055,7 +1910,8 @@ of the variability of <span class="math inline">\(Y\)</span> around the regressi
 assumes that <span class="math inline">\(\sigma\)</span> is the same at all values of the explanatory
 variables. In Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>, the estimate of <span class="math inline">\(\sigma\)</span>
 is 2.23.</p></li>
-<li><p><strong>Estimates of the regression coefficients</strong> are here denoted with
+<li>
+<p><strong>Estimates of the regression coefficients</strong> are here denoted with
 hats as <span class="math inline">\(\hat{\alpha}\)</span> and <span class="math inline">\(\hat{\beta}_{1}, \hat{\beta}_{2}, \dots,
 \hat{\beta}_{k}\)</span>, and fitted (predicted) values for <span class="math inline">\(Y_{i}\)</span> are
 given by
@@ -2075,7 +1931,10 @@ hyperplane through a high-dimensional cloud of points rather than
 the best-fitting straight line through a
 two-dimensional scatterplot.</p>
 <p>With more than one explanatory variable, the computational formulas
-for the estimates become difficult to write down<a href="#fn52" class="footnote-ref" id="fnref52"><sup>52</sup></a> and
+for the estimates become difficult to write down<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;At least until we adopt extended, so-called matrix notation. In
+this, the least squares estimates are expressible simply as
+&lt;span class=&quot;math inline&quot;&gt;\(\hat{\boldsymbol{\beta}}=
+(\mathbf{X}'\mathbf{X})^{-1}(\mathbf{X}'\mathbf{Y})\)&lt;/span&gt;.&lt;/p&gt;"><sup>52</sup></a> and
 essentially impossible to calculate by hand. This is not a problem
 in practice, as they are easily computed by statistical software
 such as SPSS. In Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>, the least squares estimates
@@ -2086,7 +1945,8 @@ similar format is adopted in SPSS output, where the
 “<strong>Coefficients</strong>” table looks very similar to the main part of
 Table <a href="c-regression.html#tab:t-imr-m2">8.3</a>. The arrangement of other parts of SPSS output
 for multiple linear regression is essentially unchanged from the
-format shown in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a>.</p></li>
+format shown in Figure <a href="c-regression.html#fig:f-spss-linreg">8.7</a>.</p>
+</li>
 <li><p>Predicted values for <span class="math inline">\(Y\)</span> can be calculated from (<a href="c-regression.html#eq:Yhat">(8.17)</a>) for any
 set of values of the explanatory variables (whether those observed
 in the data or not, as long as extrapolation outside their observed
@@ -2128,10 +1988,13 @@ increased <span class="math inline">\(R^{2}\)</span> by 12.5 percentage points, 
 reasonably large increase.</p></li>
 </ul>
 </div>
-<div id="ss-regression-multiple-beta" class="section level3 hasAnchor" number="8.5.4">
-<h3><span class="header-section-number">8.5.4</span> Interpretation and inference for the regression coefficients<a href="c-regression.html#ss-regression-multiple-beta" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="interpretation" class="section level4 unnumbered hasAnchor">
-<h4>Interpretation<a href="c-regression.html#interpretation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="ss-regression-multiple-beta" class="section level3" number="8.5.4">
+<h3>
+<span class="header-section-number">8.5.4</span> Interpretation and inference for the regression coefficients<a class="anchor" aria-label="anchor" href="#ss-regression-multiple-beta"><i class="fas fa-link"></i></a>
+</h3>
+<div id="interpretation" class="section level4 unnumbered">
+<h4>Interpretation<a class="anchor" aria-label="anchor" href="#interpretation"><i class="fas fa-link"></i></a>
+</h4>
 <p>The concept of statistical control was outlined in Section
 <a href="c-regression.html#s-regression-causality">8.4</a> above. In essence, its idea is to examine
 the association between a response variable and a particular explanatory
@@ -2226,8 +2089,9 @@ example, the estimated effect of School enrolment was qualitatively
 unaffected by controlling for the other variables, and decreased in
 magnitude from -0.179 to -0.139.</p>
 </div>
-<div id="inference" class="section level4 unnumbered hasAnchor">
-<h4>Inference<a href="c-regression.html#inference" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="inference" class="section level4 unnumbered">
+<h4>Inference<a class="anchor" aria-label="anchor" href="#inference"><i class="fas fa-link"></i></a>
+</h4>
 <p>Inference for the regression coefficients in a multiple linear model
 differs from that for the simple model in interpretation but not in
 execution. Let <span class="math inline">\(\hat{\beta}_{j}\)</span> denote the estimated coefficient of an
@@ -2307,10 +2171,14 @@ intervals for the coefficients in our example (where <span class="math inline">\
 </div>
 </div>
 </div>
-<div id="s-regression-dummies" class="section level2 hasAnchor" number="8.6">
-<h2><span class="header-section-number">8.6</span> Including categorical explanatory variables<a href="c-regression.html#s-regression-dummies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="ss-regression-dummies-def" class="section level3 hasAnchor" number="8.6.1">
-<h3><span class="header-section-number">8.6.1</span> Dummy variables<a href="c-regression.html#ss-regression-dummies-def" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="s-regression-dummies" class="section level2" number="8.6">
+<h2>
+<span class="header-section-number">8.6</span> Including categorical explanatory variables<a class="anchor" aria-label="anchor" href="#s-regression-dummies"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ss-regression-dummies-def" class="section level3" number="8.6.1">
+<h3>
+<span class="header-section-number">8.6.1</span> Dummy variables<a class="anchor" aria-label="anchor" href="#ss-regression-dummies-def"><i class="fas fa-link"></i></a>
+</h3>
 <p>Our models for Infant mortality rate so far did not include some more
 basic characteristics of the countries than school enrolment, corruption
 and income inequality. In particular, it seems desirable to control for
@@ -2353,7 +2221,7 @@ variable with only two values, 0 and 1. Its value is 1 if a unit is in a
 particular category of a categorical variable, and 0 if it is not in
 that category. For example, we can define for each country the variable
 <span class="math display">\[D_{m}=\begin{cases}
-1 &amp; \text{if Income level is ``Middle&#39;&#39;} \\
+1 &amp; \text{if Income level is ``Middle''} \\
 0 &amp; \text{otherwise.}
 \end{cases}\]</span> This would typically be referred to as something like
 “dummy for middle income level”. Note that the label <span class="math inline">\(D_{m}\)</span> used here
@@ -2362,7 +2230,7 @@ remember. Dummy variables will be treated below as regular explanatory
 variables, and we could denote them as <span class="math inline">\(X\)</span>s just like all the others. A
 dummy for high income level is defined similarly as
 <span class="math display">\[D_{h}=\begin{cases}
-1 &amp; \text{if Income level is ``High&#39;&#39;} \\
+1 &amp; \text{if Income level is ``High''} \\
 0 &amp; \text{otherwise.}
 \end{cases}\]</span> The two variables <span class="math inline">\(D_{m}\)</span> and <span class="math inline">\(D_{h}\)</span> are enough to
 identify the income level of any country. If a country is in the
@@ -2389,30 +2257,30 @@ inference are obtained exactly as before even when some of the
 explanatory variables are dummy variables. The only aspect which
 requires some further explanation is the interpretation of the
 coefficients of the dummy variables.</p>
-<table style="width:98%;">
-<caption><span id="tab:t-imr-m3">Table 8.4: </span>Response variable: Infant Mortality Rate (%). Results for a linear regression model for Infant mortality rate in
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<caption>
+<span id="tab:t-imr-m3">Table 8.4: </span>Response variable: Infant Mortality Rate (%). Results for a linear regression model for Infant mortality rate in
 the Global Civil Society data, given the three explanatory variables
 in Table <a href="c-regression.html#tab:t-imr-m2">8.3</a> and Income level in three groups. <span class="math inline">\(\hat{\sigma}=2.01\)</span>; <span class="math inline">\(R^{2}=0.753\)</span>; <span class="math inline">\(n=111\)</span>; <span class="math inline">\(df=105\)</span>.</caption>
 <colgroup>
-<col width="29%" />
-<col width="15%" />
-<col width="8%" />
-<col width="11%" />
-<col width="13%" />
-<col width="19%" />
+<col width="29%">
+<col width="15%">
+<col width="8%">
+<col width="11%">
+<col width="13%">
+<col width="19%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="left">Explanatory variable</th>
 <th align="right">Coefficient</th>
 <th align="right">Std. 
 error</th>
 <th align="right"><span class="math inline">\(t\)</span></th>
-<th align="right"><span class="math inline">\(P\)</span>-value</th>
+<th align="right">
+<span class="math inline">\(P\)</span>-value</th>
 <th align="center">95 % Conf. 
 interval</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">Constant</td>
@@ -2476,7 +2344,7 @@ interval</th>
 -1.235)\)</span></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Recall that the regression coefficient of a continuous explanatory
 variable <span class="math inline">\(X\)</span> is the expected change in the response variable when <span class="math inline">\(X\)</span> is
 increased by one unit, holding all other explanatory variables constant.
@@ -2640,8 +2508,10 @@ Although these connections are unfortunately often somewhat obscured by
 changes in language and notation, trying to understand them is very
 useful for effective learning of statistics.</p>
 </div>
-<div id="ss-regression-dummies-example" class="section level3 hasAnchor" number="8.6.2">
-<h3><span class="header-section-number">8.6.2</span> A second example<a href="c-regression.html#ss-regression-dummies-example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-regression-dummies-example" class="section level3" number="8.6.2">
+<h3>
+<span class="header-section-number">8.6.2</span> A second example<a class="anchor" aria-label="anchor" href="#ss-regression-dummies-example"><i class="fas fa-link"></i></a>
+</h3>
 <p>Because the analysis of the models for infant mortality was presented
 piecemeal to accompany the introduction of different elements of linear
 regression, an overall picture of that example may have been difficult
@@ -2650,7 +2520,9 @@ concise manner. It is particularly an illustration of the use of dummy
 variables, as most of the explanatory variables are categorical. The
 example concerns the relationship between minimum wage and employment,
 and uses data originally collected and analysed by David Card and Alan
-Krueger.<a href="#fn53" class="footnote-ref" id="fnref53"><sup>53</sup></a> Most of the choices of analyses and variables considered
+Krueger.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Card, D. and Krueger, A. B. (1994). Minimum wages and employment:
+A case study of the fast-food industry in New Jersey and
+Pennsylvania. &lt;em&gt;The American Economic Review&lt;/em&gt; &lt;strong&gt;84&lt;/strong&gt;, 772–793.&lt;/p&gt;"><sup>53</sup></a> Most of the choices of analyses and variables considered
 here are based on those of Card and Krueger. Their article should be
 consulted for discussion and more detailed analyses.</p>
 <p>A minimum wage of $5.05 per hour came into effect in the U.S. state of
@@ -2704,23 +2576,20 @@ partial control for other factors affecting the labour market, which
 might have had a differential impact on different types of restaurants
 over the study period. Summary statistics for the variables are shown in
 Table <a href="#tab:t-fastfood-descr">8.5</a>.</p>
-<table style="width:97%;">
+<div class="inline-table"><table style="width:97%;" class="table table-sm">
 <colgroup>
-<col width="24%" />
-<col width="8%" />
-<col width="10%" />
-<col width="17%" />
-<col width="20%" />
-<col width="16%" />
+<col width="24%">
+<col width="8%">
+<col width="10%">
+<col width="17%">
+<col width="20%">
+<col width="16%">
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><br />
-</td>
-<td align="right"><br />
-</td>
-<td align="right"><br />
-</td>
+<td align="left"><br></td>
+<td align="right"><br></td>
+<td align="right"><br></td>
 <td align="right">Minimum-</td>
 <td align="center">wage variable</td>
 <td align="center">Response
@@ -2813,38 +2682,38 @@ change
 <td align="center"><span class="math inline">\(+0.94\)</span></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>:(#tab:t-fastfood-descr)Summary statistics for the variables considered in the minimum wage
 example of Section <a href="c-regression.html#ss-regression-dummies-example">8.6.2</a>. Mean employment change: Among unaffected restaurants: <span class="math inline">\(-2.93\)</span>; Among affected restaurants: <span class="math inline">\(+0.68\)</span>.</p>
-<table style="width:98%;">
-<caption><span id="tab:t-fastfood-models">Table 8.6: </span>Response variable: Change in Full-time equivalent employment. Two fitted models for Employment change given exposure to minimum
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<caption>
+<span id="tab:t-fastfood-models">Table 8.6: </span>Response variable: Change in Full-time equivalent employment. Two fitted models for Employment change given exposure to minimum
 wage increase and control variables. See the text for further
 details.</caption>
 <colgroup>
-<col width="34%" />
-<col width="15%" />
-<col width="15%" />
-<col width="15%" />
-<col width="15%" />
+<col width="34%">
+<col width="15%">
+<col width="15%">
+<col width="15%">
+<col width="15%">
 </colgroup>
-<thead>
-<tr class="header">
-<th align="left"><br />
-</th>
+<thead><tr class="header">
+<th align="left"><br></th>
 <th align="right">Model (1)
 Coefficient
 (std error)</th>
-<th align="right"><br />
+<th align="right">
+<br>
 (<span class="math inline">\(t\)</span>)
 <span class="math inline">\(P\)</span>-value</th>
 <th align="right">Model (2)
 Coefficient
 (std error)</th>
-<th align="right"><br />
+<th align="right">
+<br>
 (<span class="math inline">\(t\)</span>)
 <span class="math inline">\(P\)</span>-value</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">Constant</td>
@@ -2966,7 +2835,7 @@ Coefficient
 <td align="right"></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Table <a href="c-regression.html#tab:t-fastfood-models">8.6</a> shows results for two linear regression
 models for Employment change, one using the dummy for affected
 restaurants and one using Wage gap as an explanatory variable. Both
@@ -3059,8 +2928,10 @@ tentative explanations for this finding, but do not present any of them
 as definitive.</p>
 </div>
 </div>
-<div id="s-regression-rest" class="section level2 hasAnchor" number="8.7">
-<h2><span class="header-section-number">8.7</span> Other issues in linear regression modelling<a href="c-regression.html#s-regression-rest" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="s-regression-rest" class="section level2" number="8.7">
+<h2>
+<span class="header-section-number">8.7</span> Other issues in linear regression modelling<a class="anchor" aria-label="anchor" href="#s-regression-rest"><i class="fas fa-link"></i></a>
+</h2>
 <p>The material in this chapter provides a reasonably self-contained
 introduction to linear regression models. However, it is not possible
 for a course like this to cover comprehensively all aspects of the
@@ -3087,7 +2958,9 @@ explanatory variables are added to the model. As a sample statistic,
 proportion of variation of <span class="math inline">\(Y\)</span> explained as standard <span class="math inline">\(R^{2}\)</span>.</p></li>
 <li><p>The last two columns of the “<strong>ANOVA</strong>” (Analysis of Variance) table
 show the test statistic and <span class="math inline">\(P\)</span>-value for the so-called
-<span class="math inline">\(F\)</span>-test.<a href="#fn54" class="footnote-ref" id="fnref54"><sup>54</sup></a> The null hypothesis for this is that the regression
+<span class="math inline">\(F\)</span>-test.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;The sampling distribution of this test is the &lt;span class="math inline"&gt;\(F\)&lt;/span&gt; distribution.
+The letter in both refers to Sir Ronald Fisher, the founder of
+modern statistics.&lt;/p&gt;'><sup>54</sup></a> The null hypothesis for this is that the regression
 coefficients of <em>all</em> the explanatory variables are zero,
 i.e. <span class="math inline">\(\beta_{1}=\beta_{2}=\dots=\beta_{k}=0\)</span>. In the case of simple
 regression (<span class="math inline">\(k=1\)</span>), this is equivalent to the <span class="math inline">\(t\)</span>-test for
@@ -3105,7 +2978,8 @@ example, this could be used in the example of Table <a href="c-regression.html#t
 to test if income level had no effect on IMR, i.e. if the
 coefficients of the dummies for <em>both</em> middle and high income
 were zero.</p></li>
-<li><p>The “Standardized Coefficients/Beta” in the “<strong>Coefficients</strong>” table
+<li>
+<p>The “Standardized Coefficients/Beta” in the “<strong>Coefficients</strong>” table
 are defined as <span class="math inline">\((s_{xj}/s_{y})\hat{\beta}_{j}\)</span>, where
 <span class="math inline">\(\hat{\beta}_{j}\)</span> is the estimated coefficient of <span class="math inline">\(X_{j}\)</span>, and
 <span class="math inline">\(s_{xj}\)</span> and <span class="math inline">\(s_{y}\)</span> are sample standard deviations of <span class="math inline">\(X_{j}\)</span> and
@@ -3147,7 +3021,8 @@ be manipulated at all). The values of the unstandardized or
 standardized coefficients of these explanatory variables can
 certainly be compared, but it is not clear what statements about the
 relative sizes of the effects of “increasing” them would
-really mean.</p></li>
+really mean.</p>
+</li>
 </ul>
 <p>A further course on linear regression (e.g. first half of MY452) will
 typically examine the topics covered on this course in more detail, and
@@ -3183,139 +3058,76 @@ fitted as standard linear regression models with appropriate use of
 dummy variables, but the conventional terminology and notation for
 ANOVA and ANCOVA are somewhat different from the ones used here.</p></li>
 </ul>
+</div>
+</div>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="c-means.html"><span class="header-section-number">7</span> Analysis of population means</a></div>
+<div class="next"><a href="c-3waytables.html"><span class="header-section-number">9</span> Analysis of 3-way contingency tables</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#c-regression"><span class="header-section-number">8</span> Linear regression models</a></li>
+<li><a class="nav-link" href="#s-regression-intro"><span class="header-section-number">8.1</span> Introduction</a></li>
+<li>
+<a class="nav-link" href="#s-regression-descr"><span class="header-section-number">8.2</span> Describing association between two continuous variables</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ss-regression-descr-intro"><span class="header-section-number">8.2.1</span> Introduction</a></li>
+<li><a class="nav-link" href="#ss-regression-descr-plots"><span class="header-section-number">8.2.2</span> Graphical methods</a></li>
+<li><a class="nav-link" href="#ss-regression-descr-assoc"><span class="header-section-number">8.2.3</span> Linear associations</a></li>
+<li><a class="nav-link" href="#ss-regression-descr-corr"><span class="header-section-number">8.2.4</span> Measures of association: covariance and correlation</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#s-regression-simple"><span class="header-section-number">8.3</span> Simple linear regression models</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ss-regression-simple-intro"><span class="header-section-number">8.3.1</span> Introduction</a></li>
+<li><a class="nav-link" href="#ss-regression-simple-def"><span class="header-section-number">8.3.2</span> Definition of the model</a></li>
+<li><a class="nav-link" href="#ss-regression-simple-int"><span class="header-section-number">8.3.3</span> Interpretation of the model parameters</a></li>
+<li><a class="nav-link" href="#ss-regression-simple-est"><span class="header-section-number">8.3.4</span> Estimation of the parameters</a></li>
+<li><a class="nav-link" href="#ss-regression-simple-inf"><span class="header-section-number">8.3.5</span> Statistical inference for the regression coefficients</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#s-regression-causality"><span class="header-section-number">8.4</span> Interlude: Association and causality</a></li>
+<li>
+<a class="nav-link" href="#s-regression-multiple"><span class="header-section-number">8.5</span> Multiple linear regression models</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ss-regression-multiple-intro"><span class="header-section-number">8.5.1</span> Introduction</a></li>
+<li><a class="nav-link" href="#ss-regression-multiple-def"><span class="header-section-number">8.5.2</span> Definition of the model</a></li>
+<li><a class="nav-link" href="#ss-regression-multiple-unchanged"><span class="header-section-number">8.5.3</span> Unchanged elements from simple linear models</a></li>
+<li><a class="nav-link" href="#ss-regression-multiple-beta"><span class="header-section-number">8.5.4</span> Interpretation and inference for the regression coefficients</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#s-regression-dummies"><span class="header-section-number">8.6</span> Including categorical explanatory variables</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ss-regression-dummies-def"><span class="header-section-number">8.6.1</span> Dummy variables</a></li>
+<li><a class="nav-link" href="#ss-regression-dummies-example"><span class="header-section-number">8.6.2</span> A second example</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#s-regression-rest"><span class="header-section-number">8.7</span> Other issues in linear regression modelling</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/LSE-Methodology/MY451/blob/master/08-MY451-regression.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/LSE-Methodology/MY451/edit/master/08-MY451-regression.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
 
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="39">
-<li id="fn39"><p>Anheier, H., Glasius, M. and Kaldor, M. (eds.) (2005). <em>Global
-Civil Society 2004/5</em>. London: Sage. The book gives detailed
-references to the indices considered here. Many thanks to Sally
-Stares for providing the data in an electronic form.<a href="c-regression.html#fnref39" class="footnote-back">↩︎</a></p></li>
-<li id="fn40"><p>Accessible at <code>data.giss.nasa.gov/gistemp/</code>. The temperatures used
-here are those listed in the data base under “after combining
-sources at same location”.<a href="c-regression.html#fnref40" class="footnote-back">↩︎</a></p></li>
-<li id="fn41"><p>More specifically, the differences are between 11-year <em>moving
-averages</em>, where each year is represented by the average of the
-temperature for that year and the five years before and five after
-it (except at the ends of the series, where fewer observations are
-used). This is done to smooth out short-term fluctuations from the
-data, so that longer-term trends become more clearly visible.<a href="c-regression.html#fnref41" class="footnote-back">↩︎</a></p></li>
-<li id="fn42"><p>This discussion is obviously rather approximate. Strictly
-speaking, the conditional distribution of <span class="math inline">\(Y\)</span> given, say, <span class="math inline">\(X=65\)</span>
-refers only to units with <span class="math inline">\(X\)</span> exactly rather than approximately
-equal to 65. This, however, is difficult to illustrate using a
-sample, because most values of a continuous <span class="math inline">\(X\)</span> appear at most once
-in a sample. For reasons discussed later in this chapter, the
-present approximate treatment still provides a reasonable general
-idea of the nature of the kinds of associations considered here.<a href="c-regression.html#fnref42" class="footnote-back">↩︎</a></p></li>
-<li id="fn43"><p>This wording is commonly used for convenience even in cases where
-the nature of <span class="math inline">\(X\)</span> is such that its values can never actually be
-manipulated.<a href="c-regression.html#fnref43" class="footnote-back">↩︎</a></p></li>
-<li id="fn44"><p>In this particular example, a more closely linear association is
-obtained by considering the logarithm of GDP as the response
-variable instead of GDP itself. This approach, which is common in
-dealing with skewed variables such as income, is, however, beyond
-the scope of this course.<a href="c-regression.html#fnref44" class="footnote-back">↩︎</a></p></li>
-<li id="fn45"><p>Galton, F. (1888). “Co-relations and their measurement, chiefly
-from anthropometric data”. <em>Proceedings of the Royal Society of
-London</em>, <strong>45</strong>, 135–145.<a href="c-regression.html#fnref45" class="footnote-back">↩︎</a></p></li>
-<li id="fn46"><p>This is slightly misleading: what actually matters in general is
-that the conditional mean is a linear function of the <em>parameters</em>
-<span class="math inline">\(\alpha\)</span> and <span class="math inline">\(\beta\)</span>. This need not concern us at this stage.<a href="c-regression.html#fnref46" class="footnote-back">↩︎</a></p></li>
-<li id="fn47"><p>Galton, F. (1886). “Regression towards mediocrity in hereditary
-stature”. <em>Journal of the Anthropological Institute</em>, <strong>15</strong>,
-246–263. The original context is essentially the one discussed on
-courses on research design as “regression toward the mean”.<a href="c-regression.html#fnref47" class="footnote-back">↩︎</a></p></li>
-<li id="fn48"><p>This exact phrase apparently first appears in Box, G.E.P. (1979).
-Robustness in the strategy of scientific model building. In Launer,
-R.L. and Wilkinson, G.N., <em>Robustness in Statistics</em>, pp. 201–236.<a href="c-regression.html#fnref48" class="footnote-back">↩︎</a></p></li>
-<li id="fn49"><p>This is another old idea. Different approaches to the problem of
-fitting curves to observations were gradually developed by Tobias
-Mayer, Rudjer Bošković and Pierre Simon Laplace from the 1750s
-onwards, and the method of least squares itself was presented by
-Adrien Marie Legendre in 1805.<a href="c-regression.html#fnref49" class="footnote-back">↩︎</a></p></li>
-<li id="fn50"><p>It would have been more consistent with related notation used in
-Chapter <a href="c-means.html#c-means">7</a> to denote it something like
-<span class="math inline">\(\hat{\sigma}_{\hat{\beta}}\)</span>, but this would later become somewhat
-cumbersome.<a href="c-regression.html#fnref50" class="footnote-back">↩︎</a></p></li>
-<li id="fn51"><p>Here adapted from a discussion in Agresti and Finlay,
-<em>Statistical Methods for the Social Sciences</em> (1997).<a href="c-regression.html#fnref51" class="footnote-back">↩︎</a></p></li>
-<li id="fn52"><p>At least until we adopt extended, so-called matrix notation. In
-this, the least squares estimates are expressible simply as
-<span class="math inline">\(\hat{\boldsymbol{\beta}}=
-(\mathbf{X}&#39;\mathbf{X})^{-1}(\mathbf{X}&#39;\mathbf{Y})\)</span>.<a href="c-regression.html#fnref52" class="footnote-back">↩︎</a></p></li>
-<li id="fn53"><p>Card, D. and Krueger, A. B. (1994). Minimum wages and employment:
-A case study of the fast-food industry in New Jersey and
-Pennsylvania. <em>The American Economic Review</em> <strong>84</strong>, 772–793.<a href="c-regression.html#fnref53" class="footnote-back">↩︎</a></p></li>
-<li id="fn54"><p>The sampling distribution of this test is the <span class="math inline">\(F\)</span> distribution.
-The letter in both refers to Sir Ronald Fisher, the founder of
-modern statistics.<a href="c-regression.html#fnref54" class="footnote-back">↩︎</a></p></li>
-</ol>
-</div>
-            </section>
+</div> <!-- .container -->
 
-          </div>
-        </div>
-      </div>
-<a href="c-means.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="c-3waytables.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>MY451 Introduction to Quantitative Analysis</strong>" was written by Jouni Kuha, Department of Methodology, London School of Economics and Political Science. </p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-  },
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": "https://github.com/LSE-Methodology/MY451/edit/master/08-MY451-regression.Rmd",
-    "text": "Edit"
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "section"
-  }
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -3327,7 +3139,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>

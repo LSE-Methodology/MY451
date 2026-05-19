@@ -1,298 +1,75 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 6 Continuous variables: Population and sampling distributions | MY451 Introduction to Quantitative Analysis</title>
-  <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="generator" content="bookdown 0.44 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Chapter 6 Continuous variables: Population and sampling distributions | MY451 Introduction to Quantitative Analysis" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="github-repo" content="LSE-Methodology/MY451" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 6 Continuous variables: Population and sampling distributions | MY451 Introduction to Quantitative Analysis" />
-  
-  <meta name="twitter:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  
-
-<meta name="author" content="Jouni Kuha, Department of Methodology, London School of Economics and Political Science" />
-
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="c-probs.html"/>
-<link rel="next" href="c-means.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 6 Continuous variables: Population and sampling distributions | MY451 Introduction to Quantitative Analysis</title>
+<meta name="author" content="Jouni Kuha, Department of Methodology, London School of Economics and Political Science">
+<meta name="description" content="6.1 Introduction This chapter serves both as an explanation of some topics that were skimmed over previously, and as preparation for later chapters. Its central theme is probability distributions...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Chapter 6 Continuous variables: Population and sampling distributions | MY451 Introduction to Quantitative Analysis">
+<meta property="og:type" content="book">
+<meta property="og:description" content="6.1 Introduction This chapter serves both as an explanation of some topics that were skimmed over previously, and as preparation for later chapters. Its central theme is probability distributions...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 6 Continuous variables: Population and sampling distributions | MY451 Introduction to Quantitative Analysis">
+<meta name="twitter:description" content="6.1 Introduction This chapter serves both as an explanation of some topics that were skimmed over previously, and as preparation for later chapters. Its central theme is probability distributions...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.10.0/transition.js"></script><script src="libs/bs3compat-0.10.0/tabs.js"></script><script src="libs/bs3compat-0.10.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">MY451 Introduction to Quantitative Analysis</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course information</a></li>
-<li class="chapter" data-level="1" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
-<ul>
-<li class="chapter" data-level="1.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>1.1</b> What is the purpose of this course?</a></li>
-<li class="chapter" data-level="1.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>1.2</b> Some basic definitions</a>
-<ul>
-<li class="chapter" data-level="1.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>1.2.1</b> Subjects and variables</a></li>
-<li class="chapter" data-level="1.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>1.2.2</b> Types of variables</a></li>
-<li class="chapter" data-level="1.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>1.2.3</b> Description and inference</a></li>
-<li class="chapter" data-level="1.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>1.2.4</b> Association and causation</a></li>
-</ul></li>
-<li class="chapter" data-level="1.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>1.3</b> Outline of the course</a></li>
-<li class="chapter" data-level="1.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>1.4</b> The use of mathematics and computing</a>
-<ul>
-<li class="chapter" data-level="1.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>1.4.1</b> Symbolic mathematics and mathematical notation</a></li>
-<li class="chapter" data-level="1.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>1.4.2</b> Computing</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>2</b> Descriptive statistics</a>
-<ul>
-<li class="chapter" data-level="2.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>2.1</b> Introduction</a></li>
-<li class="chapter" data-level="2.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>2.2</b> Example data sets</a></li>
-<li class="chapter" data-level="2.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>2.3</b> Single categorical variable</a>
-<ul>
-<li class="chapter" data-level="2.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>2.3.1</b> Describing the sample distribution</a></li>
-<li class="chapter" data-level="2.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>2.3.2</b> Tabular methods: Tables of frequencies</a></li>
-<li class="chapter" data-level="2.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>2.3.3</b> Graphical methods: Bar charts</a></li>
-<li class="chapter" data-level="2.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>2.3.4</b> Simple descriptive statistics</a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>2.4</b> Two categorical variables</a>
-<ul>
-<li class="chapter" data-level="2.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>2.4.1</b> Two-way contingency tables</a></li>
-<li class="chapter" data-level="2.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>2.4.2</b> Conditional proportions</a></li>
-<li class="chapter" data-level="2.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>2.4.3</b> Conditional distributions and associations</a></li>
-<li class="chapter" data-level="2.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>2.4.4</b> Describing an association using conditional proportions</a></li>
-<li class="chapter" data-level="2.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>2.4.5</b> A measure of association for ordinal variables</a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>2.5</b> Sample distributions of a single continuous variable</a>
-<ul>
-<li class="chapter" data-level="2.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>2.5.1</b> Tabular methods</a></li>
-<li class="chapter" data-level="2.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>2.5.2</b> Graphical methods</a></li>
-</ul></li>
-<li class="chapter" data-level="2.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>2.6</b> Numerical descriptive statistics</a>
-<ul>
-<li class="chapter" data-level="2.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>2.6.1</b> Measures of central tendency</a></li>
-<li class="chapter" data-level="2.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>2.6.2</b> Measures of variation</a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>2.7</b> Associations which involve continuous variables</a></li>
-<li class="chapter" data-level="2.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>2.8</b> Presentation of tables and graphs</a></li>
-<li class="chapter" data-level="2.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>2.9</b> Appendix: Country data</a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>3</b> Samples and populations</a>
-<ul>
-<li class="chapter" data-level="3.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction</a></li>
-<li class="chapter" data-level="3.2" data-path="c-samples.html"><a href="c-samples.html#s-samples-finpops"><i class="fa fa-check"></i><b>3.2</b> Finite populations</a></li>
-<li class="chapter" data-level="3.3" data-path="c-samples.html"><a href="c-samples.html#s-samples-samples"><i class="fa fa-check"></i><b>3.3</b> Samples from finite populations</a></li>
-<li class="chapter" data-level="3.4" data-path="c-samples.html"><a href="c-samples.html#s-samples-infpops"><i class="fa fa-check"></i><b>3.4</b> Conceptual and infinite populations</a></li>
-<li class="chapter" data-level="3.5" data-path="c-samples.html"><a href="c-samples.html#s-samples-popdistrs"><i class="fa fa-check"></i><b>3.5</b> Population distributions</a></li>
-<li class="chapter" data-level="3.6" data-path="c-samples.html"><a href="c-samples.html#s-samples-inference"><i class="fa fa-check"></i><b>3.6</b> Need for statistical inference</a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="c-tables.html"><a href="c-tables.html"><i class="fa fa-check"></i><b>4</b> Statistical inference for two-way tables</a>
-<ul>
-<li class="chapter" data-level="4.1" data-path="c-tables.html"><a href="c-tables.html#s-tables-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction</a></li>
-<li class="chapter" data-level="4.2" data-path="c-tables.html"><a href="c-tables.html#s-tables-tests"><i class="fa fa-check"></i><b>4.2</b> Significance tests</a></li>
-<li class="chapter" data-level="4.3" data-path="c-tables.html"><a href="c-tables.html#s-tables-chi2test"><i class="fa fa-check"></i><b>4.3</b> The chi-square test of independence</a>
-<ul>
-<li class="chapter" data-level="4.3.1" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-null"><i class="fa fa-check"></i><b>4.3.1</b> Hypotheses</a></li>
-<li class="chapter" data-level="4.3.2" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-ass"><i class="fa fa-check"></i><b>4.3.2</b> Assumptions of a significance test</a></li>
-<li class="chapter" data-level="4.3.3" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-stat"><i class="fa fa-check"></i><b>4.3.3</b> The test statistic</a></li>
-<li class="chapter" data-level="4.3.4" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-sdist"><i class="fa fa-check"></i><b>4.3.4</b> The sampling distribution of the test statistic</a></li>
-<li class="chapter" data-level="4.3.5" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-Pval"><i class="fa fa-check"></i><b>4.3.5</b> The P-value</a></li>
-<li class="chapter" data-level="4.3.6" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-conclusions"><i class="fa fa-check"></i><b>4.3.6</b> Drawing conclusions from a test</a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="c-tables.html"><a href="c-tables.html#s-tables-summary"><i class="fa fa-check"></i><b>4.4</b> Summary of the chi-square test of independence</a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="c-probs.html"><a href="c-probs.html"><i class="fa fa-check"></i><b>5</b> Inference for population proportions</a>
-<ul>
-<li class="chapter" data-level="5.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-intro"><i class="fa fa-check"></i><b>5.1</b> Introduction</a></li>
-<li class="chapter" data-level="5.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-examples"><i class="fa fa-check"></i><b>5.2</b> Examples</a></li>
-<li class="chapter" data-level="5.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-distribution"><i class="fa fa-check"></i><b>5.3</b> Probability distribution of a dichotomous variable</a></li>
-<li class="chapter" data-level="5.4" data-path="c-probs.html"><a href="c-probs.html#s-probs-pointest"><i class="fa fa-check"></i><b>5.4</b> Point estimation of a population probability</a></li>
-<li class="chapter" data-level="5.5" data-path="c-probs.html"><a href="c-probs.html#s-probs-test1sample"><i class="fa fa-check"></i><b>5.5</b> Significance test of a single proportion</a>
-<ul>
-<li class="chapter" data-level="5.5.1" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-hypotheses"><i class="fa fa-check"></i><b>5.5.1</b> Null and alternative hypotheses</a></li>
-<li class="chapter" data-level="5.5.2" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-teststatistic"><i class="fa fa-check"></i><b>5.5.2</b> The test statistic</a></li>
-<li class="chapter" data-level="5.5.3" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-samplingd"><i class="fa fa-check"></i><b>5.5.3</b> The sampling distribution of the test statistic and P-values</a></li>
-<li class="chapter" data-level="5.5.4" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-conclusions"><i class="fa fa-check"></i><b>5.5.4</b> Conclusions from the test</a></li>
-<li class="chapter" data-level="5.5.5" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-summary"><i class="fa fa-check"></i><b>5.5.5</b> Summary of the test</a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci"><i class="fa fa-check"></i><b>5.6</b> Confidence interval for a single proportion</a>
-<ul>
-<li class="chapter" data-level="5.6.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-intro"><i class="fa fa-check"></i><b>5.6.1</b> Introduction</a></li>
-<li class="chapter" data-level="5.6.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-calc"><i class="fa fa-check"></i><b>5.6.2</b> Calculation of the interval</a></li>
-<li class="chapter" data-level="5.6.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>5.6.3</b> Interpretation of confidence intervals</a></li>
-<li class="chapter" data-level="5.6.4" data-path="c-probs.html"><a href="c-probs.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>5.6.4</b> Confidence intervals vs. significance tests</a></li>
-</ul></li>
-<li class="chapter" data-level="5.7" data-path="c-probs.html"><a href="c-probs.html#s-probs-2samples"><i class="fa fa-check"></i><b>5.7</b> Inference for comparing two proportions</a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="c-contd.html"><a href="c-contd.html"><i class="fa fa-check"></i><b>6</b> Continuous variables: Population and sampling distributions</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="c-contd.html"><a href="c-contd.html#s-contd-intro"><i class="fa fa-check"></i><b>6.1</b> Introduction</a></li>
-<li class="chapter" data-level="6.2" data-path="c-contd.html"><a href="c-contd.html#s-contd-popdistrs"><i class="fa fa-check"></i><b>6.2</b> Population distributions of continuous variables</a>
-<ul>
-<li class="chapter" data-level="6.2.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-popdistrs-params"><i class="fa fa-check"></i><b>6.2.1</b> Population parameters and their point estimates</a></li>
-</ul></li>
-<li class="chapter" data-level="6.3" data-path="c-contd.html"><a href="c-contd.html#s-contd-probdistrs"><i class="fa fa-check"></i><b>6.3</b> Probability distributions of continuous variables</a>
-<ul>
-<li class="chapter" data-level="6.3.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-general"><i class="fa fa-check"></i><b>6.3.1</b> General comments</a></li>
-<li class="chapter" data-level="6.3.2" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-normal"><i class="fa fa-check"></i><b>6.3.2</b> The normal distribution as a population distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="c-contd.html"><a href="c-contd.html#s-contd-clt"><i class="fa fa-check"></i><b>6.4</b> The normal distribution as a sampling distribution</a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="c-means.html"><a href="c-means.html"><i class="fa fa-check"></i><b>7</b> Analysis of population means</a>
-<ul>
-<li class="chapter" data-level="7.1" data-path="c-means.html"><a href="c-means.html#s-means-intro"><i class="fa fa-check"></i><b>7.1</b> Introduction and examples</a></li>
-<li class="chapter" data-level="7.2" data-path="c-means.html"><a href="c-means.html#s-means-descr"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics for comparisons of groups</a>
-<ul>
-<li class="chapter" data-level="7.2.1" data-path="c-means.html"><a href="c-means.html#ss-means-descr-graphs"><i class="fa fa-check"></i><b>7.2.1</b> Graphical methods of comparing sample distributions</a></li>
-<li class="chapter" data-level="7.2.2" data-path="c-means.html"><a href="c-means.html#ss-means-descr-tables"><i class="fa fa-check"></i><b>7.2.2</b> Comparing summary statistics</a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="c-means.html"><a href="c-means.html#s-means-inference"><i class="fa fa-check"></i><b>7.3</b> Inference for two means from independent samples</a>
-<ul>
-<li class="chapter" data-level="7.3.1" data-path="c-means.html"><a href="c-means.html#ss-means-inference-intro"><i class="fa fa-check"></i><b>7.3.1</b> Aims of the analysis</a></li>
-<li class="chapter" data-level="7.3.2" data-path="c-means.html"><a href="c-means.html#ss-means-inference-test"><i class="fa fa-check"></i><b>7.3.2</b> Significance testing: The two-sample t-test</a></li>
-<li class="chapter" data-level="7.3.3" data-path="c-means.html"><a href="c-means.html#ss-means-inference-ci"><i class="fa fa-check"></i><b>7.3.3</b> Confidence intervals for a difference of two means</a></li>
-<li class="chapter" data-level="7.3.4" data-path="c-means.html"><a href="c-means.html#ss-means-inference-variants"><i class="fa fa-check"></i><b>7.3.4</b> Variants of the test and confidence interval</a></li>
-</ul></li>
-<li class="chapter" data-level="7.4" data-path="c-means.html"><a href="c-means.html#s-means-1sample"><i class="fa fa-check"></i><b>7.4</b> Tests and confidence intervals for a single mean</a></li>
-<li class="chapter" data-level="7.5" data-path="c-means.html"><a href="c-means.html#s-means-dependent"><i class="fa fa-check"></i><b>7.5</b> Inference for dependent samples</a></li>
-<li class="chapter" data-level="7.6" data-path="c-means.html"><a href="c-means.html#s-means-tests3"><i class="fa fa-check"></i><b>7.6</b> Further comments on significance tests</a>
-<ul>
-<li class="chapter" data-level="7.6.1" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-errors"><i class="fa fa-check"></i><b>7.6.1</b> Different types of error</a></li>
-<li class="chapter" data-level="7.6.2" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-power"><i class="fa fa-check"></i><b>7.6.2</b> Power of significance tests</a></li>
-<li class="chapter" data-level="7.6.3" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-importance"><i class="fa fa-check"></i><b>7.6.3</b> Significance vs. importance</a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="c-regression.html"><a href="c-regression.html"><i class="fa fa-check"></i><b>8</b> Linear regression models</a>
-<ul>
-<li class="chapter" data-level="8.1" data-path="c-regression.html"><a href="c-regression.html#s-regression-intro"><i class="fa fa-check"></i><b>8.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.2" data-path="c-regression.html"><a href="c-regression.html#s-regression-descr"><i class="fa fa-check"></i><b>8.2</b> Describing association between two continuous variables</a>
-<ul>
-<li class="chapter" data-level="8.2.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-intro"><i class="fa fa-check"></i><b>8.2.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.2.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-plots"><i class="fa fa-check"></i><b>8.2.2</b> Graphical methods</a></li>
-<li class="chapter" data-level="8.2.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-assoc"><i class="fa fa-check"></i><b>8.2.3</b> Linear associations</a></li>
-<li class="chapter" data-level="8.2.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-corr"><i class="fa fa-check"></i><b>8.2.4</b> Measures of association: covariance and correlation</a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="c-regression.html"><a href="c-regression.html#s-regression-simple"><i class="fa fa-check"></i><b>8.3</b> Simple linear regression models</a>
-<ul>
-<li class="chapter" data-level="8.3.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-intro"><i class="fa fa-check"></i><b>8.3.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.3.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-def"><i class="fa fa-check"></i><b>8.3.2</b> Definition of the model</a></li>
-<li class="chapter" data-level="8.3.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-int"><i class="fa fa-check"></i><b>8.3.3</b> Interpretation of the model parameters</a></li>
-<li class="chapter" data-level="8.3.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-est"><i class="fa fa-check"></i><b>8.3.4</b> Estimation of the parameters</a></li>
-<li class="chapter" data-level="8.3.5" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-inf"><i class="fa fa-check"></i><b>8.3.5</b> Statistical inference for the regression coefficients</a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="c-regression.html"><a href="c-regression.html#s-regression-causality"><i class="fa fa-check"></i><b>8.4</b> Interlude: Association and causality</a></li>
-<li class="chapter" data-level="8.5" data-path="c-regression.html"><a href="c-regression.html#s-regression-multiple"><i class="fa fa-check"></i><b>8.5</b> Multiple linear regression models</a>
-<ul>
-<li class="chapter" data-level="8.5.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-intro"><i class="fa fa-check"></i><b>8.5.1</b> Introduction</a></li>
-<li class="chapter" data-level="8.5.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-def"><i class="fa fa-check"></i><b>8.5.2</b> Definition of the model</a></li>
-<li class="chapter" data-level="8.5.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-unchanged"><i class="fa fa-check"></i><b>8.5.3</b> Unchanged elements from simple linear models</a></li>
-<li class="chapter" data-level="8.5.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-beta"><i class="fa fa-check"></i><b>8.5.4</b> Interpretation and inference for the regression coefficients</a></li>
-</ul></li>
-<li class="chapter" data-level="8.6" data-path="c-regression.html"><a href="c-regression.html#s-regression-dummies"><i class="fa fa-check"></i><b>8.6</b> Including categorical explanatory variables</a>
-<ul>
-<li class="chapter" data-level="8.6.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>8.6.1</b> Dummy variables</a></li>
-<li class="chapter" data-level="8.6.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>8.6.2</b> A second example</a></li>
-</ul></li>
-<li class="chapter" data-level="8.7" data-path="c-regression.html"><a href="c-regression.html#s-regression-rest"><i class="fa fa-check"></i><b>8.7</b> Other issues in linear regression modelling</a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>9</b> Analysis of 3-way contingency tables</a></li>
-<li class="chapter" data-level="10" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>10</b> More statistics…</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix</a>
-<ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#computer-classes"><i class="fa fa-check"></i>Computer classes</a>
-<ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#general-instructions"><i class="fa fa-check"></i>General instructions</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#introduction-to-spss"><i class="fa fa-check"></i>Introduction to SPSS</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-2-class-descriptive-statistics-for-categorical-data-and-entering-data"><i class="fa fa-check"></i>WEEK 2 class: Descriptive statistics for categorical data, and entering data</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-3-class-descriptive-statistics-for-continuous-variables"><i class="fa fa-check"></i>WEEK 3 class: Descriptive statistics for continuous variables</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-4-class-two-way-contingency-tables"><i class="fa fa-check"></i>WEEK 4 class: Two-way contingency tables</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-5-class-inference-for-two-population-means"><i class="fa fa-check"></i>WEEK 5 class: Inference for two population means</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-7-class-inference-for-population-proportions"><i class="fa fa-check"></i>WEEK 7 class: Inference for population proportions</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-8-class-correlation-and-simple-linear-regression-1"><i class="fa fa-check"></i>WEEK 8 class: Correlation and simple linear regression 1</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-9-class-simple-linear-regression-and-3-way-tables"><i class="fa fa-check"></i>WEEK 9 class: Simple linear regression and 3-way tables</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-10-class-multiple-linear-regression"><i class="fa fa-check"></i>WEEK 10 class: Multiple linear regression</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-11-class-review-and-multiple-linear-regression"><i class="fa fa-check"></i>WEEK 11 class: Review and Multiple linear regression</a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#statistical-tables"><i class="fa fa-check"></i>Statistical tables</a>
-<ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-standard-normal-tail-probabilities"><i class="fa fa-check"></i>Table of standard normal tail probabilities</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-critical-values-for-t-distributions"><i class="fa fa-check"></i>Table of critical values for t-distributions</a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-critical-values-for-chi-square-distributions"><i class="fa fa-check"></i>Table of critical values for chi-square distributions</a></li>
-</ul></li>
-</ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">MY451 Introduction to Quantitative Analysis</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY451 Introduction to Quantitative Analysis</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Course information</a></li>
+<li><a class="" href="c-intro.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="c-descr1.html"><span class="header-section-number">2</span> Descriptive statistics</a></li>
+<li><a class="" href="c-samples.html"><span class="header-section-number">3</span> Samples and populations</a></li>
+<li><a class="" href="c-tables.html"><span class="header-section-number">4</span> Statistical inference for two-way tables</a></li>
+<li><a class="" href="c-probs.html"><span class="header-section-number">5</span> Inference for population proportions</a></li>
+<li><a class="active" href="c-contd.html"><span class="header-section-number">6</span> Continuous variables: Population and sampling distributions</a></li>
+<li><a class="" href="c-means.html"><span class="header-section-number">7</span> Analysis of population means</a></li>
+<li><a class="" href="c-regression.html"><span class="header-section-number">8</span> Linear regression models</a></li>
+<li><a class="" href="c-3waytables.html"><span class="header-section-number">9</span> Analysis of 3-way contingency tables</a></li>
+<li><a class="" href="c-more.html"><span class="header-section-number">10</span> More statistics…</a></li>
+<li><a class="" href="appendix.html">Appendix</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/LSE-Methodology/MY451">View book source <i class="fab fa-github"></i></a></p>
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="c-contd" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Chapter 6</span> Continuous variables: Population and sampling distributions<a href="c-contd.html#c-contd" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="s-contd-intro" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Introduction<a href="c-contd.html#s-contd-intro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="c-contd" class="section level1" number="6">
+<h1>
+<span class="header-section-number">6</span> Continuous variables: Population and sampling distributions<a class="anchor" aria-label="anchor" href="#c-contd"><i class="fas fa-link"></i></a>
+</h1>
+<div id="s-contd-intro" class="section level2" number="6.1">
+<h2>
+<span class="header-section-number">6.1</span> Introduction<a class="anchor" aria-label="anchor" href="#s-contd-intro"><i class="fas fa-link"></i></a>
+</h2>
 <p><em>This</em> chapter serves both as an explanation of some topics that were
 skimmed over previously, and as preparation for later chapters. Its
 central theme is probability distributions of continuous variables.
@@ -315,7 +92,9 @@ distributions in this role, the <span class="math inline">\(\chi^{2}\)</span> di
 <a href="c-probs.html#c-probs">5</a>. Their origins are explained in more detail below.</p></li>
 </ul>
 <p>To illustrate the concepts, we use data from the
-Health Survey for England 2002 (HES).<a href="#fn24" class="footnote-ref" id="fnref24"><sup>24</sup></a> One part of the survey was a
+Health Survey for England 2002 (HES).<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;Carried out on behalf of The Department of Health by SCPR and the
+Department of Epidemiology and Public Health, UCL. Data used here
+were obtained from the UK Data Archive at &lt;a href="http://www.data-archive.ac.uk" class="uri"&gt;http://www.data-archive.ac.uk&lt;/a&gt;.&lt;/p&gt;'><sup>24</sup></a> One part of the survey was a
 short physical examination by a nurse. Figure <a href="c-contd.html#fig:f-bp1">6.1</a> shows a
 histogram and frequency polygon of diastolic blood pressure (in mm Hg)
 for 4489 respondents, measured by the mean of the last two of three
@@ -323,9 +102,9 @@ measurements taken during the examination. Data from respondents for
 whom the measurements were not obtained or were considered invalid have
 been excluded. Respondents aged under 25 have also been excluded for
 simplicity, because this age group was oversampled in the 2002 HES.</p>
-<div class="float"><span style="display:block;" id="fig:f-bp1"></span>
-<img src="bloodp1.png" style="width:13.5cm" alt="Histogram of diastolic blood pressure, with the corresponding frequency polygon, from Health Survey for England 2002 (respondents aged 25 or over, n=4489)." />
-<div class="figcaption">Figure 6.1: Histogram of diastolic blood pressure, with the corresponding frequency polygon, from Health Survey for England 2002 (respondents aged 25 or over, <span class="math inline">\(n=4489\)</span>).</div>
+<div class="float">
+<span style="display:block;" id="fig:f-bp1"></span>
+<img src="bloodp1.png" style="width:13.5cm" alt="Histogram of diastolic blood pressure, with the corresponding frequency polygon, from Health Survey for England 2002 (respondents aged 25 or over, n=4489)."><div class="figcaption">Figure 6.1: Histogram of diastolic blood pressure, with the corresponding frequency polygon, from Health Survey for England 2002 (respondents aged 25 or over, <span class="math inline">\(n=4489\)</span>).</div>
 </div>
 <p>The respondents whose blood pressures are summarized in Figure
 <a href="c-contd.html#fig:f-bp1">6.1</a> are in reality a sample from a larger population in the
@@ -336,10 +115,14 @@ small town, say). The values summarised in Figure <a href="c-contd.html#fig:f-bp
 the population distribution of blood pressure in this population. It is
 clear that blood pressure is best treated as a continuous variable.</p>
 </div>
-<div id="s-contd-popdistrs" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Population distributions of continuous variables<a href="c-contd.html#s-contd-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="ss-contd-popdistrs-params" class="section level3 hasAnchor" number="6.2.1">
-<h3><span class="header-section-number">6.2.1</span> Population parameters and their point estimates<a href="c-contd.html#ss-contd-popdistrs-params" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="s-contd-popdistrs" class="section level2" number="6.2">
+<h2>
+<span class="header-section-number">6.2</span> Population distributions of continuous variables<a class="anchor" aria-label="anchor" href="#s-contd-popdistrs"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ss-contd-popdistrs-params" class="section level3" number="6.2.1">
+<h3>
+<span class="header-section-number">6.2.1</span> Population parameters and their point estimates<a class="anchor" aria-label="anchor" href="#ss-contd-popdistrs-params"><i class="fas fa-link"></i></a>
+</h3>
 <p>If we knew all of its values, we could summarise a finite population
 distribution by, say, a histogram like Figure <a href="c-contd.html#fig:f-bp1">6.1</a>. We can also
 consider specific characteristics of the distribution, i.e. its
@@ -414,30 +197,32 @@ observations from the finite population of <span class="math inline">\(N=4489\)<
 Figure <a href="c-contd.html#fig:f-bp1">6.1</a>. Table <a href="c-contd.html#tab:t-bp-example">6.1</a> shows the summary
 statistics (<a href="c-contd.html#eq:Ybar-ch6">(6.4)</a>–(<a href="c-contd.html#eq:s-ch6">(6.6)</a>) in this sample and the
 corresponding parameters (<a href="c-contd.html#eq:mu">(6.1)</a>)–(<a href="c-contd.html#eq:sigma">(6.3)</a>) in the population.</p>
-<table style="width:98%;">
-<caption><span id="tab:t-bp-example">Table 6.1: </span>Summary statistics for diastolic blood pressure in the population
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<caption>
+<span id="tab:t-bp-example">Table 6.1: </span>Summary statistics for diastolic blood pressure in the population
 and a sample from it in the example used for illustration in Sections
 <a href="c-contd.html#s-contd-popdistrs">6.2</a>–<a href="c-contd.html#s-contd-clt">6.4</a>.</caption>
 <colgroup>
-<col width="16%" />
-<col width="13%" />
-<col width="20%" />
-<col width="19%" />
-<col width="27%" />
+<col width="16%">
+<col width="13%">
+<col width="20%">
+<col width="19%">
+<col width="27%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th></th>
-<th align="right"><br />
+<th align="right">
+<br>
 Size</th>
-<th align="center"><br />
+<th align="center">
+<br>
 Mean</th>
 <th align="right">Standard
 Deviation</th>
-<th align="right"><br />
+<th align="right">
+<br>
 Variance</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>Population</td>
@@ -454,7 +239,7 @@ Variance</th>
 <td align="right"><span class="math inline">\(s^{2}=161.19\)</span></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>You may have noticed that the formulas of the sample variance
 (<a href="c-contd.html#eq:s2-ch6">(6.5)</a>) and sample standard deviation (<a href="c-contd.html#eq:s-ch6">(6.6)</a>) involve the
 divisor <span class="math inline">\(n-1\)</span> rather than the <span class="math inline">\(n\)</span> which might seem more natural, while
@@ -476,10 +261,14 @@ In general, there are often several possible sample statistics which
 could be used as estimates for the same population parameter.</p>
 </div>
 </div>
-<div id="s-contd-probdistrs" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Probability distributions of continuous variables<a href="c-contd.html#s-contd-probdistrs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="ss-contd-probdistrs-general" class="section level3 hasAnchor" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> General comments<a href="c-contd.html#ss-contd-probdistrs-general" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="s-contd-probdistrs" class="section level2" number="6.3">
+<h2>
+<span class="header-section-number">6.3</span> Probability distributions of continuous variables<a class="anchor" aria-label="anchor" href="#s-contd-probdistrs"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ss-contd-probdistrs-general" class="section level3" number="6.3.1">
+<h3>
+<span class="header-section-number">6.3.1</span> General comments<a class="anchor" aria-label="anchor" href="#ss-contd-probdistrs-general"><i class="fas fa-link"></i></a>
+</h3>
 <p>Thinking about population distributions of continuous distributions
 using, say, histograms as in Figure <a href="c-contd.html#fig:f-bp1">6.1</a> would present
 difficulties for statistical inference, for at least two reasons. First,
@@ -523,9 +312,9 @@ or any other simple probability distribution. All we require is that a
 population distribution is close enough to a specified probability
 distribution for the results from analyses based on this assumption to
 be meaningful and not misleading.</p>
-<div class="float"><span style="display:block;" id="fig:f-bp2"></span>
-<img src="bloodp2.png" style="width:11.5cm" alt="The frequency polygon of Figure 6.1, together with a normal curve with the same mean and variance." />
-<div class="figcaption">Figure 6.2: The frequency polygon of Figure <a href="c-contd.html#fig:f-bp1">6.1</a>, together with a normal
+<div class="float">
+<span style="display:block;" id="fig:f-bp2"></span>
+<img src="bloodp2.png" style="width:11.5cm" alt="The frequency polygon of Figure 6.1, together with a normal curve with the same mean and variance."><div class="figcaption">Figure 6.2: The frequency polygon of Figure <a href="c-contd.html#fig:f-bp1">6.1</a>, together with a normal
 curve with the same mean and variance.</div>
 </div>
 <p> Such a simplifying assumption about the population
@@ -559,8 +348,10 @@ the <em>Binomial</em> distribution discussed in Chapter <a href="c-probs.html#c-
 <em>Multinomial</em> and <em>Poisson</em> distributions. On this course, however, we
 will not include further discussion of these various possibilities.</p>
 </div>
-<div id="ss-contd-probdistrs-normal" class="section level3 hasAnchor" number="6.3.2">
-<h3><span class="header-section-number">6.3.2</span> The normal distribution as a population distribution<a href="c-contd.html#ss-contd-probdistrs-normal" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-contd-probdistrs-normal" class="section level3" number="6.3.2">
+<h3>
+<span class="header-section-number">6.3.2</span> The normal distribution as a population distribution<a class="anchor" aria-label="anchor" href="#ss-contd-probdistrs-normal"><i class="fas fa-link"></i></a>
+</h3>
 <p>The particular probability distribution that is included in Figure
 <a href="c-contd.html#fig:f-bp2">6.2</a> is a <strong>normal distribution</strong>, also known as the <em>Gaussian</em>
 distribution, after the great German mathematician Karl Friedrich Gauss
@@ -570,9 +361,9 @@ pictures of the university town of Göttingen and of the normal curve
 (even the mathematical formula of the curve is engraved on the note).
 The curve of the normal distribution is also known as the “bell curve”
 because of its shape.</p>
-<div class="float"><span style="display:block;" id="fig:f-10dm"></span>
-<img src="mark.png" style="width:14cm" alt="A portrait of Gauss and the normal curve on a former German 10-DM banknote." />
-<div class="figcaption">Figure 6.3: A portrait of Gauss and the normal curve on a former German 10-DM banknote.</div>
+<div class="float">
+<span style="display:block;" id="fig:f-10dm"></span>
+<img src="mark.png" style="width:14cm" alt="A portrait of Gauss and the normal curve on a former German 10-DM banknote."><div class="figcaption">Figure 6.3: A portrait of Gauss and the normal curve on a former German 10-DM banknote.</div>
 </div>
 <p>The normal distribution is by far the most important probability
 distribution in statistics. The main reason for this is its use as a
@@ -603,9 +394,9 @@ below). In Figure <a href="c-contd.html#fig:f-3norms">6.4</a>, the curves for <s
 are both centered around <span class="math inline">\(\mu=0\)</span>; the mean of the <span class="math inline">\(N(5, 1)\)</span> distribution
 is <span class="math inline">\(\mu=5\)</span>, so the whole curve is shifted to the right and centered
 around 5.</p>
-<div class="float"><span style="display:block;" id="fig:f-3norms"></span>
-<img src="threenorms.png" style="width:11cm" alt="Three normal distributions with different means and/or variances." />
-<div class="figcaption">Figure 6.4: Three normal distributions with different means and/or variances.</div>
+<div class="float">
+<span style="display:block;" id="fig:f-3norms"></span>
+<img src="threenorms.png" style="width:11cm" alt="Three normal distributions with different means and/or variances."><div class="figcaption">Figure 6.4: Three normal distributions with different means and/or variances.</div>
 </div>
 <p>The variance <span class="math inline">\(\sigma^{2}\)</span> determines how widely spread the curve is. In
 Figure <a href="c-contd.html#fig:f-3norms">6.4</a>, the curves for <span class="math inline">\(N(0, 1)\)</span> and <span class="math inline">\(N(5, 1)\)</span> have the
@@ -639,9 +430,9 @@ probability that the value of a randomly sampled observation is in that
 range. These are the same principles that we have already used to derive
 <span class="math inline">\(P\)</span>-values for tests in Sections <a href="c-tables.html#ss-tables-chi2test-Pval">4.3.5</a> and
 <a href="c-probs.html#ss-probs-test1sample-samplingd">5.5.3</a>.</p>
-<div class="float"><span style="display:block;" id="fig:f-norm1"></span>
-<img src="norm1.png" style="width:12cm" alt="Illustration of probabilities for the normal distribution. The probability of an observation being within one standard deviation of the mean (the grey area) is 0.68, and the probability of it being within 1.96 standard deviations of the mean (grey and shaded areas together) is 0.95." />
-<div class="figcaption">Figure 6.5: Illustration of probabilities for the normal distribution. The
+<div class="float">
+<span style="display:block;" id="fig:f-norm1"></span>
+<img src="norm1.png" style="width:12cm" alt="Illustration of probabilities for the normal distribution. The probability of an observation being within one standard deviation of the mean (the grey area) is 0.68, and the probability of it being within 1.96 standard deviations of the mean (grey and shaded areas together) is 0.95."><div class="figcaption">Figure 6.5: Illustration of probabilities for the normal distribution. The
 probability of an observation being within one standard deviation of the
 mean (the grey area) is 0.68, and the probability of it being within
 1.96 standard deviations of the mean (grey and shaded areas together) is
@@ -675,9 +466,9 @@ blood pressure or hypertension)</p></li>
 (possibly indicating unusually low blood pressure or hypotension)</p></li>
 <li><p>the proportion of people in the normal pressure range of 60–90</p></li>
 </ul>
-<div class="float"><span style="display:block;" id="fig:f-normbp"></span>
-<img src="normbp.png" style="width:12cm" alt="Illustration of probabilities for a normal distribution in the blood pressure example, where \mu=74.2 and \sigma=11.3. The plot shows probabilities for the ranges of values at most 60 (“Low”), between 60 and 90 (“Mid”) and over 90 (“High”)." />
-<div class="figcaption">Figure 6.6: Illustration of probabilities for a normal distribution in the blood pressure example, where <span class="math inline">\(\mu=74.2\)</span> and <span class="math inline">\(\sigma=11.3\)</span>. The plot shows probabilities for the ranges of values at most 60 (“Low”), between 60 and 90 (“Mid”) and over 90 (“High”).</div>
+<div class="float">
+<span style="display:block;" id="fig:f-normbp"></span>
+<img src="normbp.png" style="width:12cm" alt="Illustration of probabilities for a normal distribution in the blood pressure example, where \mu=74.2 and \sigma=11.3. The plot shows probabilities for the ranges of values at most 60 (“Low”), between 60 and 90 (“Mid”) and over 90 (“High”)."><div class="figcaption">Figure 6.6: Illustration of probabilities for a normal distribution in the blood pressure example, where <span class="math inline">\(\mu=74.2\)</span> and <span class="math inline">\(\sigma=11.3\)</span>. The plot shows probabilities for the ranges of values at most 60 (“Low”), between 60 and 90 (“Mid”) and over 90 (“High”).</div>
 </div>
 <p>Such figures might be of interest for example for predicting health
 service needs for treating hypertension. Suppose that we were reasonably
@@ -721,15 +512,14 @@ score (a full table would typically give all values from 0.00 to about
 3.50). The second column, labelled “Tail Prob.”, gives the probability
 that a <span class="math inline">\(Z\)</span> score for a normal distribution is <em>larger than</em> the value
 given by <span class="math inline">\(z\)</span>, i.e. the area of the region to the right of <span class="math inline">\(z\)</span>.</p>
-<table>
-<caption><span id="tab:t-normtab">Table 6.2: </span>Extract from the table of right-hand tail probabilities for normal <span class="math inline">\(Z\)</span> scores. Here “Tail Prob.” is the probability that a value from the standard normal distribution is at least the value in the column
+<div class="inline-table"><table class="table table-sm">
+<caption>
+<span id="tab:t-normtab">Table 6.2: </span>Extract from the table of right-hand tail probabilities for normal <span class="math inline">\(Z\)</span> scores. Here “Tail Prob.” is the probability that a value from the standard normal distribution is at least the value in the column
 labelled “<span class="math inline">\(z\)</span>”. The full table is shown in the Appendix.</caption>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="right"><span class="math inline">\(z\)</span></th>
 <th align="right">Tail Prob. </th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="right">…</td>
@@ -776,7 +566,7 @@ labelled “<span class="math inline">\(z\)</span>”. The full table is shown i
 <td align="right">…</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Consider first the probability that blood pressure is greater than 90,
 i.e. the area labelled “High” in Figure <a href="c-contd.html#fig:f-normbp">6.6</a>. We have seen
 that 90 corresponds to a <span class="math inline">\(Z\)</span> score of 1.40, so the probability of high
@@ -793,7 +583,10 @@ values of <span class="math inline">\(z\)</span>. Because the distribution is sy
 that a <span class="math inline">\(Z\)</span> score is <em>at most</em> <span class="math inline">\(-1.26\)</span> (the area of the left-hand tail to
 the left of <span class="math inline">\(-1.26\)</span>) is the same as the probability that it is <em>at
 least</em> 1.26 (the area of the right-hand tail to the right of 1.26). This
-is the kind of quantity we calculated above.<a href="#fn25" class="footnote-ref" id="fnref25"><sup>25</sup></a> The required
+is the kind of quantity we calculated above.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Note that there we were looking for the probability of a Z score
+being “bigger than” rather than “at least” a certain value; for a
+continuous probability distribution this makes no difference, and
+both probabilities are the same.&lt;/p&gt;"><sup>25</sup></a> The required
 probability is thus equal to the right-hand tail probability for 1.26,
 which the table shows to be 0.1038 (rounded to 0.10 in Figure
 <a href="c-contd.html#fig:f-normbp">6.6</a>).</p>
@@ -823,8 +616,10 @@ the estimate is reasonably close to the true population proportion of
 about 8.1%.</p>
 </div>
 </div>
-<div id="s-contd-clt" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> The normal distribution as a sampling distribution<a href="c-contd.html#s-contd-clt" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="s-contd-clt" class="section level2" number="6.4">
+<h2>
+<span class="header-section-number">6.4</span> The normal distribution as a sampling distribution<a class="anchor" aria-label="anchor" href="#s-contd-clt"><i class="fas fa-link"></i></a>
+</h2>
 <p>We have already encountered the normal distribution in Section
 <a href="c-probs.html#ss-probs-test1sample-samplingd">5.5.3</a>, in the role of the <em>sampling
 distribution</em> of a test statistic rather than as a model for the
@@ -888,9 +683,9 @@ deviations of the mean, this means that about 95% of samples of size
 <span class="math inline">\(n=1000\)</span>, on the other hand, 95% of samples would yield <span class="math inline">\(\bar{Y}\)</span> in
 the much narrower range of <span class="math inline">\(74.2-2*0.36=73.5\)</span> to <span class="math inline">\(74.2+2*0.36=74.9\)</span>.</p></li>
 </ul>
-<div class="float"><span style="display:block;" id="fig:f-sampld2"></span>
-<img src="sampld2_bp.png" style="width:12cm" alt="Illustration of the sampling distribution of the sample mean for two sample sizes. In both cases the population distribution is normal with \mu=74.2 and \sigma=11.3." />
-<div class="figcaption">Figure 6.7: Illustration of the sampling distribution of the sample mean for two
+<div class="float">
+<span style="display:block;" id="fig:f-sampld2"></span>
+<img src="sampld2_bp.png" style="width:12cm" alt="Illustration of the sampling distribution of the sample mean for two sample sizes. In both cases the population distribution is normal with \mu=74.2 and \sigma=11.3."><div class="figcaption">Figure 6.7: Illustration of the sampling distribution of the sample mean for two
 sample sizes. In both cases the population distribution is normal with
 <span class="math inline">\(\mu=74.2\)</span> and <span class="math inline">\(\sigma=11.3\)</span>.</div>
 </div>
@@ -924,9 +719,9 @@ these 100,000 values of <span class="math inline">\(\bar{Y}\)</span> is shown in
 Also shown is the curve of the normal distribution with the mean <span class="math inline">\(\mu\)</span>
 and standard deviation <span class="math inline">\(\sigma/\sqrt{50}\)</span> determined by the theoretical
 result given above.</p>
-<div class="float"><span style="display:block;" id="fig:f-sampld"></span>
-<img src="sampld1_bp.png" style="width:12cm" alt="Example of the sampling distribution of the sample mean. The plot shows a histogram of the values of the sample mean in 100,000 samples of size n=50 drawn from the 4489 values of diastolic blood pressure shown in Figure 6.1, for which the mean is \mu=74.2 and standard deviation is \sigma=11.3. Superimposed on the histogram is the curve of the approximate sampling distribution, which is normal with mean \mu and standard deviation \sigma/\sqrt{n}." />
-<div class="figcaption">Figure 6.8: Example of the sampling distribution of the sample mean. The plot
+<div class="float">
+<span style="display:block;" id="fig:f-sampld"></span>
+<img src="sampld1_bp.png" style="width:12cm" alt="Example of the sampling distribution of the sample mean. The plot shows a histogram of the values of the sample mean in 100,000 samples of size n=50 drawn from the 4489 values of diastolic blood pressure shown in Figure 6.1, for which the mean is \mu=74.2 and standard deviation is \sigma=11.3. Superimposed on the histogram is the curve of the approximate sampling distribution, which is normal with mean \mu and standard deviation \sigma/\sqrt{n}."><div class="figcaption">Figure 6.8: Example of the sampling distribution of the sample mean. The plot
 shows a histogram of the values of the sample mean in 100,000 samples of
 size <span class="math inline">\(n=50\)</span> drawn from the 4489 values of diastolic blood pressure shown
 in Figure <a href="c-contd.html#fig:f-bp1">6.1</a>, for which the mean is <span class="math inline">\(\mu=74.2\)</span> and standard
@@ -974,12 +769,15 @@ Then
 <span class="math inline">\(Z_{n}/B_{n} \stackrel{\mathcal{L}}{\longrightarrow} N(0,1)\)</span>.</p>
 <p>No, that will not come up in the examination. The theorem is given here
 just as a glimpse of how this topic would be introduced in a very
-different kind of text book,<a href="#fn26" class="footnote-ref" id="fnref26"><sup>26</sup></a> and because it pleases the author of
+different kind of text book,<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Ferguson, T. S. (1996). &lt;em&gt;A Course in Large Sample Theory&lt;/em&gt;, Chapman
+&amp;amp; Hall, London.&lt;/p&gt;"><sup>26</sup></a> and because it pleases the author of
 this coursepack to note that Jarl Lindeberg was Finnish. For our
 purposes, it is better to state the same result in English:</p>
 <ul>
 <li>If <span class="math inline">\(Y_{1}, Y_{2}, \dots, Y_{n}\)</span> are a random sample of observations
-from (almost)<a href="#fn27" class="footnote-ref" id="fnref27"><sup>27</sup></a> any distribution with a population mean <span class="math inline">\(\mu\)</span> and
+from (almost)<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;The CLT does not hold in some rather weird cases which need not
+concern us here. Condition (&lt;a href="c-contd.html#eq:lindeberg"&gt;(6.9)&lt;/a&gt;) is a mathematical
+expression for “not weird”.&lt;/p&gt;'><sup>27</sup></a> any distribution with a population mean <span class="math inline">\(\mu\)</span> and
 variance <span class="math inline">\(\sigma^{2}\)</span>, and if <span class="math inline">\(n\)</span> is reasonably large, the sampling
 distribution of their sample mean <span class="math inline">\(\bar{Y}\)</span> is approximately a
 normal distribution with mean <span class="math inline">\(\mu\)</span> and variance <span class="math inline">\(\sigma^{2}/n\)</span>.</li>
@@ -1032,9 +830,9 @@ distribution is not a very good approximation of the sampling
 distribution of <span class="math inline">\(\hat{\pi}\)</span> when <span class="math inline">\(n\)</span> is as small as 10 or even 30. For
 the larger values of 100 and 1000, however, the normal approximation is
 already quite good, as expected from the CLT.</p>
-<div class="float"><span style="display:block;" id="fig:f-cltbin"></span>
-<img src="sampld_p.png" style="width:13.5cm" alt="Illustration of the Central Limit Theorem for the sample proportion of a dichotomous variable. Each plot shows the histogram of the sample proportions \hat{\pi} calculated for 5000 samples simulated from a population distribution with proportion \pi=0.2, together with the normal curve with mean \pi and variance \pi(1-\pi)/n. The samples sizes n are 10, 30, 100 and 1000." />
-<div class="figcaption">Figure 6.9: Illustration of the Central Limit Theorem for the sample proportion of
+<div class="float">
+<span style="display:block;" id="fig:f-cltbin"></span>
+<img src="sampld_p.png" style="width:13.5cm" alt="Illustration of the Central Limit Theorem for the sample proportion of a dichotomous variable. Each plot shows the histogram of the sample proportions \hat{\pi} calculated for 5000 samples simulated from a population distribution with proportion \pi=0.2, together with the normal curve with mean \pi and variance \pi(1-\pi)/n. The samples sizes n are 10, 30, 100 and 1000."><div class="figcaption">Figure 6.9: Illustration of the Central Limit Theorem for the sample proportion of
 a dichotomous variable. Each plot shows the histogram of the sample
 proportions <span class="math inline">\(\hat{\pi}\)</span> calculated for 5000 samples simulated from a
 population distribution with proportion <span class="math inline">\(\pi=0.2\)</span>, together with the
@@ -1060,85 +858,51 @@ central importance of the CLT in statistical methodology.</p>
 
 </div>
 </div>
-<div class="footnotes">
-<hr />
-<ol start="24">
-<li id="fn24"><p>Carried out on behalf of The Department of Health by SCPR and the
-Department of Epidemiology and Public Health, UCL. Data used here
-were obtained from the UK Data Archive at <a href="http://www.data-archive.ac.uk" class="uri">http://www.data-archive.ac.uk</a>.<a href="c-contd.html#fnref24" class="footnote-back">↩︎</a></p></li>
-<li id="fn25"><p>Note that there we were looking for the probability of a Z score
-being “bigger than” rather than “at least” a certain value; for a
-continuous probability distribution this makes no difference, and
-both probabilities are the same.<a href="c-contd.html#fnref25" class="footnote-back">↩︎</a></p></li>
-<li id="fn26"><p>Ferguson, T. S. (1996). <em>A Course in Large Sample Theory</em>, Chapman
-&amp; Hall, London.<a href="c-contd.html#fnref26" class="footnote-back">↩︎</a></p></li>
-<li id="fn27"><p>The CLT does not hold in some rather weird cases which need not
-concern us here. Condition (<a href="c-contd.html#eq:lindeberg">(6.9)</a>) is a mathematical
-expression for “not weird”.<a href="c-contd.html#fnref27" class="footnote-back">↩︎</a></p></li>
-</ol>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="c-probs.html"><span class="header-section-number">5</span> Inference for population proportions</a></div>
+<div class="next"><a href="c-means.html"><span class="header-section-number">7</span> Analysis of population means</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#c-contd"><span class="header-section-number">6</span> Continuous variables: Population and sampling distributions</a></li>
+<li><a class="nav-link" href="#s-contd-intro"><span class="header-section-number">6.1</span> Introduction</a></li>
+<li>
+<a class="nav-link" href="#s-contd-popdistrs"><span class="header-section-number">6.2</span> Population distributions of continuous variables</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#ss-contd-popdistrs-params"><span class="header-section-number">6.2.1</span> Population parameters and their point estimates</a></li></ul>
+</li>
+<li>
+<a class="nav-link" href="#s-contd-probdistrs"><span class="header-section-number">6.3</span> Probability distributions of continuous variables</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ss-contd-probdistrs-general"><span class="header-section-number">6.3.1</span> General comments</a></li>
+<li><a class="nav-link" href="#ss-contd-probdistrs-normal"><span class="header-section-number">6.3.2</span> The normal distribution as a population distribution</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#s-contd-clt"><span class="header-section-number">6.4</span> The normal distribution as a sampling distribution</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/LSE-Methodology/MY451/blob/master/06-MY451-contd.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/LSE-Methodology/MY451/edit/master/06-MY451-contd.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
 </div>
-            </section>
+    </nav>
+</div>
 
-          </div>
-        </div>
-      </div>
-<a href="c-probs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="c-means.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>MY451 Introduction to Quantitative Analysis</strong>" was written by Jouni Kuha, Department of Methodology, London School of Economics and Political Science. </p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-  },
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": "https://github.com/LSE-Methodology/MY451/edit/master/06-MY451-contd.Rmd",
-    "text": "Edit"
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": null,
-    "text": null
-  },
-  "download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "section"
-  }
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -1150,7 +914,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>
