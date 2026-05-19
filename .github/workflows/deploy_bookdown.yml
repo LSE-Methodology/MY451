@@ -37,22 +37,22 @@ jobs:
   checkout-and-deploy:
    runs-on: ubuntu-latest
    needs: bookdown
+   permissions:
+     contents: write
    steps:
      - name: Checkout
-       uses: actions/checkout@master
+       uses: actions/checkout@v4
      - name: Download artifact
        uses: actions/download-artifact@v4.1.3
        with:
-         # Artifact name
-         name: _book # optional
-         # Destination path
-         path: _book # optional
+         name: _book
+         path: _book
      - name: Deploy to GitHub Pages
        uses: Cecilapp/GitHub-Pages-deploy@v3
        with:
           email: ${{ secrets.EMAIL }}             # must be a verified email
           build_dir: _book                        # bookdown's output directory
        env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}         # https://github.com/settings/tokens
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}   # built-in token, never expires
     
  
