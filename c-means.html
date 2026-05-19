@@ -1,269 +1,75 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 7 Analysis of population means | MY451 Introduction to Quantitative Analysis</title>
-  <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Chapter 7 Analysis of population means | MY451 Introduction to Quantitative Analysis" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="github-repo" content="LSE-Methodology/MY451" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 7 Analysis of population means | MY451 Introduction to Quantitative Analysis" />
-  
-  <meta name="twitter:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  
-
-<meta name="author" content="Jouni Kuha, Department of Methodology, London School of Economics and Political Science" />
-
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="c-contd.html"/>
-<link rel="next" href="c-regression.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 7 Analysis of population means | MY451 Introduction to Quantitative Analysis</title>
+<meta name="author" content="Jouni Kuha, Department of Methodology, London School of Economics and Political Science">
+<meta name="description" content="7.1 Introduction and examples This chapter introduces some basic methods of analysis for continuous, interval-level variables. The main focus is on statistical inference on population means of...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Chapter 7 Analysis of population means | MY451 Introduction to Quantitative Analysis">
+<meta property="og:type" content="book">
+<meta property="og:description" content="7.1 Introduction and examples This chapter introduces some basic methods of analysis for continuous, interval-level variables. The main focus is on statistical inference on population means of...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 7 Analysis of population means | MY451 Introduction to Quantitative Analysis">
+<meta name="twitter:description" content="7.1 Introduction and examples This chapter introduces some basic methods of analysis for continuous, interval-level variables. The main focus is on statistical inference on population means of...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.11.0/transition.js"></script><script src="libs/bs3compat-0.11.0/tabs.js"></script><script src="libs/bs3compat-0.11.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">MY451 Introduction to Quantitative Analysis</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course information<a href="index.html#course-information" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction<a href="c-intro.html#c-intro" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="1.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>1.1</b> What is the purpose of this course?<a href="c-intro.html#s-intro-purpose" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>1.2</b> Some basic definitions<a href="c-intro.html#s-intro-definitions" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="1.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>1.2.1</b> Subjects and variables<a href="c-intro.html#ss-intro-def-subj" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>1.2.2</b> Types of variables<a href="c-intro.html#ss-intro-def-vartypes" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>1.2.3</b> Description and inference<a href="c-intro.html#ss-intro-def-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>1.2.4</b> Association and causation<a href="c-intro.html#ss-intro-def-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="1.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>1.3</b> Outline of the course<a href="c-intro.html#s-intro-outline" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>1.4</b> The use of mathematics and computing<a href="c-intro.html#s-intro-maths" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="1.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>1.4.1</b> Symbolic mathematics and mathematical notation<a href="c-intro.html#symbolic-mathematics-and-mathematical-notation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>1.4.2</b> Computing<a href="c-intro.html#computing-1" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>2</b> Descriptive statistics<a href="c-descr1.html#c-descr1" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="2.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>2.1</b> Introduction<a href="c-descr1.html#s-descr1-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>2.2</b> Example data sets<a href="c-descr1.html#s-descr1-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>2.3</b> Single categorical variable<a href="c-descr1.html#s-descr1-1cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="2.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>2.3.1</b> Describing the sample distribution<a href="c-descr1.html#ss-descr1-1cat-distr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>2.3.2</b> Tabular methods: Tables of frequencies<a href="c-descr1.html#ss-descr1-1cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>2.3.3</b> Graphical methods: Bar charts<a href="c-descr1.html#ss-descr1-1cat-charts" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>2.3.4</b> Simple descriptive statistics<a href="c-descr1.html#ss-descr1-1cat-descriptives" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>2.4</b> Two categorical variables<a href="c-descr1.html#s-descr1-2cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="2.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>2.4.1</b> Two-way contingency tables<a href="c-descr1.html#ss-descr1-2cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>2.4.2</b> Conditional proportions<a href="c-descr1.html#ss-descr1-2cat-cond" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>2.4.3</b> Conditional distributions and associations<a href="c-descr1.html#ss-descr1-2cat-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>2.4.4</b> Describing an association using conditional proportions<a href="c-descr1.html#ss-descr1-2cat-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>2.4.5</b> A measure of association for ordinal variables<a href="c-descr1.html#ss-descr1-2cat-gamma" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>2.5</b> Sample distributions of a single continuous variable<a href="c-descr1.html#s-descr1-1cont" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="2.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>2.5.1</b> Tabular methods<a href="c-descr1.html#ss-descr1-1cont-tab" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>2.5.2</b> Graphical methods<a href="c-descr1.html#ss-descr1-1cont-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="2.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>2.6</b> Numerical descriptive statistics<a href="c-descr1.html#s-descr1-nums" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="2.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>2.6.1</b> Measures of central tendency<a href="c-descr1.html#ss-descr1-nums-central" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>2.6.2</b> Measures of variation<a href="c-descr1.html#ss-descr1-nums-variation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>2.7</b> Associations which involve continuous variables<a href="c-descr1.html#s-descr1-2cont" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>2.8</b> Presentation of tables and graphs<a href="c-descr1.html#s-descr1-presentation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>2.9</b> Appendix: Country data<a href="c-descr1.html#s-descr1-app" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>3</b> Samples and populations<a href="c-samples.html#c-samples" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="3.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction<a href="c-samples.html#s-samples-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="3.2" data-path="c-samples.html"><a href="c-samples.html#s-samples-finpops"><i class="fa fa-check"></i><b>3.2</b> Finite populations<a href="c-samples.html#s-samples-finpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="3.3" data-path="c-samples.html"><a href="c-samples.html#s-samples-samples"><i class="fa fa-check"></i><b>3.3</b> Samples from finite populations<a href="c-samples.html#s-samples-samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="3.4" data-path="c-samples.html"><a href="c-samples.html#s-samples-infpops"><i class="fa fa-check"></i><b>3.4</b> Conceptual and infinite populations<a href="c-samples.html#s-samples-infpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="3.5" data-path="c-samples.html"><a href="c-samples.html#s-samples-popdistrs"><i class="fa fa-check"></i><b>3.5</b> Population distributions<a href="c-samples.html#s-samples-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="3.6" data-path="c-samples.html"><a href="c-samples.html#s-samples-inference"><i class="fa fa-check"></i><b>3.6</b> Need for statistical inference<a href="c-samples.html#s-samples-inference" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="c-tables.html"><a href="c-tables.html"><i class="fa fa-check"></i><b>4</b> Statistical inference for two-way tables<a href="c-tables.html#c-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="4.1" data-path="c-tables.html"><a href="c-tables.html#s-tables-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction<a href="c-tables.html#s-tables-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.2" data-path="c-tables.html"><a href="c-tables.html#s-tables-tests"><i class="fa fa-check"></i><b>4.2</b> Significance tests<a href="c-tables.html#s-tables-tests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.3" data-path="c-tables.html"><a href="c-tables.html#s-tables-chi2test"><i class="fa fa-check"></i><b>4.3</b> The chi-square test of independence<a href="c-tables.html#s-tables-chi2test" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="4.3.1" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-null"><i class="fa fa-check"></i><b>4.3.1</b> Hypotheses<a href="c-tables.html#ss-tables-chi2test-null" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.3.2" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-ass"><i class="fa fa-check"></i><b>4.3.2</b> Assumptions of a significance test<a href="c-tables.html#ss-tables-chi2test-ass" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.3.3" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-stat"><i class="fa fa-check"></i><b>4.3.3</b> The test statistic<a href="c-tables.html#ss-tables-chi2test-stat" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.3.4" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-sdist"><i class="fa fa-check"></i><b>4.3.4</b> The sampling distribution of the test statistic<a href="c-tables.html#ss-tables-chi2test-sdist" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.3.5" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-Pval"><i class="fa fa-check"></i><b>4.3.5</b> The P-value<a href="c-tables.html#ss-tables-chi2test-Pval" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.3.6" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-conclusions"><i class="fa fa-check"></i><b>4.3.6</b> Drawing conclusions from a test<a href="c-tables.html#ss-tables-chi2test-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="c-tables.html"><a href="c-tables.html#s-tables-summary"><i class="fa fa-check"></i><b>4.4</b> Summary of the chi-square test of independence<a href="c-tables.html#s-tables-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="c-probs.html"><a href="c-probs.html"><i class="fa fa-check"></i><b>5</b> Inference for population proportions<a href="c-probs.html#c-probs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="5.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-intro"><i class="fa fa-check"></i><b>5.1</b> Introduction<a href="c-probs.html#s-probs-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-examples"><i class="fa fa-check"></i><b>5.2</b> Examples<a href="c-probs.html#s-probs-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-distribution"><i class="fa fa-check"></i><b>5.3</b> Probability distribution of a dichotomous variable<a href="c-probs.html#s-probs-distribution" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.4" data-path="c-probs.html"><a href="c-probs.html#s-probs-pointest"><i class="fa fa-check"></i><b>5.4</b> Point estimation of a population probability<a href="c-probs.html#s-probs-pointest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.5" data-path="c-probs.html"><a href="c-probs.html#s-probs-test1sample"><i class="fa fa-check"></i><b>5.5</b> Significance test of a single proportion<a href="c-probs.html#s-probs-test1sample" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="5.5.1" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-hypotheses"><i class="fa fa-check"></i><b>5.5.1</b> Null and alternative hypotheses<a href="c-probs.html#ss-probs-test1sample-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.5.2" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-teststatistic"><i class="fa fa-check"></i><b>5.5.2</b> The test statistic<a href="c-probs.html#ss-probs-test1sample-teststatistic" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.5.3" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-samplingd"><i class="fa fa-check"></i><b>5.5.3</b> The sampling distribution of the test statistic and P-values<a href="c-probs.html#ss-probs-test1sample-samplingd" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.5.4" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-conclusions"><i class="fa fa-check"></i><b>5.5.4</b> Conclusions from the test<a href="c-probs.html#ss-probs-test1sample-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.5.5" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-summary"><i class="fa fa-check"></i><b>5.5.5</b> Summary of the test<a href="c-probs.html#ss-probs-test1sample-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci"><i class="fa fa-check"></i><b>5.6</b> Confidence interval for a single proportion<a href="c-probs.html#s-probs-1sampleci" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="5.6.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-intro"><i class="fa fa-check"></i><b>5.6.1</b> Introduction<a href="c-probs.html#s-probs-1sampleci-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.6.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-calc"><i class="fa fa-check"></i><b>5.6.2</b> Calculation of the interval<a href="c-probs.html#s-probs-1sampleci-calc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.6.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>5.6.3</b> Interpretation of confidence intervals<a href="c-probs.html#s-probs-1sampleci-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.6.4" data-path="c-probs.html"><a href="c-probs.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>5.6.4</b> Confidence intervals vs. significance tests<a href="c-probs.html#ss-means-ci-vstests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="5.7" data-path="c-probs.html"><a href="c-probs.html#s-probs-2samples"><i class="fa fa-check"></i><b>5.7</b> Inference for comparing two proportions<a href="c-probs.html#s-probs-2samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="c-contd.html"><a href="c-contd.html"><i class="fa fa-check"></i><b>6</b> Continuous variables: Population and sampling distributions<a href="c-contd.html#c-contd" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="6.1" data-path="c-contd.html"><a href="c-contd.html#s-contd-intro"><i class="fa fa-check"></i><b>6.1</b> Introduction<a href="c-contd.html#s-contd-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="6.2" data-path="c-contd.html"><a href="c-contd.html#s-contd-popdistrs"><i class="fa fa-check"></i><b>6.2</b> Population distributions of continuous variables<a href="c-contd.html#s-contd-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="6.2.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-popdistrs-params"><i class="fa fa-check"></i><b>6.2.1</b> Population parameters and their point estimates<a href="c-contd.html#ss-contd-popdistrs-params" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="6.3" data-path="c-contd.html"><a href="c-contd.html#s-contd-probdistrs"><i class="fa fa-check"></i><b>6.3</b> Probability distributions of continuous variables<a href="c-contd.html#s-contd-probdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="6.3.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-general"><i class="fa fa-check"></i><b>6.3.1</b> General comments<a href="c-contd.html#ss-contd-probdistrs-general" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="6.3.2" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-normal"><i class="fa fa-check"></i><b>6.3.2</b> The normal distribution as a population distribution<a href="c-contd.html#ss-contd-probdistrs-normal" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="c-contd.html"><a href="c-contd.html#s-contd-clt"><i class="fa fa-check"></i><b>6.4</b> The normal distribution as a sampling distribution<a href="c-contd.html#s-contd-clt" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="c-means.html"><a href="c-means.html"><i class="fa fa-check"></i><b>7</b> Analysis of population means<a href="c-means.html#c-means" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="7.1" data-path="c-means.html"><a href="c-means.html#s-means-intro"><i class="fa fa-check"></i><b>7.1</b> Introduction and examples<a href="c-means.html#s-means-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.2" data-path="c-means.html"><a href="c-means.html#s-means-descr"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics for comparisons of groups<a href="c-means.html#s-means-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="7.2.1" data-path="c-means.html"><a href="c-means.html#ss-means-descr-graphs"><i class="fa fa-check"></i><b>7.2.1</b> Graphical methods of comparing sample distributions<a href="c-means.html#ss-means-descr-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.2.2" data-path="c-means.html"><a href="c-means.html#ss-means-descr-tables"><i class="fa fa-check"></i><b>7.2.2</b> Comparing summary statistics<a href="c-means.html#ss-means-descr-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="c-means.html"><a href="c-means.html#s-means-inference"><i class="fa fa-check"></i><b>7.3</b> Inference for two means from independent samples<a href="c-means.html#s-means-inference" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="7.3.1" data-path="c-means.html"><a href="c-means.html#ss-means-inference-intro"><i class="fa fa-check"></i><b>7.3.1</b> Aims of the analysis<a href="c-means.html#ss-means-inference-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.3.2" data-path="c-means.html"><a href="c-means.html#ss-means-inference-test"><i class="fa fa-check"></i><b>7.3.2</b> Significance testing: The two-sample t-test<a href="c-means.html#ss-means-inference-test" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.3.3" data-path="c-means.html"><a href="c-means.html#ss-means-inference-ci"><i class="fa fa-check"></i><b>7.3.3</b> Confidence intervals for a difference of two means<a href="c-means.html#ss-means-inference-ci" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.3.4" data-path="c-means.html"><a href="c-means.html#ss-means-inference-variants"><i class="fa fa-check"></i><b>7.3.4</b> Variants of the test and confidence interval<a href="c-means.html#ss-means-inference-variants" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="7.4" data-path="c-means.html"><a href="c-means.html#s-means-1sample"><i class="fa fa-check"></i><b>7.4</b> Tests and confidence intervals for a single mean<a href="c-means.html#s-means-1sample" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.5" data-path="c-means.html"><a href="c-means.html#s-means-dependent"><i class="fa fa-check"></i><b>7.5</b> Inference for dependent samples<a href="c-means.html#s-means-dependent" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.6" data-path="c-means.html"><a href="c-means.html#s-means-tests3"><i class="fa fa-check"></i><b>7.6</b> Further comments on significance tests<a href="c-means.html#s-means-tests3" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="7.6.1" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-errors"><i class="fa fa-check"></i><b>7.6.1</b> Different types of error<a href="c-means.html#ss-means-tests3-errors" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.6.2" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-power"><i class="fa fa-check"></i><b>7.6.2</b> Power of significance tests<a href="c-means.html#ss-means-tests3-power" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.6.3" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-importance"><i class="fa fa-check"></i><b>7.6.3</b> Significance vs. importance<a href="c-means.html#ss-means-tests3-importance" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="c-regression.html"><a href="c-regression.html"><i class="fa fa-check"></i><b>8</b> Linear regression models<a href="c-regression.html#c-regression" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="8.1" data-path="c-regression.html"><a href="c-regression.html#s-regression-intro"><i class="fa fa-check"></i><b>8.1</b> Introduction<a href="c-regression.html#s-regression-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.2" data-path="c-regression.html"><a href="c-regression.html#s-regression-descr"><i class="fa fa-check"></i><b>8.2</b> Describing association between two continuous variables<a href="c-regression.html#s-regression-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="8.2.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-intro"><i class="fa fa-check"></i><b>8.2.1</b> Introduction<a href="c-regression.html#ss-regression-descr-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.2.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-plots"><i class="fa fa-check"></i><b>8.2.2</b> Graphical methods<a href="c-regression.html#ss-regression-descr-plots" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.2.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-assoc"><i class="fa fa-check"></i><b>8.2.3</b> Linear associations<a href="c-regression.html#ss-regression-descr-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.2.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-corr"><i class="fa fa-check"></i><b>8.2.4</b> Measures of association: covariance and correlation<a href="c-regression.html#ss-regression-descr-corr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="c-regression.html"><a href="c-regression.html#s-regression-simple"><i class="fa fa-check"></i><b>8.3</b> Simple linear regression models<a href="c-regression.html#s-regression-simple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="8.3.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-intro"><i class="fa fa-check"></i><b>8.3.1</b> Introduction<a href="c-regression.html#ss-regression-simple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.3.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-def"><i class="fa fa-check"></i><b>8.3.2</b> Definition of the model<a href="c-regression.html#ss-regression-simple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.3.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-int"><i class="fa fa-check"></i><b>8.3.3</b> Interpretation of the model parameters<a href="c-regression.html#ss-regression-simple-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.3.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-est"><i class="fa fa-check"></i><b>8.3.4</b> Estimation of the parameters<a href="c-regression.html#ss-regression-simple-est" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.3.5" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-inf"><i class="fa fa-check"></i><b>8.3.5</b> Statistical inference for the regression coefficients<a href="c-regression.html#ss-regression-simple-inf" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="c-regression.html"><a href="c-regression.html#s-regression-causality"><i class="fa fa-check"></i><b>8.4</b> Interlude: Association and causality<a href="c-regression.html#s-regression-causality" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.5" data-path="c-regression.html"><a href="c-regression.html#s-regression-multiple"><i class="fa fa-check"></i><b>8.5</b> Multiple linear regression models<a href="c-regression.html#s-regression-multiple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="8.5.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-intro"><i class="fa fa-check"></i><b>8.5.1</b> Introduction<a href="c-regression.html#ss-regression-multiple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.5.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-def"><i class="fa fa-check"></i><b>8.5.2</b> Definition of the model<a href="c-regression.html#ss-regression-multiple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.5.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-unchanged"><i class="fa fa-check"></i><b>8.5.3</b> Unchanged elements from simple linear models<a href="c-regression.html#ss-regression-multiple-unchanged" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.5.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-beta"><i class="fa fa-check"></i><b>8.5.4</b> Interpretation and inference for the regression coefficients<a href="c-regression.html#ss-regression-multiple-beta" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="8.6" data-path="c-regression.html"><a href="c-regression.html#s-regression-dummies"><i class="fa fa-check"></i><b>8.6</b> Including categorical explanatory variables<a href="c-regression.html#s-regression-dummies" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="8.6.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>8.6.1</b> Dummy variables<a href="c-regression.html#ss-regression-dummies-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.6.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>8.6.2</b> A second example<a href="c-regression.html#ss-regression-dummies-example" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="8.7" data-path="c-regression.html"><a href="c-regression.html#s-regression-rest"><i class="fa fa-check"></i><b>8.7</b> Other issues in linear regression modelling<a href="c-regression.html#s-regression-rest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>9</b> Analysis of 3-way contingency tables<a href="c-3waytables.html#c-3waytables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="10" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>10</b> More statistics…<a href="c-more.html#c-more" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix<a href="appendix.html#appendix" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#computer-classes"><i class="fa fa-check"></i>Computer classes<a href="appendix.html#computer-classes" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#general-instructions"><i class="fa fa-check"></i>General instructions<a href="appendix.html#general-instructions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#introduction-to-spss"><i class="fa fa-check"></i>Introduction to SPSS<a href="appendix.html#introduction-to-spss" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-2-class-descriptive-statistics-for-categorical-data-and-entering-data"><i class="fa fa-check"></i>WEEK 2 class: Descriptive statistics for categorical data, and entering data<a href="appendix.html#week-2-class-descriptive-statistics-for-categorical-data-and-entering-data" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-3-class-descriptive-statistics-for-continuous-variables"><i class="fa fa-check"></i>WEEK 3 class: Descriptive statistics for continuous variables<a href="appendix.html#week-3-class-descriptive-statistics-for-continuous-variables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-4-class-two-way-contingency-tables"><i class="fa fa-check"></i>WEEK 4 class: Two-way contingency tables<a href="appendix.html#week-4-class-two-way-contingency-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-5-class-inference-for-two-population-means"><i class="fa fa-check"></i>WEEK 5 class: Inference for two population means<a href="appendix.html#week-5-class-inference-for-two-population-means" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-7-class-inference-for-population-proportions"><i class="fa fa-check"></i>WEEK 7 class: Inference for population proportions<a href="appendix.html#week-7-class-inference-for-population-proportions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-8-class-correlation-and-simple-linear-regression-1"><i class="fa fa-check"></i>WEEK 8 class: Correlation and simple linear regression 1<a href="appendix.html#week-8-class-correlation-and-simple-linear-regression-1" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-9-class-simple-linear-regression-and-3-way-tables"><i class="fa fa-check"></i>WEEK 9 class: Simple linear regression and 3-way tables<a href="appendix.html#week-9-class-simple-linear-regression-and-3-way-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-10-class-multiple-linear-regression"><i class="fa fa-check"></i>WEEK 10 class: Multiple linear regression<a href="appendix.html#week-10-class-multiple-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-11-class-review-and-multiple-linear-regression"><i class="fa fa-check"></i>WEEK 11 class: Review and Multiple linear regression<a href="appendix.html#week-11-class-review-and-multiple-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#statistical-tables"><i class="fa fa-check"></i>Statistical tables<a href="appendix.html#statistical-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-standard-normal-tail-probabilities"><i class="fa fa-check"></i>Table of standard normal tail probabilities<a href="appendix.html#table-of-standard-normal-tail-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-critical-values-for-t-distributions"><i class="fa fa-check"></i>Table of critical values for t-distributions<a href="appendix.html#table-of-critical-values-for-t-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-critical-values-for-chi-square-distributions"><i class="fa fa-check"></i>Table of critical values for chi-square distributions<a href="appendix.html#table-of-critical-values-for-chi-square-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-</ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">MY451 Introduction to Quantitative Analysis</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY451 Introduction to Quantitative Analysis</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Course information</a></li>
+<li><a class="" href="c-intro.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="c-descr1.html"><span class="header-section-number">2</span> Descriptive statistics</a></li>
+<li><a class="" href="c-samples.html"><span class="header-section-number">3</span> Samples and populations</a></li>
+<li><a class="" href="c-tables.html"><span class="header-section-number">4</span> Statistical inference for two-way tables</a></li>
+<li><a class="" href="c-probs.html"><span class="header-section-number">5</span> Inference for population proportions</a></li>
+<li><a class="" href="c-contd.html"><span class="header-section-number">6</span> Continuous variables: Population and sampling distributions</a></li>
+<li><a class="active" href="c-means.html"><span class="header-section-number">7</span> Analysis of population means</a></li>
+<li><a class="" href="c-regression.html"><span class="header-section-number">8</span> Linear regression models</a></li>
+<li><a class="" href="c-3waytables.html"><span class="header-section-number">9</span> Analysis of 3-way contingency tables</a></li>
+<li><a class="" href="c-more.html"><span class="header-section-number">10</span> More statistics…</a></li>
+<li><a class="" href="appendix.html">Appendix</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/LSE-Methodology/MY451">View book source <i class="fab fa-github"></i></a></p>
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="c-means" class="section level1 hasAnchor">
-<h1><span class="header-section-number">Chapter 7</span> Analysis of population means<a href="c-means.html#c-means" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="s-means-intro" class="section level2 hasAnchor">
-<h2><span class="header-section-number">7.1</span> Introduction and examples<a href="c-means.html#s-means-intro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="c-means" class="section level1" number="7">
+<h1>
+<span class="header-section-number">7</span> Analysis of population means<a class="anchor" aria-label="anchor" href="#c-means"><i class="fas fa-link"></i></a>
+</h1>
+<div id="s-means-intro" class="section level2" number="7.1">
+<h2>
+<span class="header-section-number">7.1</span> Introduction and examples<a class="anchor" aria-label="anchor" href="#s-means-intro"><i class="fas fa-link"></i></a>
+</h2>
 <p>This chapter introduces some basic methods of analysis for continuous,
 interval-level variables. The main focus is on statistical inference on
 population <em>means</em> of such variables, but some new methods of
@@ -285,7 +91,14 @@ this chapter. Summary statistics for them are shown in Table
 <a href="#tab:t-groupex">7.1</a>.</p>
 <p><strong>Example 7.1: Survey data on diet</strong></p>
 <p>The National Diet and Nutrition Survey of adults aged 19–64 living in
-private households in Great Britain was carried out in 2000–01.<a href="#fn28" class="footnote-ref" id="fnref28"><sup>28</sup></a> One
+private households in Great Britain was carried out in 2000–01.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Conducted for the Food Standards Agency and the Department of
+Health by ONS and MRC Human Nutrition Research. The sample
+statistics used here are from the survey reports published by HMSO
+in 2002-04, aggregating results published separately for men and
+women. The standard errors have been adjusted for non-constant
+sampling probabilities using design factors published in the survey
+reports. We will treat these numbers as if they were from a simple
+random sample.&lt;/p&gt;"><sup>28</sup></a> One
 part of the survey was a food diary where the respondents recorded all
 food and drink they consumed in a seven-day period. We consider two
 variables derived from the diary: the consumption of fruit and
@@ -293,23 +106,21 @@ vegetables in portions (of 400g) per day (with mean in the sample of
 size <span class="math inline">\(n=1724\)</span> of <span class="math inline">\(\bar{Y}=2.8\)</span>, and standard deviation <span class="math inline">\(s=2.15\)</span>), and
 the percentage of daily food energy intake obtained from fat and fatty
 acids (<span class="math inline">\(n=1724\)</span>, <span class="math inline">\(\bar{Y}=35.3\)</span>, and <span class="math inline">\(s=6.11\)</span>).</p>
-<table style="width:100%;">
+<div class="inline-table"><table style="width:100%;" class="table table-sm">
 <colgroup>
-<col width="63%" />
-<col width="7%" />
-<col width="11%" />
-<col width="7%" />
-<col width="9%" />
+<col width="63%">
+<col width="7%">
+<col width="11%">
+<col width="7%">
+<col width="9%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="left"><strong>One sample</strong></th>
 <th align="right"><span class="math inline">\(n\)</span></th>
 <th align="right"><span class="math inline">\(\bar{Y}\)</span></th>
 <th align="right"><span class="math inline">\(s\)</span></th>
 <th align="right">Diff.</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left"><em>Example 7.1: Variables from the National Diet and Nutrition Survey</em></td>
@@ -435,7 +246,7 @@ acids (<span class="math inline">\(n=1724\)</span>, <span class="math inline">\(
 <td align="right">-1835</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>:(#tab:t-groupex)Examples of analyses of population means used in Chapter <a href="c-means.html#c-means">7</a>. Here <span class="math inline">\(n\)</span> and <span class="math inline">\(\bar{Y}\)</span> denote the sample size and sample mean respectively, in the two-group examples 7.2–7.5 separately for the two groups. “Diff.” denotes the between-group difference of means, and <span class="math inline">\(s\)</span> is the sample standard deviation of the response variable <span class="math inline">\(Y\)</span> for the whole sample (Example 7.1), of the response variable within each group (Examples 7.2 and 7.3), or of the within-pair differences (Examples 7.4 and 7.5).</p>
 <p><strong>Example 7.2: Housework by men and women</strong></p>
 <p>This example uses data from the 12th wave of the British Household Panel
@@ -449,7 +260,10 @@ response variable <span class="math inline">\(Y\)</span>, and the respondent’s
 variable <span class="math inline">\(X\)</span>. We consider only those respondents who were less than 65
 years old at the time of the interview and who lived in single-person
 households (thus the comparisons considered here will not involve
-questions of the division of domestic work within families).<a href="#fn29" class="footnote-ref" id="fnref29"><sup>29</sup></a></p>
+questions of the division of domestic work within families).<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;The data were obtained from the UK Data Archive. Three respondents
+with outlying values of the housework variable (two women and one
+man, with 50, 50 and 70 reported weekly hours) have been omitted
+from the analysis considered here.&lt;/p&gt;"><sup>29</sup></a></p>
 <p>We can indicate summary statistics separately for the two groups by
 using subscripts 1 for men and 2 for women (for example). The sample
 sizes are <span class="math inline">\(n_{1}=635\)</span> for men and <span class="math inline">\(n_{2}=469\)</span> for women, and the sample
@@ -459,7 +273,10 @@ Table <a href="#tab:t-groupex">7.1</a>.</p>
 <p><strong>Example 7.3: Eye contact and perceived friendliness of police officers</strong></p>
 <p>This example is based on an experiment conducted to examine the effects
 of some aspects of the appearance and behaviour of police officers on
-how members of the public perceive their encounters with the police.<a href="#fn30" class="footnote-ref" id="fnref30"><sup>30</sup></a>
+how members of the public perceive their encounters with the police.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Boyanowsky, E. O. and Griffiths, C. T. (1982). “Weapons and eye
+contact as instigators or inhibitors of aggressive arousal in
+police-citizen interaction”. &lt;em&gt;Journal of Applied Social Psychology&lt;/em&gt;,
+&lt;strong&gt;12&lt;/strong&gt;, 398–407.&lt;/p&gt;"><sup>30</sup></a>
 The subjects of the study were 133 people stopped by the Traffic Patrol
 Division of a detachment of the Royal Canadian Mounted Police. When
 talking to the driver who had been stopped, the police officer either
@@ -484,7 +301,10 @@ report.</p>
 <p><strong>Example 7.4: Transition to parenthood</strong></p>
 <p>In a study of the stresses and feelings associated with parenthood, 109
 couples expecting their first child were interviewed before and after
-the birth of the baby.<a href="#fn31" class="footnote-ref" id="fnref31"><sup>31</sup></a> Here we consider only data for the fathers,
+the birth of the baby.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Miller, B. C. and Sollie, D. L. (1980). “Normal stresses during
+the transition to parenthood”. &lt;em&gt;Family Relations&lt;/em&gt;, &lt;strong&gt;29&lt;/strong&gt;, 459–465.
+See the article for further information, including results for the
+mothers.&lt;/p&gt;"><sup>31</sup></a> Here we consider only data for the fathers,
 and only one of the variables measured in the study. This variable is a
 measure of personal well-being, obtained from a seven-item attitude
 scale, where larger values indicate higher levels of well-being.
@@ -503,7 +323,10 @@ difference agree with those in the article.</p>
 <p><strong>Example 7.5: Traffic patterns on Friday the 13th</strong></p>
 <p>A common superstition regards the 13th day of any month falling on a
 Friday as a particularly unlucky day. In a study examining the possible
-effects of this belief on people’s behaviour,<a href="#fn32" class="footnote-ref" id="fnref32"><sup>32</sup></a> data were obtained on
+effects of this belief on people’s behaviour,<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Scanlon, T. J. et al. (1993). “Is Friday the 13th bad for your
+health?”. &lt;em&gt;British Medical Journal&lt;/em&gt;, &lt;strong&gt;307&lt;/strong&gt;, 1584–1586. The data
+were obtained from The Data and Story Library at Carnegie Mellon
+University (&lt;code&gt;lib.stat.cmu.edu/DASL&lt;/code&gt;).&lt;/p&gt;"><sup>32</sup></a> data were obtained on
 the numbers of vehicles travelling between junctions 7 and 8 and
 junctions 9 and 10 on the M25 motorway around London during every Friday
 the 13th in 1990–92. For comparison, the same numbers were also recorded
@@ -513,16 +336,14 @@ ten such pairs here, and the full data set is shown in Table
 is Friday the 6th (coded as 1) or Friday the 13th (coded as 2), and the
 response variable is the number of vehicles travelling between two
 junctions.</p>
-<table>
-<thead>
-<tr class="header">
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
 <th align="left">Date</th>
 <th align="left">Junctions</th>
 <th align="right">Friday the 6th</th>
 <th align="right">Friday the 13th</th>
 <th align="right">Difference</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">July 1990</td>
@@ -595,7 +416,7 @@ junctions.</p>
 <td align="right">-321</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>:(#tab:t-F13)Data for Example 7.5: Traffic flows between junctions of the M25 on
 each Friday the 6th and Friday the 13th in 1990-92.</p>
 <p>In each of these cases, we will regard the variable of interest <span class="math inline">\(Y\)</span> as a
@@ -619,7 +440,7 @@ statistical inference in Section <a href="c-means.html#s-means-inference">7.3</a
 <p>Finally, examples 7.4 and 7.5 also involve comparisons between two
 groups, but of a slightly different kind than examples 7.2 and 7.3. The
 two types of cases differ in the nature of the two samples (groups)
-being compared.  In Examples 7.2 and 7.3, the
+being compared. In Examples 7.2 and 7.3, the
 samples can be considered to be <strong>independent</strong>. What this claim means
 will be discussed briefly later; informally, it is justified in these
 examples because the subjects in the two groups are separate and
@@ -660,10 +481,14 @@ described in Section <a href="c-means.html#s-means-descr">7.2</a>, on the other 
 summarise and compare other aspects of the two conditional sample
 distributions.</p>
 </div>
-<div id="s-means-descr" class="section level2 hasAnchor">
-<h2><span class="header-section-number">7.2</span> Descriptive statistics for comparisons of groups<a href="c-means.html#s-means-descr" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="ss-means-descr-graphs" class="section level3 hasAnchor">
-<h3><span class="header-section-number">7.2.1</span> Graphical methods of comparing sample distributions<a href="c-means.html#ss-means-descr-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="s-means-descr" class="section level2" number="7.2">
+<h2>
+<span class="header-section-number">7.2</span> Descriptive statistics for comparisons of groups<a class="anchor" aria-label="anchor" href="#s-means-descr"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ss-means-descr-graphs" class="section level3" number="7.2.1">
+<h3>
+<span class="header-section-number">7.2.1</span> Graphical methods of comparing sample distributions<a class="anchor" aria-label="anchor" href="#ss-means-descr-graphs"><i class="fas fa-link"></i></a>
+</h3>
 <p>There is an association between the group variable <span class="math inline">\(X\)</span> and the response
 variable <span class="math inline">\(Y\)</span> if the distributions of <span class="math inline">\(Y\)</span> in the two groups are not the
 same. To determine the extent and nature of any such association, we
@@ -714,17 +539,17 @@ outlying observations (note that SPSS, which was used to produce Figure
 <a href="c-means.html#fig:f-twoboxplots">7.3</a>, divides outliers into moderate and “extreme” ones;
 the latter are observations more than 3 IQR from the end of the box, and
 are plotted with asterisks).</p>
-<div class="figure"><span style="display:block;" id="fig:f-hworkpyramid"></span>
-<img src="hworkpyramid.png" alt="Histograms of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men (n=635) and women (n=469)." style="width:130mm" />
-<p class="caption">Figure 7.1: Histograms of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men (<span class="math inline">\(n=635\)</span>) and women (<span class="math inline">\(n=469\)</span>).</p>
+<div class="float">
+<span style="display:block;" id="fig:f-hworkpyramid"></span>
+<img src="hworkpyramid.png" style="width:130mm" alt="Histograms of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men (n=635) and women (n=469)."><div class="figcaption">Figure 7.1: Histograms of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men (<span class="math inline">\(n=635\)</span>) and women (<span class="math inline">\(n=469\)</span>).</div>
 </div>
-<div class="figure"><span style="display:block;" id="fig:f-hworkpolygons"></span>
-<img src="hwork.png" alt="Frequency polygons of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men and women. The points show the percentages of observations in the intervals of 0–3, 4–7, \dots, 32–35 hours (plus zero percentages at each end of the curve)." style="width:11.5cm" />
-<p class="caption">Figure 7.2: Frequency polygons of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men and women. The points show the percentages of observations in the intervals of 0–3, 4–7, <span class="math inline">\(\dots\)</span>, 32–35 hours (plus zero percentages at each end of the curve).</p>
+<div class="float">
+<span style="display:block;" id="fig:f-hworkpolygons"></span>
+<img src="hwork.png" style="width:11.5cm" alt="Frequency polygons of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men and women. The points show the percentages of observations in the intervals of 0–3, 4–7, \dots, 32–35 hours (plus zero percentages at each end of the curve)."><div class="figcaption">Figure 7.2: Frequency polygons of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men and women. The points show the percentages of observations in the intervals of 0–3, 4–7, <span class="math inline">\(\dots\)</span>, 32–35 hours (plus zero percentages at each end of the curve).</div>
 </div>
-<div class="figure"><span style="display:block;" id="fig:f-twoboxplots"></span>
-<img src="twoboxplots.png" alt="Box plots of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men and women." style="width:11cm" />
-<p class="caption">Figure 7.3: Box plots of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men and women.</p>
+<div class="float">
+<span style="display:block;" id="fig:f-twoboxplots"></span>
+<img src="twoboxplots.png" style="width:11cm" alt="Box plots of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men and women."><div class="figcaption">Figure 7.3: Box plots of the sample distributions of reported weekly hours of housework in Example 7.2, separately for men and women.</div>
 </div>
 <p>Figures <a href="c-means.html#fig:f-hworkpyramid">7.1</a>–<a href="c-means.html#fig:f-twoboxplots">7.3</a> also illustrate an
 important general point about such comparisons. Typically we focus on
@@ -761,8 +586,10 @@ these two conditions could easily be summarized by drawing four box
 plots or frequency polygons in the same plot, one for each experimental
 condition.</p>
 </div>
-<div id="ss-means-descr-tables" class="section level3 hasAnchor">
-<h3><span class="header-section-number">7.2.2</span> Comparing summary statistics<a href="c-means.html#ss-means-descr-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-means-descr-tables" class="section level3" number="7.2.2">
+<h3>
+<span class="header-section-number">7.2.2</span> Comparing summary statistics<a class="anchor" aria-label="anchor" href="#ss-means-descr-tables"><i class="fas fa-link"></i></a>
+</h3>
 <p>Main features of sample distributions, such as their central tendencies
 and variations, are described using the summary statistics introduced in
 Section <a href="c-descr1.html#s-descr1-nums">2.6</a>. These too can be compared between groups.
@@ -788,10 +615,14 @@ the women’s average is about 16 per cent higher than the men’s average
 men’s average).</p>
 </div>
 </div>
-<div id="s-means-inference" class="section level2 hasAnchor">
-<h2><span class="header-section-number">7.3</span> Inference for two means from independent samples<a href="c-means.html#s-means-inference" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="ss-means-inference-intro" class="section level3 hasAnchor">
-<h3><span class="header-section-number">7.3.1</span> Aims of the analysis<a href="c-means.html#ss-means-inference-intro" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="s-means-inference" class="section level2" number="7.3">
+<h2>
+<span class="header-section-number">7.3</span> Inference for two means from independent samples<a class="anchor" aria-label="anchor" href="#s-means-inference"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ss-means-inference-intro" class="section level3" number="7.3.1">
+<h3>
+<span class="header-section-number">7.3.1</span> Aims of the analysis<a class="anchor" aria-label="anchor" href="#ss-means-inference-intro"><i class="fas fa-link"></i></a>
+</h3>
 <p>Formulated as a statistical model in the sense discussed on page in Section <a href="c-contd.html#ss-contd-probdistrs-general">6.3.1</a>, the
 assumptions of the analyses considered in this section are as follows:</p>
 <ol style="list-style-type: decimal">
@@ -836,7 +667,7 @@ men (group 1) and women (group 2).</p>
 <p>The quantity of main interest is here the difference of population means
 <span class="math display" id="eq:DeltaB">\[\begin{equation}
 \Delta=\mu_{2}-\mu_{1}.
-\tag{7.1} 
+\tag{7.1}
 \end{equation}\]</span>
 In particular, if <span class="math inline">\(\Delta=0\)</span>, the population means in
 the two groups are the same. If <span class="math inline">\(\Delta\ne 0\)</span>, they are not the same,
@@ -873,7 +704,7 @@ familiar form
 \end{equation}\]</span>
 where <span class="math inline">\(z_{\alpha/2}\)</span> is the appropriate multiplier from
 the standard normal distribution to obtain the required confidence
-level, e.g. <span class="math inline">\(z_{0.025}=1.96\)</span> for 95% confidence intervals. The
+level, e.g. <span class="math inline">\(z_{0.025}=1.96\)</span> for 95% confidence intervals. The
 multiplier is replaced with a slightly different one if the
 <span class="math inline">\(t\)</span>-distribution is used as the sampling distribution, as discussed in
 Section <a href="c-means.html#ss-means-inference-variants">7.3.4</a>.</p>
@@ -882,8 +713,10 @@ means are described next, in Section <a href="c-means.html#ss-means-inference-te
 the significance test and in Section <a href="c-means.html#ss-means-inference-ci">7.3.3</a> for the
 confidence interval.</p>
 </div>
-<div id="ss-means-inference-test" class="section level3 hasAnchor">
-<h3><span class="header-section-number">7.3.2</span> Significance testing: The two-sample t-test<a href="c-means.html#ss-means-inference-test" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-means-inference-test" class="section level3" number="7.3.2">
+<h3>
+<span class="header-section-number">7.3.2</span> Significance testing: The two-sample t-test<a class="anchor" aria-label="anchor" href="#ss-means-inference-test"><i class="fas fa-link"></i></a>
+</h3>
 <p>For tests of the difference of means <span class="math inline">\(\Delta=\mu_{2}-\mu_{1}\)</span> between
 two population distributions, we consider the null hypothesis of no
 difference
@@ -964,23 +797,22 @@ t-test statistic (<a href="c-means.html#eq:ztestmuDb">(7.12)</a>) is then obtain
 <span class="math display">\[t=\frac{1.16}{0.353}=3.29.\]</span> These values and other quantities
 explained later, as well as similar results for Example 7.3, are also
 shown in Table <a href="#tab:t-2testsY1">7.3</a>.</p>
-<table style="width:98%;">
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
 <colgroup>
-<col width="31%" />
-<col width="27%" />
-<col width="8%" />
-<col width="10%" />
-<col width="20%" />
+<col width="31%">
+<col width="27%">
+<col width="8%">
+<col width="10%">
+<col width="20%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="right"><span class="math inline">\(\hat{\Delta}\)</span></th>
 <th align="right"><span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span></th>
 <th align="right"><span class="math inline">\(t\)</span></th>
-<th align="right"><span class="math inline">\(P\)</span>-value</th>
+<th align="right">
+<span class="math inline">\(P\)</span>-value</th>
 <th align="right">95 % C.I.</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="right">Example 7.2: Average weekly hours
@@ -1013,7 +845,7 @@ of a police officer</td>
 <td align="right"><span class="math inline">\((-2.49; -0.99)\)</span></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>:(#tab:t-2testsY1)Results of tests and confidence intervals for comparing means for
 two independent samples. For Example 7.2, the difference of means is
 between women and men, and for Example 7.3, it is between wearing and
@@ -1043,9 +875,9 @@ in the column labelled “<span class="math inline">\(t\)</span>”, and the dif
 (<span class="math inline">\(-1.16\)</span>) has been calculated in SPSS between men and women rather than
 vice versa as in Table <a href="#tab:t-2testsY1">7.3</a>, but this will make no
 difference to the conclusions from the test.</p>
-<div class="figure"><span style="display:block;" id="fig:f-spss2test"></span>
-<img src="spss2t.png" alt="SPSS output for a two-sample t-test in Example 7.2, comparing average weekly hours spent on housework between men and women." style="width:17cm" />
-<p class="caption">Figure 7.4: SPSS output for a two-sample <span class="math inline">\(t\)</span>-test in Example 7.2, comparing average weekly hours spent on housework between men and women.</p>
+<div class="float">
+<span style="display:block;" id="fig:f-spss2test"></span>
+<img src="spss2t.png" style="width:17cm" alt="SPSS output for a two-sample t-test in Example 7.2, comparing average weekly hours spent on housework between men and women."><div class="figcaption">Figure 7.4: SPSS output for a two-sample <span class="math inline">\(t\)</span>-test in Example 7.2, comparing average weekly hours spent on housework between men and women.</div>
 </div>
 <p>In the two-sample situation with assumptions 1–4 at the beginning of Section <a href="c-means.html#ss-means-inference-intro">7.3.1</a>, the sampling distribution of the t-test
 statistic (<a href="c-means.html#eq:ztestmuDb">(7.12)</a>) is approximately a standard normal
@@ -1138,8 +970,10 @@ sunglasses than when the officer is not wearing such glasses
 (<span class="math inline">\(P&lt;0.001\)</span>).</p></li>
 </ol>
 </div>
-<div id="ss-means-inference-ci" class="section level3 hasAnchor">
-<h3><span class="header-section-number">7.3.3</span> Confidence intervals for a difference of two means<a href="c-means.html#ss-means-inference-ci" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-means-inference-ci" class="section level3" number="7.3.3">
+<h3>
+<span class="header-section-number">7.3.3</span> Confidence intervals for a difference of two means<a class="anchor" aria-label="anchor" href="#ss-means-inference-ci"><i class="fas fa-link"></i></a>
+</h3>
 <p>A confidence interval for the mean difference <span class="math inline">\(\Delta=\mu_{1}-\mu_{2}\)</span>
 is obtained by substituting appropriate expressions into the general
 formula (<a href="c-means.html#eq:ciDpa">(7.4)</a>). Specifically, here
@@ -1161,7 +995,8 @@ Figure <a href="c-means.html#fig:f-spss2test">7.4</a> .
 In the latter, the interval is given as (-1.85; -0.47) because it is
 expressed for the difference defined in the opposite direction (men <span class="math inline">\(-\)</span>
 women instead of vice versa). For Example 7.3, the 95% confidence
-interval is <span class="math inline">\(-1.74\pm 1.96\times 0.383=(-2.49; -0.99)\)</span>.</p>
+interval is <span class="math inline">\(-1.74\pm 1.96\times 0.383=(-2.49;
+-0.99)\)</span>.</p>
 <p>Based on the data in Example 7.2 we are thus 95 % confident that the
 difference between women’s and men’s average hours of reported weekly
 housework in the population is between 0.47 and 1.85 hours. In
@@ -1171,10 +1006,13 @@ be regarded as substantially different from each other. The difference
 between women’s and men’s average housework hours is thus estimated
 fairly imprecisely from this survey.</p>
 </div>
-<div id="ss-means-inference-variants" class="section level3 hasAnchor">
-<h3><span class="header-section-number">7.3.4</span> Variants of the test and confidence interval<a href="c-means.html#ss-means-inference-variants" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="allowing-unequal-population-variances" class="section level4 unnumbered hasAnchor">
-<h4>Allowing unequal population variances<a href="c-means.html#allowing-unequal-population-variances" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="ss-means-inference-variants" class="section level3" number="7.3.4">
+<h3>
+<span class="header-section-number">7.3.4</span> Variants of the test and confidence interval<a class="anchor" aria-label="anchor" href="#ss-means-inference-variants"><i class="fas fa-link"></i></a>
+</h3>
+<div id="allowing-unequal-population-variances" class="section level4 unnumbered">
+<h4>Allowing unequal population variances<a class="anchor" aria-label="anchor" href="#allowing-unequal-population-variances"><i class="fas fa-link"></i></a>
+</h4>
 <p>The two-sample <span class="math inline">\(t\)</span>-test and confidence interval for the difference of
 means were stated above under the assumption that the standard
 deviations <span class="math inline">\(\sigma_{1}\)</span> and <span class="math inline">\(\sigma_{2}\)</span> of the variable of interest <span class="math inline">\(Y\)</span>
@@ -1187,7 +1025,7 @@ calculations.</p>
 consider the model stated at the beginning of Section <a href="c-means.html#ss-means-inference-intro">7.3.1</a>, without
 assumption 4 that <span class="math inline">\(\sigma_{1}=\sigma_{2}\)</span>. The test statistic is then
 still of the same form as before,
-i.e. <span class="math inline">\(t=\hat{\Delta}/\hat{\sigma}_{\hat{\Delta}}\)</span>, with
+i.e. <span class="math inline">\(t=\hat{\Delta}/\hat{\sigma}_{\hat{\Delta}}\)</span>, with
 <span class="math inline">\(\hat{\Delta}=\bar{Y}_{2}-\bar{Y}_{1}\)</span>. The only change in the
 calculations is that the estimate of the standard error of
 <span class="math inline">\(\hat{\Delta}\)</span>, the formula of which is given by equation
@@ -1233,16 +1071,29 @@ similar, and the conclusions from the test are the same in both cases.
 The differences between the two variants of the test are even smaller in
 Example 7.3, where the estimated standard error
 <span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}=0.383\)</span> is the same (to three decimal
-places) in both cases, and the results are thus identical.<a href="#fn33" class="footnote-ref" id="fnref33"><sup>33</sup></a> In both
+places) in both cases, and the results are thus identical.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;In this case this is a consquence of the fact that the sample
+sizes (67 and 66) in the two groups are very similar. When they are
+exactly equal, formulas (&lt;a href="c-means.html#eq:sehatjoint"&gt;(7.11)&lt;/a&gt;)–(&lt;a href="c-means.html#eq:ztestmuDb"&gt;(7.12)&lt;/a&gt;) and
+(&lt;a href="c-means.html#eq:seDmu-ne"&gt;(7.14)&lt;/a&gt;) actually give exactly the same value for the
+standard error &lt;span class="math inline"&gt;\(\hat{\sigma}_{\hat{\Delta}}\)&lt;/span&gt;, and &lt;span class="math inline"&gt;\(t\)&lt;/span&gt; is thus also
+the same for both variants of the test.&lt;/p&gt;'><sup>33</sup></a> In both
 examples the confidence intervals obtained from (<a href="c-means.html#eq:ciDmu2">(7.13)</a>) and
 (<a href="c-means.html#eq:ciDmu">(7.16)</a>) are also very similar. Both variants of the two-sample
 analyses are shown in SPSS output (c.f. Figure <a href="c-means.html#fig:f-spss2test">7.4</a>), the ones assuming equal population standard
 deviations on the row labelled “Equal variances assumed” and the one
-without this assumption on the “Equal variances not assumed” row.<a href="#fn34" class="footnote-ref" id="fnref34"><sup>34</sup></a></p>
+without this assumption on the “Equal variances not assumed” row.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;The output also shows, under “Levene’s test”, a test statistic and
+&lt;span class="math inline"&gt;\(P\)&lt;/span&gt;-value for testing the hypothesis of equal standard deviations
+(&lt;span class="math inline"&gt;\(H_{0}: \,
+\sigma_{1}=\sigma_{2}\)&lt;/span&gt;). However, we prefer not to rely on this
+because the test requires the additional assumption that the
+population distributions are normal, and is very sensitive to the
+correctness of this assumption.&lt;/p&gt;'><sup>34</sup></a></p>
 <p>Which methods should we then use, the ones with or without the
 assumption of equal population variances? In practice the choice rarely
 makes much difference, and the <span class="math inline">\(P\)</span>-values and conclusions from the two
-versions of the test are typically very similar.<a href="#fn35" class="footnote-ref" id="fnref35"><sup>35</sup></a> Not assuming the
+versions of the test are typically very similar.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;In the MY451 examination and homework, for example, both variants
+of the test are equally acceptable, unless a question explicitly
+states otherwise.&lt;/p&gt;"><sup>35</sup></a> Not assuming the
 variances to be equal has the advantage of making fewer restrictive
 assumptions about the population. For this reason it should be used in
 the rare cases where the <span class="math inline">\(P\)</span>-values obtained under the different
@@ -1256,8 +1107,9 @@ more closely related to analogous tests used in more general contexts
 Chapter <a href="c-regression.html#c-regression">8</a>). It is also preferable when the sample sizes
 are very small, as discussed below.</p>
 </div>
-<div id="using-the-t-distribution" class="section level4 unnumbered hasAnchor">
-<h4>Using the <span class="math inline">\(t\)</span> distribution<a href="c-means.html#using-the-t-distribution" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="using-the-t-distribution" class="section level4 unnumbered">
+<h4>Using the <span class="math inline">\(t\)</span> distribution<a class="anchor" aria-label="anchor" href="#using-the-t-distribution"><i class="fas fa-link"></i></a>
+</h4>
 <p>As discussed in Section <a href="c-contd.html#s-contd-probdistrs">6.3</a>, it is often assumed
 that the population distributions of the variables under consideration
 are described by particular probability distributions. In this chapter,
@@ -1283,7 +1135,8 @@ standard deviations, <span class="math inline">\(\sigma_{1}=\sigma_{2}=\sigma\)<
 the distribution of <span class="math inline">\(Y\)</span> is a normal distribution in both groups, the
 sampling distribution of the t-test statistic (<a href="c-means.html#eq:ztestmuDb">(7.12)</a>) is a
 <span class="math inline">\(t\)</span> distribution with <span class="math inline">\(n_{1}+n_{2}-2\)</span> degrees of freedom when the
-null hypothesis <span class="math inline">\(H_{0}: \; \Delta=\mu_{2}-\mu_{1}=0\)</span> is true in the population.</li>
+null hypothesis <span class="math inline">\(H_{0}: \;
+\Delta=\mu_{2}-\mu_{1}=0\)</span> is true in the population.</li>
 </ul>
 <p>The <span class="math inline">\(\mathbf{t}\)</span> <strong>distributions</strong> mentioned in this result are a family
 of distributions with different degrees of freedom, in a similar way as
@@ -1298,9 +1151,9 @@ and 30 degrees of freedom, compared to the standard normal distribution.
 It can be seen that the <span class="math inline">\(t_{30}\)</span> distribution is already very similar to
 the <span class="math inline">\(N(0,1)\)</span> distribution. With degrees of freedom larger than about 30,
 the difference becomes almost indistinguishable.</p>
-<div class="figure"><span style="display:block;" id="fig:f-tdistr1"></span>
-<img src="tdistr1.png" alt="Curves of two t distributions with small degrees of freedom, compared to the standard normal distribution." style="width:13cm" />
-<p class="caption">Figure 7.5: Curves of two <span class="math inline">\(t\)</span> distributions with small degrees of freedom, compared to the standard normal distribution.</p>
+<div class="float">
+<span style="display:block;" id="fig:f-tdistr1"></span>
+<img src="tdistr1.png" style="width:13cm" alt="Curves of two t distributions with small degrees of freedom, compared to the standard normal distribution."><div class="figcaption">Figure 7.5: Curves of two <span class="math inline">\(t\)</span> distributions with small degrees of freedom, compared to the standard normal distribution.</div>
 </div>
 <p>If we use this result for the test, the <span class="math inline">\(P\)</span>-value is obtained from the
 <span class="math inline">\(t\)</span> distribution with <span class="math inline">\(n_{1}+n_{2}-2\)</span> degrees of freedom (often denoted
@@ -1351,7 +1204,8 @@ corresponding values for the standard normal distribution, but the
 difference between the two is quite small when the degrees of freedom
 are reasonably large.</p>
 <p>The <span class="math inline">\(t\)</span>-test and the <span class="math inline">\(t\)</span> distribution are among the oldest tools of
-statistical inference. They were introduced in 1908 by W. S. Gosset,<a href="#fn36" class="footnote-ref" id="fnref36"><sup>36</sup></a>
+statistical inference. They were introduced in 1908 by W. S. Gosset,<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;Student (1908). “The probable error of a mean”. &lt;em&gt;Biometrika&lt;/em&gt;
+&lt;strong&gt;6&lt;/strong&gt;, 1–25.&lt;/p&gt;"><sup>36</sup></a>
 initially for the one-sample case discussed in Section
 <a href="c-means.html#s-means-1sample">7.4</a>. Gosset was working as a chemist at the Guinness
 brewery at St. James’ Gate, Dublin. He published his findings under the
@@ -1395,7 +1249,8 @@ standard normal, whatever the shape of the population distribution.
 Which set of assumptions should we then use? The following guidelines
 can be used to make the choice:</p>
 <ul>
-<li><p>The easiest and arguably most common case is the one where both
+<li>
+<p>The easiest and arguably most common case is the one where both
 sample sizes <span class="math inline">\(n_{1}\)</span> and <span class="math inline">\(n_{2}\)</span> are large enough (both greater than
 20, say) for the standard normal approximation of the sampling
 distribution to be reasonably accurate. Because the degrees of
@@ -1411,7 +1266,8 @@ in the output. This will be from the <span class="math inline">\(t\)</span> dist
 need to use tables of critical values to draw the conclusion,
 use the critical values for the standard normal distribution
 (see Table <a href="c-probs.html#tab:t-ttable">5.2</a>).</p></li>
-</ul></li>
+</ul>
+</li>
 <li><p>When the sample sizes are small (e.g. if one or both of them are
 less than 20), only the <span class="math inline">\(t\)</span> distribution can be used, and even then
 only if <span class="math inline">\(Y\)</span> is approximately normally distributed in both groups in
@@ -1478,8 +1334,10 @@ are approximately normal.</p>
 </div>
 </div>
 </div>
-<div id="s-means-1sample" class="section level2 hasAnchor">
-<h2><span class="header-section-number">7.4</span> Tests and confidence intervals for a single mean<a href="c-means.html#s-means-1sample" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="s-means-1sample" class="section level2" number="7.4">
+<h2>
+<span class="header-section-number">7.4</span> Tests and confidence intervals for a single mean<a class="anchor" aria-label="anchor" href="#s-means-1sample"><i class="fas fa-link"></i></a>
+</h2>
 <p>The task considered in this section is inference on the population mean
 of a continuous, interval-level variable <span class="math inline">\(Y\)</span> in a single population.
 This is thus analogous to the analysis of a single proportion in
@@ -1491,25 +1349,69 @@ vegetables, and the percentage of total faily energy intake obtained
 from fat and fatty acids. These will be analysed separately, each in
 turn in the role of the variable of interest <span class="math inline">\(Y\)</span>. Summary statistics for
 the variables are shown in Table <a href="#tab:t-ttests1">7.4</a></p>
-<table>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<colgroup>
+<col width="15%">
+<col width="7%">
+<col width="8%">
+<col width="5%">
+<col width="8%">
+<col width="9%">
+<col width="12%">
+<col width="14%">
+<col width="16%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">Variable</th>
+<th align="right"><br></th>
+<th align="right"><br></th>
+<th align="right"><br></th>
+<th align="right"><br></th>
+<th align="right"><br></th>
+<th align="right">
+<span class="math inline">\(P\)</span>-value
+Two-
+sided<span class="math inline">\(^{*}\)</span>
+</th>
+<th align="right">
+<span class="math inline">\(P\)</span>-value
+One-
+sided<span class="math inline">\(^{\dagger}\)</span>
+</th>
+<th align="center">
+<br>
+95% CI
+for <span class="math inline">\(\mu\)</span>
+</th>
+</tr></thead>
 <tbody>
 <tr class="odd">
-<td align="center">          <span class="math inline">\(P\)</span>-value <span class="math inline">\(P\)</span>-value \</td>
+<td align="left">Fruit and vegetable
+consumption
+(400g portions)</td>
+<td align="right">1724</td>
+<td align="right">2.8</td>
+<td align="right">2.15</td>
+<td align="right">5</td>
+<td align="right">-49.49</td>
+<td align="right"><span class="math inline">\(&lt;0.001\)</span></td>
+<td align="right"><span class="math inline">\(&lt;0.001\)</span></td>
+<td align="center">(2.70; 2.90)</td>
 </tr>
 <tr class="even">
-<td align="center">Two- One- 95% CI</td>
-</tr>
-<tr class="odd">
-<td align="center">Variable <span class="math inline">\(n\)</span> <span class="math inline">\(\bar{Y}\)</span> <span class="math inline">\(s\)</span> <span class="math inline">\(\mu_{0}\)</span> <span class="math inline">\(t\)</span> sided<span class="math inline">\(^{*}\)</span> sided<span class="math inline">\(^{\dagger}\)</span> for <span class="math inline">\(\mu\)</span></td>
+<td align="left">Total energy intake
+from fat (%)</td>
+<td align="right">1724</td>
+<td align="right">35.3</td>
+<td align="right">6.11</td>
+<td align="right">35</td>
+<td align="right">2.04</td>
+<td align="right">0.042</td>
+<td align="right">0.021</td>
+<td align="center">(35.01; 35.59)</td>
 </tr>
 </tbody>
-</table>
-<p>Fruit and vegetable 1724 2.8 2.15 5 -49.49 <span class="math inline">\(&lt;0.001\)</span> <span class="math inline">\(&lt;0.001\)</span> (2.70; 2.90)
-consumption
-(400g portions)</p>
-<p>Total energy intake 1724 35.3 6.11 35 2.04 0.042 0.021 (35.01; 35.59)
-from fat (%)
-—————————————————————————————————————————————</p>
+</table></div>
 <p>:(#tab:t-ttests1)Summary statistics, <span class="math inline">\(t\)</span>-tests and confidence intervals for the mean
 for the two variables in Example 7.1 (variables from the Diet and
 Nutrition Survey). <span class="math inline">\(n=\)</span>sample size; <span class="math inline">\(\bar{Y}=\)</span>sample mean; <span class="math inline">\(s=\)</span>sample standard
@@ -1624,7 +1526,10 @@ the data from the diet survey:</p>
 its sampling distribution, is
 <span class="math inline">\(\sigma_{\hat{\Delta}}=\sigma/\sqrt{n}\)</span> (note that this is equal to
 the standard error <span class="math inline">\(\sigma_{\bar{Y}}\)</span> of the sample mean <span class="math inline">\(\bar{Y}\)</span>
-itself).<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a> This is estimated by
+itself).<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;The two are the same because &lt;span class="math inline"&gt;\(\mu_{0}\)&lt;/span&gt; in
+&lt;span class="math inline"&gt;\(\hat{\Delta}=\bar{Y}-\mu_{0}\)&lt;/span&gt; is a known number rather a
+data-dependent statistic, which means that it does not affect the
+standard error.&lt;/p&gt;'><sup>37</sup></a> This is estimated by
 <span class="math display" id="eq:seDhat1">\[\begin{equation}
 \hat{\sigma}_{\hat{\Delta}} = \frac{s}{\sqrt{n}}.
 \tag{7.28}
@@ -1634,7 +1539,8 @@ itself).<a href="#fn37" class="footnote-ref" id="fnref37"><sup>37</sup></a> This
 t=\frac{\hat{\Delta}}{\hat{\sigma}_{\hat{\Delta}}} = \frac{\bar{Y}-\mu_{0}}{s/\sqrt{n}}.
 \tag{7.29}
 \end{equation}\]</span></p></li>
-<li><p>The sampling distribution of the <span class="math inline">\(t\)</span>-statistic, when the null
+<li>
+<p>The sampling distribution of the <span class="math inline">\(t\)</span>-statistic, when the null
 hypothesis is true, is approximately a standard normal distribution,
 when the sample size <span class="math inline">\(n\)</span> is reasonably large. A common rule of thumb
 is that this sampling distribution is adequate when <span class="math inline">\(n\)</span> is at
@@ -1648,11 +1554,13 @@ choice of which sampling distribution to refer to is based on
 the considerations outlined in Section
 <a href="c-means.html#ss-means-inference-variants">7.3.4</a>. When <span class="math inline">\(n\)</span> is 30 or larger, the
 two approaches give very similar results.</li>
-</ul></li>
+</ul>
+</li>
 <li><p><span class="math inline">\(P\)</span>-values are obtained and the conclusions drawn in the same way as
 for two-sample tests, with appropriate modifications to the wording
 of the conclusions.</p></li>
-<li><p>A confidence interval for <span class="math inline">\(\Delta\)</span>, with confidence level <span class="math inline">\(1-\alpha\)</span>
+<li>
+<p>A confidence interval for <span class="math inline">\(\Delta\)</span>, with confidence level <span class="math inline">\(1-\alpha\)</span>
 and based on the approximate normal sampling distribution, is given
 by
 <span class="math display" id="eq:ciD1">\[\begin{equation}
@@ -1674,7 +1582,8 @@ confidence interval for <span class="math inline">\(\mu\)</span> itself. This is
 \tag{7.31}
 \end{equation}\]</span>
 which is obtained by adding <span class="math inline">\(\mu_{0}\)</span> to both end
-points of (<a href="c-means.html#eq:ciD1">(7.30)</a>).</p></li>
+points of (<a href="c-means.html#eq:ciD1">(7.30)</a>).</p>
+</li>
 </ul>
 <p>For the fruit and vegetable variable in the diet example, the mean under
 the null hypothesis is the dietary recommendation <span class="math inline">\(\mu_{0}=5\)</span>. The
@@ -1686,7 +1595,8 @@ the <span class="math inline">\(t\)</span>-test statistic (<a href="c-means.html
 test, <span class="math inline">\(t=-42.49\)</span> is referred to the sampling distribution under the null
 hypothesis, which can here be taken to be the standard normal
 distribution, as the sample size <span class="math inline">\(n=1723\)</span> is large. If we consider the
-two-sided alternative hypothesis <span class="math inline">\(H_{a}:\; \Delta\ne 0\)</span> (i.e. <span class="math inline">\(H_{a}:\; \mu\ne5\)</span>), the <span class="math inline">\(P\)</span>-value is the probability that a randomly selected
+two-sided alternative hypothesis <span class="math inline">\(H_{a}:\; \Delta\ne 0\)</span> (i.e. <span class="math inline">\(H_{a}:\;
+\mu\ne5\)</span>), the <span class="math inline">\(P\)</span>-value is the probability that a randomly selected
 value from the standard normal distribution is at most <span class="math inline">\(-42.49\)</span> or at
 least 42.49. This is a very small probability, approximately
 <span class="math inline">\(0.00\cdots019\)</span>, with 268 zeroes between the decimal point and the 1.
@@ -1728,13 +1638,16 @@ sloppy SPSS manner as “.000”). This is actually obtained from the <span clas
 distribution, the degrees of freedom of which (<span class="math inline">\(n-1=1723\)</span>) are given
 under “df”. Finally, the output also contains a 95% confidence interval
 for the difference <span class="math inline">\(\Delta=\mu-\mu_{0}\)</span>, i.e. the interval
-(<a href="c-means.html#eq:ciD1">(7.30)</a>).<a href="#fn38" class="footnote-ref" id="fnref38"><sup>38</sup></a> This is given as <span class="math inline">\((-2.30; -2.10)\)</span>. To obtain the more
+(<a href="c-means.html#eq:ciD1">(7.30)</a>).<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;Except that SPSS uses the multiplier from &lt;span class="math inline"&gt;\(t_{1723}\)&lt;/span&gt; distribution
+rather than the normal distribution. This makes no difference here,
+as the former is 1.961 and the latter 1.960.&lt;/p&gt;'><sup>38</sup></a> This is given as <span class="math inline">\((-2.30; -2.10)\)</span>. To obtain the more
 convenient confidence interval (<a href="c-means.html#eq:cimu1">(7.31)</a>) for <span class="math inline">\(\mu\)</span> itself, we only
 need to add <span class="math inline">\(\mu_{0}=5\)</span> to both end points of the interval shown by
-SPSS, to obtain <span class="math inline">\((-2.30+5; -2.10+5)=(2.70; 2.90)\)</span> as before.</p>
-<div class="figure"><span style="display:block;" id="fig:f-spsstest"></span>
-<img src="ttestspss.png" alt="SPSS output for a t-test of a single mean. The output is for the variable on fruit and vegetable consumption in Table 7.4, with the null hypothesis H-{0}: \mu=5." style="width:130mm" />
-<p class="caption">Figure 7.6: SPSS output for a <span class="math inline">\(t\)</span>-test of a single mean. The output is for the variable on fruit and vegetable consumption in Table <a href="#tab:t-ttests1">7.4</a>, with the null hypothesis <span class="math inline">\(H-{0}: \mu=5\)</span>.</p>
+SPSS, to obtain <span class="math inline">\((-2.30+5;
+-2.10+5)=(2.70; 2.90)\)</span> as before.</p>
+<div class="float">
+<span style="display:block;" id="fig:f-spsstest"></span>
+<img src="ttestspss.png" style="width:130mm" alt="SPSS output for a t-test of a single mean. The output is for the variable on fruit and vegetable consumption in Table 7.4, with the null hypothesis H-{0}: \mu=5."><div class="figcaption">Figure 7.6: SPSS output for a <span class="math inline">\(t\)</span>-test of a single mean. The output is for the variable on fruit and vegetable consumption in Table <a href="#tab:t-ttests1">7.4</a>, with the null hypothesis <span class="math inline">\(H-{0}: \mu=5\)</span>.</div>
 </div>
 <p>Similar results for the variable on the percentage of dietary energy
 obtained from fat are also shown in Table <a href="#tab:t-ttests1">7.4</a>. Here
@@ -1760,7 +1673,8 @@ value <span class="math inline">\(\mu_{0}\)</span> to be considered as the null 
 one-sample <span class="math inline">\(t\)</span>-test. Second, even when such a significance test is
 sensible, the conclusion can also be obtained from the confidence
 interval, as discussed at the end of Section <a href="c-probs.html#ss-means-ci-vstests">5.6.4</a>. In other words,
-<span class="math inline">\(H_{0}:\; \mu=\mu_{0}\)</span> is rejected at a given significance level against a
+<span class="math inline">\(H_{0}:\;
+\mu=\mu_{0}\)</span> is rejected at a given significance level against a
 two-sided alternative hypothesis, if the confidence interval for <span class="math inline">\(\mu\)</span>
 at the corresponding confidence level does not contain <span class="math inline">\(\mu_{0}\)</span>, and
 not rejected if the interval contains <span class="math inline">\(\mu_{0}\)</span>. Here the 95% confidence
@@ -1796,8 +1710,10 @@ contrasts with the results for the fruit and vegetable variable, where
 all the values covered by the confidence interval (2.70; 2.90) are much
 more obviously far from the recommended value of 5.</p>
 </div>
-<div id="s-means-dependent" class="section level2 hasAnchor">
-<h2><span class="header-section-number">7.5</span> Inference for dependent samples<a href="c-means.html#s-means-dependent" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="s-means-dependent" class="section level2" number="7.5">
+<h2>
+<span class="header-section-number">7.5</span> Inference for dependent samples<a class="anchor" aria-label="anchor" href="#s-means-dependent"><i class="fas fa-link"></i></a>
+</h2>
 <p>In the two-sample cases considered in Section <a href="c-means.html#s-means-inference">7.3</a>,
 the two groups being compared consisted of separate and presumably
 unrelated units (people, in all of these cases). It thus seemed
@@ -1913,28 +1829,31 @@ where the multiplier <span class="math inline">\(q_{\alpha/2}\)</span> is either
 noting that this is simply a one-sample analysis with the differences
 <span class="math inline">\(D\)</span> in place of the variable <span class="math inline">\(Y\)</span>, and applying the formulas of Section
 <a href="c-means.html#s-means-1sample">7.4</a> to the observed values of <span class="math inline">\(D\)</span>.</p>
-<table style="width:99%;">
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
 <colgroup>
-<col width="25%" />
-<col width="18%" />
-<col width="15%" />
-<col width="20%" />
-<col width="18%" />
+<col width="25%">
+<col width="18%">
+<col width="15%">
+<col width="20%">
+<col width="18%">
 </colgroup>
-<thead>
-<tr class="header">
-<th align="right"><br />
-<span class="math inline">\(\hat{\Delta}\)</span></th>
-<th align="right"><br />
-<span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span></th>
+<thead><tr class="header">
+<th align="right">
+<br><span class="math inline">\(\hat{\Delta}\)</span>
+</th>
+<th align="right">
+<br><span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span>
+</th>
 <th align="right">Test of <span class="math inline">\(H_{0}: \Delta=0\)</span>
-<span class="math inline">\(t\)</span></th>
+<span class="math inline">\(t\)</span>
+</th>
 <th align="right">Test of <span class="math inline">\(H_{0}: \Delta=0\)</span>
 <span class="math inline">\(P\)</span>-value</th>
-<th align="right"><br />
-95 % C.I. for <span class="math inline">\(\Delta\)</span></th>
-</tr>
-</thead>
+<th align="right">
+<br>
+95 % C.I. for <span class="math inline">\(\Delta\)</span>
+</th>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="right">Example 7.4: Father’s personal well-being</td>
@@ -1947,7 +1866,8 @@ noting that this is simply a one-sample analysis with the differences
 <td align="right">0.08</td>
 <td align="right">0.247</td>
 <td align="right">0.324</td>
-<td align="right">0.75<span class="math inline">\(^{\dagger}\)</span></td>
+<td align="right">0.75<span class="math inline">\(^{\dagger}\)</span>
+</td>
 <td align="right">(-0.40; 0.56)</td>
 </tr>
 <tr class="odd">
@@ -1962,11 +1882,12 @@ Fridays</td>
 <td align="right">-1835</td>
 <td align="right">372</td>
 <td align="right">-4.93</td>
-<td align="right">0.001<span class="math inline">\(^{*}\)</span></td>
+<td align="right">0.001<span class="math inline">\(^{*}\)</span>
+</td>
 <td align="right">(-2676; -994)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>:(#tab:t-2tests-dep)Results of tests and confidence intervals for comparing means of two
 dependent samples. For Example 7.4, the difference is between after
 and before the birth of the child, and for Example 7.5 it is between
@@ -2017,17 +1938,21 @@ hypothesis that <span class="math inline">\(\Delta=0\)</span>. There is thus no 
 difference in first-time fathers’ self-assessed level of well-being
 between the time their wives were six months pregnant, and a month after
 the birth of the baby. This is also indicated by the 95% confidence
-interval  for the difference, which clearly covers
+interval for the difference, which clearly covers
 the value 0 of no difference.</p>
 </div>
-<div id="s-means-tests3" class="section level2 hasAnchor">
-<h2><span class="header-section-number">7.6</span> Further comments on significance tests<a href="c-means.html#s-means-tests3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="s-means-tests3" class="section level2" number="7.6">
+<h2>
+<span class="header-section-number">7.6</span> Further comments on significance tests<a class="anchor" aria-label="anchor" href="#s-means-tests3"><i class="fas fa-link"></i></a>
+</h2>
 <p>Some further aspects of significance testing are dicussed here. These
 are not practical issues that need to be actively considered every time
 you carry out a test. Instead, they provide context and motivation for
 the principles behind significance tests.</p>
-<div id="ss-means-tests3-errors" class="section level3 hasAnchor">
-<h3><span class="header-section-number">7.6.1</span> Different types of error<a href="c-means.html#ss-means-tests3-errors" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-means-tests3-errors" class="section level3" number="7.6.1">
+<h3>
+<span class="header-section-number">7.6.1</span> Different types of error<a class="anchor" aria-label="anchor" href="#ss-means-tests3-errors"><i class="fas fa-link"></i></a>
+</h3>
 <p>Consider for the moment the approach to significance testing where the
 outcome is presented in the form of a discrete claim or decision about
 the hypotheses, stating that the null hypothesis was either rejected or
@@ -2049,13 +1974,14 @@ hypothesis unless data provide strong enough evidence to justify
 rejecting it, a principle which is somewhat analogous to the “keep a
 theory until falsified” thinking of Popperian philosophy of science, or
 even the “innocent until proven guilty” principle of jurisprudence.</p>
-<table>
-<tbody>
+<div class="inline-table"><table class="table table-sm"><tbody>
 <tr class="odd">
 <td></td>
 <td></td>
-<td align="left"><span class="math inline">\(H_{0}\)</span> is</td>
-<td align="left"><span class="math inline">\(H_{0}\)</span> is</td>
+<td align="left">
+<span class="math inline">\(H_{0}\)</span> is</td>
+<td align="left">
+<span class="math inline">\(H_{0}\)</span> is</td>
 </tr>
 <tr class="even">
 <td></td>
@@ -2064,7 +1990,8 @@ even the “innocent until proven guilty” principle of jurisprudence.</p>
 <td align="left">Rejected</td>
 </tr>
 <tr class="odd">
-<td><span class="math inline">\(H_{0}\)</span> is</td>
+<td>
+<span class="math inline">\(H_{0}\)</span> is</td>
 <td>True</td>
 <td align="left">Correct decision</td>
 <td align="left">Type I error</td>
@@ -2075,8 +2002,7 @@ even the “innocent until proven guilty” principle of jurisprudence.</p>
 <td align="left">Type II error</td>
 <td align="left">Correct decision</td>
 </tr>
-</tbody>
-</table>
+</tbody></table></div>
 <p>:(#tab:t-twoerrors)The four possible combinations of the truth of a null hypothesis
 <span class="math inline">\(H_{0}\)</span> in a population and decision about it from a significance
 test.</p>
@@ -2136,8 +2062,10 @@ using the <span class="math inline">\(t\)</span>-test when <span class="math inl
 size is small, because the sampling distribution of the <span class="math inline">\(t\)</span>-test
 statistic may then be very far from normal).</p>
 </div>
-<div id="ss-means-tests3-power" class="section level3 hasAnchor">
-<h3><span class="header-section-number">7.6.2</span> Power of significance tests<a href="c-means.html#ss-means-tests3-power" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-means-tests3-power" class="section level3" number="7.6.2">
+<h3>
+<span class="header-section-number">7.6.2</span> Power of significance tests<a class="anchor" aria-label="anchor" href="#ss-means-tests3-power"><i class="fas fa-link"></i></a>
+</h3>
 <p>After addressing the question of Type I error by selecting an
 appropriate test and deciding on the significance level to be used, we
 turn our attention to Type II errors. The probability that a
@@ -2190,7 +2118,7 @@ questions like</p>
 rejecting <span class="math inline">\(H_{0}: \Delta=0\)</span> is at least 0.9, when the true value of
 <span class="math inline">\(\Delta\)</span> is smaller than <span class="math inline">\(-5\)</span> or larger than 5?</p></li>
 <li><p>The largest sample sizes we can afford are 1000 in both groups,
-i.e. <span class="math inline">\(n_{1}=n_{2}=1000\)</span>. What is the probability this gives us of
+i.e. <span class="math inline">\(n_{1}=n_{2}=1000\)</span>. What is the probability this gives us of
 rejecting <span class="math inline">\(H_{0}: \Delta=0\)</span> when the true value of <span class="math inline">\(\Delta\)</span> is
 smaller than <span class="math inline">\(-5\)</span> or larger than 5?</p></li>
 </ul>
@@ -2201,8 +2129,10 @@ mathematical results for test statistics, essentially using their
 sampling distributions under specific alternative hypotheses. The
 details are, however, beyond the scope of this course.</p>
 </div>
-<div id="ss-means-tests3-importance" class="section level3 hasAnchor">
-<h3><span class="header-section-number">7.6.3</span> Significance vs. importance<a href="c-means.html#ss-means-tests3-importance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-means-tests3-importance" class="section level3" number="7.6.3">
+<h3>
+<span class="header-section-number">7.6.3</span> Significance vs. importance<a class="anchor" aria-label="anchor" href="#ss-means-tests3-importance"><i class="fas fa-link"></i></a>
+</h3>
 <p>The <span class="math inline">\(P\)</span>-value is a measure of the strength of evidence the data provide
 against the null hypothesis. This is not the same as the magnitude of
 the difference between sample estimates and the null hypothesis, or the
@@ -2238,121 +2168,64 @@ situation or of possible efforts of trying to change it.</p>
 </div>
 </div>
 </div>
-<div class="footnotes">
-<hr />
-<ol start="28">
-<li id="fn28"><p>Conducted for the Food Standards Agency and the Department of
-Health by ONS and MRC Human Nutrition Research. The sample
-statistics used here are from the survey reports published by HMSO
-in 2002-04, aggregating results published separately for men and
-women. The standard errors have been adjusted for non-constant
-sampling probabilities using design factors published in the survey
-reports. We will treat these numbers as if they were from a simple
-random sample.<a href="c-means.html#fnref28" class="footnote-back">↩</a></p></li>
-<li id="fn29"><p>The data were obtained from the UK Data Archive. Three respondents
-with outlying values of the housework variable (two women and one
-man, with 50, 50 and 70 reported weekly hours) have been omitted
-from the analysis considered here.<a href="c-means.html#fnref29" class="footnote-back">↩</a></p></li>
-<li id="fn30"><p>Boyanowsky, E. O. and Griffiths, C. T. (1982). “Weapons and eye
-contact as instigators or inhibitors of aggressive arousal in
-police-citizen interaction”. <em>Journal of Applied Social Psychology</em>,
-<strong>12</strong>, 398–407.<a href="c-means.html#fnref30" class="footnote-back">↩</a></p></li>
-<li id="fn31"><p>Miller, B. C. and Sollie, D. L. (1980). “Normal stresses during
-the transition to parenthood”. <em>Family Relations</em>, <strong>29</strong>, 459–465.
-See the article for further information, including results for the
-mothers.<a href="c-means.html#fnref31" class="footnote-back">↩</a></p></li>
-<li id="fn32"><p>Scanlon, T. J. et al. (1993). “Is Friday the 13th bad for your
-health?”. <em>British Medical Journal</em>, <strong>307</strong>, 1584–1586. The data
-were obtained from The Data and Story Library at Carnegie Mellon
-University (<code>lib.stat.cmu.edu/DASL</code>).<a href="c-means.html#fnref32" class="footnote-back">↩</a></p></li>
-<li id="fn33"><p>In this case this is a consquence of the fact that the sample
-sizes (67 and 66) in the two groups are very similar. When they are
-exactly equal, formulas (<a href="c-means.html#eq:sehatjoint">(7.11)</a>)–(<a href="c-means.html#eq:ztestmuDb">(7.12)</a>) and
-(<a href="c-means.html#eq:seDmu-ne">(7.14)</a>) actually give exactly the same value for the
-standard error <span class="math inline">\(\hat{\sigma}_{\hat{\Delta}}\)</span>, and <span class="math inline">\(t\)</span> is thus also
-the same for both variants of the test.<a href="c-means.html#fnref33" class="footnote-back">↩</a></p></li>
-<li id="fn34"><p>The output also shows, under “Levene’s test”, a test statistic and
-<span class="math inline">\(P\)</span>-value for testing the hypothesis of equal standard deviations
-(<span class="math inline">\(H_{0}: \, \sigma_{1}=\sigma_{2}\)</span>). However, we prefer not to rely on this
-because the test requires the additional assumption that the
-population distributions are normal, and is very sensitive to the
-correctness of this assumption.<a href="c-means.html#fnref34" class="footnote-back">↩</a></p></li>
-<li id="fn35"><p>In the MY451 examination and homework, for example, both variants
-of the test are equally acceptable, unless a question explicitly
-states otherwise.<a href="c-means.html#fnref35" class="footnote-back">↩</a></p></li>
-<li id="fn36"><p>Student (1908). “The probable error of a mean”. <em>Biometrika</em>
-<strong>6</strong>, 1–25.<a href="c-means.html#fnref36" class="footnote-back">↩</a></p></li>
-<li id="fn37"><p>The two are the same because <span class="math inline">\(\mu_{0}\)</span> in
-<span class="math inline">\(\hat{\Delta}=\bar{Y}-\mu_{0}\)</span> is a known number rather a
-data-dependent statistic, which means that it does not affect the
-standard error.<a href="c-means.html#fnref37" class="footnote-back">↩</a></p></li>
-<li id="fn38"><p>Except that SPSS uses the multiplier from <span class="math inline">\(t_{1723}\)</span> distribution
-rather than the normal distribution. This makes no difference here,
-as the former is 1.961 and the latter 1.960.<a href="c-means.html#fnref38" class="footnote-back">↩</a></p></li>
-</ol>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="c-contd.html"><span class="header-section-number">6</span> Continuous variables: Population and sampling distributions</a></div>
+<div class="next"><a href="c-regression.html"><span class="header-section-number">8</span> Linear regression models</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#c-means"><span class="header-section-number">7</span> Analysis of population means</a></li>
+<li><a class="nav-link" href="#s-means-intro"><span class="header-section-number">7.1</span> Introduction and examples</a></li>
+<li>
+<a class="nav-link" href="#s-means-descr"><span class="header-section-number">7.2</span> Descriptive statistics for comparisons of groups</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ss-means-descr-graphs"><span class="header-section-number">7.2.1</span> Graphical methods of comparing sample distributions</a></li>
+<li><a class="nav-link" href="#ss-means-descr-tables"><span class="header-section-number">7.2.2</span> Comparing summary statistics</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#s-means-inference"><span class="header-section-number">7.3</span> Inference for two means from independent samples</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ss-means-inference-intro"><span class="header-section-number">7.3.1</span> Aims of the analysis</a></li>
+<li><a class="nav-link" href="#ss-means-inference-test"><span class="header-section-number">7.3.2</span> Significance testing: The two-sample t-test</a></li>
+<li><a class="nav-link" href="#ss-means-inference-ci"><span class="header-section-number">7.3.3</span> Confidence intervals for a difference of two means</a></li>
+<li><a class="nav-link" href="#ss-means-inference-variants"><span class="header-section-number">7.3.4</span> Variants of the test and confidence interval</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#s-means-1sample"><span class="header-section-number">7.4</span> Tests and confidence intervals for a single mean</a></li>
+<li><a class="nav-link" href="#s-means-dependent"><span class="header-section-number">7.5</span> Inference for dependent samples</a></li>
+<li>
+<a class="nav-link" href="#s-means-tests3"><span class="header-section-number">7.6</span> Further comments on significance tests</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ss-means-tests3-errors"><span class="header-section-number">7.6.1</span> Different types of error</a></li>
+<li><a class="nav-link" href="#ss-means-tests3-power"><span class="header-section-number">7.6.2</span> Power of significance tests</a></li>
+<li><a class="nav-link" href="#ss-means-tests3-importance"><span class="header-section-number">7.6.3</span> Significance vs. importance</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/LSE-Methodology/MY451/blob/master/07-MY451-means.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/LSE-Methodology/MY451/edit/master/07-MY451-means.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
 </div>
-            </section>
+    </nav>
+</div>
 
-          </div>
-        </div>
-      </div>
-<a href="c-contd.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="c-regression.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>MY451 Introduction to Quantitative Analysis</strong>" was written by Jouni Kuha, Department of Methodology, London School of Economics and Political Science. </p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/LSE-Methodology/MY451/edit/master/07-MY451-means.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -2364,7 +2237,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>

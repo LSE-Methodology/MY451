@@ -1,269 +1,75 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang="en">
 <head>
-
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Descriptive statistics | MY451 Introduction to Quantitative Analysis</title>
-  <meta name="description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
-
-  <meta property="og:title" content="Chapter 2 Descriptive statistics | MY451 Introduction to Quantitative Analysis" />
-  <meta property="og:type" content="book" />
-  
-  <meta property="og:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  <meta name="github-repo" content="LSE-Methodology/MY451" />
-
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Descriptive statistics | MY451 Introduction to Quantitative Analysis" />
-  
-  <meta name="twitter:description" content="This course is intended for those with little or no past training in quantitative methods. The course is an intensive introduction to some of the principles and methods of statistical analysis in social research. Topics covered in MY451 include descriptive statistics, basic ideas of inference and estimation, contingency tables and an introduction to linear regression models." />
-  
-
-<meta name="author" content="Jouni Kuha, Department of Methodology, London School of Economics and Political Science" />
-
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-  
-  
-<link rel="prev" href="c-intro.html"/>
-<link rel="next" href="c-samples.html"/>
-<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
-
-
-
-
-
-
-
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
-<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-
-
-
-<style type="text/css">
-  
-  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-</style>
-
-<link rel="stylesheet" href="style.css" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 2 Descriptive statistics | MY451 Introduction to Quantitative Analysis</title>
+<meta name="author" content="Jouni Kuha, Department of Methodology, London School of Economics and Political Science">
+<meta name="description" content="2.1 Introduction This chapter introduces some common descriptive statistical methods. It is organised around two dichotomies: Methods that are used only for variables with small numbers of values,...">
+<meta name="generator" content="bookdown 0.46 with bs4_book()">
+<meta property="og:title" content="Chapter 2 Descriptive statistics | MY451 Introduction to Quantitative Analysis">
+<meta property="og:type" content="book">
+<meta property="og:description" content="2.1 Introduction This chapter introduces some common descriptive statistical methods. It is organised around two dichotomies: Methods that are used only for variables with small numbers of values,...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 2 Descriptive statistics | MY451 Introduction to Quantitative Analysis">
+<meta name="twitter:description" content="2.1 Introduction This chapter introduces some common descriptive statistical methods. It is organised around two dichotomies: Methods that are used only for variables with small numbers of values,...">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.11.0/transition.js"></script><script src="libs/bs3compat-0.11.0/tabs.js"></script><script src="libs/bs3compat-0.11.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
+    
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  </style>
+<link rel="stylesheet" href="style.css">
 </head>
+<body data-spy="scroll" data-target="#toc">
 
-<body>
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 
-
-
-  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
-
-    <div class="book-summary">
-      <nav role="navigation">
-
-<ul class="summary">
-<li><a href="./">MY451 Introduction to Quantitative Analysis</a></li>
-
-<li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Course information<a href="index.html#course-information" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1" data-path="c-intro.html"><a href="c-intro.html"><i class="fa fa-check"></i><b>1</b> Introduction<a href="c-intro.html#c-intro" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="1.1" data-path="c-intro.html"><a href="c-intro.html#s-intro-purpose"><i class="fa fa-check"></i><b>1.1</b> What is the purpose of this course?<a href="c-intro.html#s-intro-purpose" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1.2" data-path="c-intro.html"><a href="c-intro.html#s-intro-definitions"><i class="fa fa-check"></i><b>1.2</b> Some basic definitions<a href="c-intro.html#s-intro-definitions" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="1.2.1" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-subj"><i class="fa fa-check"></i><b>1.2.1</b> Subjects and variables<a href="c-intro.html#ss-intro-def-subj" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1.2.2" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-vartypes"><i class="fa fa-check"></i><b>1.2.2</b> Types of variables<a href="c-intro.html#ss-intro-def-vartypes" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1.2.3" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-descr"><i class="fa fa-check"></i><b>1.2.3</b> Description and inference<a href="c-intro.html#ss-intro-def-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1.2.4" data-path="c-intro.html"><a href="c-intro.html#ss-intro-def-assoc"><i class="fa fa-check"></i><b>1.2.4</b> Association and causation<a href="c-intro.html#ss-intro-def-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="1.3" data-path="c-intro.html"><a href="c-intro.html#s-intro-outline"><i class="fa fa-check"></i><b>1.3</b> Outline of the course<a href="c-intro.html#s-intro-outline" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1.4" data-path="c-intro.html"><a href="c-intro.html#s-intro-maths"><i class="fa fa-check"></i><b>1.4</b> The use of mathematics and computing<a href="c-intro.html#s-intro-maths" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="1.4.1" data-path="c-intro.html"><a href="c-intro.html#symbolic-mathematics-and-mathematical-notation"><i class="fa fa-check"></i><b>1.4.1</b> Symbolic mathematics and mathematical notation<a href="c-intro.html#symbolic-mathematics-and-mathematical-notation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="1.4.2" data-path="c-intro.html"><a href="c-intro.html#computing-1"><i class="fa fa-check"></i><b>1.4.2</b> Computing<a href="c-intro.html#computing-1" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="2" data-path="c-descr1.html"><a href="c-descr1.html"><i class="fa fa-check"></i><b>2</b> Descriptive statistics<a href="c-descr1.html#c-descr1" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="2.1" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-intro"><i class="fa fa-check"></i><b>2.1</b> Introduction<a href="c-descr1.html#s-descr1-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.2" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-examples"><i class="fa fa-check"></i><b>2.2</b> Example data sets<a href="c-descr1.html#s-descr1-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.3" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cat"><i class="fa fa-check"></i><b>2.3</b> Single categorical variable<a href="c-descr1.html#s-descr1-1cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="2.3.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-distr"><i class="fa fa-check"></i><b>2.3.1</b> Describing the sample distribution<a href="c-descr1.html#ss-descr1-1cat-distr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.3.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-tables"><i class="fa fa-check"></i><b>2.3.2</b> Tabular methods: Tables of frequencies<a href="c-descr1.html#ss-descr1-1cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.3.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-charts"><i class="fa fa-check"></i><b>2.3.3</b> Graphical methods: Bar charts<a href="c-descr1.html#ss-descr1-1cat-charts" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.3.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cat-descriptives"><i class="fa fa-check"></i><b>2.3.4</b> Simple descriptive statistics<a href="c-descr1.html#ss-descr1-1cat-descriptives" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="2.4" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cat"><i class="fa fa-check"></i><b>2.4</b> Two categorical variables<a href="c-descr1.html#s-descr1-2cat" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="2.4.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-tables"><i class="fa fa-check"></i><b>2.4.1</b> Two-way contingency tables<a href="c-descr1.html#ss-descr1-2cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.4.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-cond"><i class="fa fa-check"></i><b>2.4.2</b> Conditional proportions<a href="c-descr1.html#ss-descr1-2cat-cond" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.4.3" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-assoc"><i class="fa fa-check"></i><b>2.4.3</b> Conditional distributions and associations<a href="c-descr1.html#ss-descr1-2cat-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.4.4" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-descr"><i class="fa fa-check"></i><b>2.4.4</b> Describing an association using conditional proportions<a href="c-descr1.html#ss-descr1-2cat-descr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.4.5" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-2cat-gamma"><i class="fa fa-check"></i><b>2.4.5</b> A measure of association for ordinal variables<a href="c-descr1.html#ss-descr1-2cat-gamma" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="2.5" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-1cont"><i class="fa fa-check"></i><b>2.5</b> Sample distributions of a single continuous variable<a href="c-descr1.html#s-descr1-1cont" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="2.5.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-tab"><i class="fa fa-check"></i><b>2.5.1</b> Tabular methods<a href="c-descr1.html#ss-descr1-1cont-tab" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.5.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-1cont-graphs"><i class="fa fa-check"></i><b>2.5.2</b> Graphical methods<a href="c-descr1.html#ss-descr1-1cont-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="2.6" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-nums"><i class="fa fa-check"></i><b>2.6</b> Numerical descriptive statistics<a href="c-descr1.html#s-descr1-nums" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="2.6.1" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-central"><i class="fa fa-check"></i><b>2.6.1</b> Measures of central tendency<a href="c-descr1.html#ss-descr1-nums-central" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.6.2" data-path="c-descr1.html"><a href="c-descr1.html#ss-descr1-nums-variation"><i class="fa fa-check"></i><b>2.6.2</b> Measures of variation<a href="c-descr1.html#ss-descr1-nums-variation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="2.7" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-2cont"><i class="fa fa-check"></i><b>2.7</b> Associations which involve continuous variables<a href="c-descr1.html#s-descr1-2cont" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.8" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-presentation"><i class="fa fa-check"></i><b>2.8</b> Presentation of tables and graphs<a href="c-descr1.html#s-descr1-presentation" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="2.9" data-path="c-descr1.html"><a href="c-descr1.html#s-descr1-app"><i class="fa fa-check"></i><b>2.9</b> Appendix: Country data<a href="c-descr1.html#s-descr1-app" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="c-samples.html"><a href="c-samples.html"><i class="fa fa-check"></i><b>3</b> Samples and populations<a href="c-samples.html#c-samples" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="3.1" data-path="c-samples.html"><a href="c-samples.html#s-samples-intro"><i class="fa fa-check"></i><b>3.1</b> Introduction<a href="c-samples.html#s-samples-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="3.2" data-path="c-samples.html"><a href="c-samples.html#s-samples-finpops"><i class="fa fa-check"></i><b>3.2</b> Finite populations<a href="c-samples.html#s-samples-finpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="3.3" data-path="c-samples.html"><a href="c-samples.html#s-samples-samples"><i class="fa fa-check"></i><b>3.3</b> Samples from finite populations<a href="c-samples.html#s-samples-samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="3.4" data-path="c-samples.html"><a href="c-samples.html#s-samples-infpops"><i class="fa fa-check"></i><b>3.4</b> Conceptual and infinite populations<a href="c-samples.html#s-samples-infpops" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="3.5" data-path="c-samples.html"><a href="c-samples.html#s-samples-popdistrs"><i class="fa fa-check"></i><b>3.5</b> Population distributions<a href="c-samples.html#s-samples-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="3.6" data-path="c-samples.html"><a href="c-samples.html#s-samples-inference"><i class="fa fa-check"></i><b>3.6</b> Need for statistical inference<a href="c-samples.html#s-samples-inference" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="4" data-path="c-tables.html"><a href="c-tables.html"><i class="fa fa-check"></i><b>4</b> Statistical inference for two-way tables<a href="c-tables.html#c-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="4.1" data-path="c-tables.html"><a href="c-tables.html#s-tables-intro"><i class="fa fa-check"></i><b>4.1</b> Introduction<a href="c-tables.html#s-tables-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.2" data-path="c-tables.html"><a href="c-tables.html#s-tables-tests"><i class="fa fa-check"></i><b>4.2</b> Significance tests<a href="c-tables.html#s-tables-tests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.3" data-path="c-tables.html"><a href="c-tables.html#s-tables-chi2test"><i class="fa fa-check"></i><b>4.3</b> The chi-square test of independence<a href="c-tables.html#s-tables-chi2test" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="4.3.1" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-null"><i class="fa fa-check"></i><b>4.3.1</b> Hypotheses<a href="c-tables.html#ss-tables-chi2test-null" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.3.2" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-ass"><i class="fa fa-check"></i><b>4.3.2</b> Assumptions of a significance test<a href="c-tables.html#ss-tables-chi2test-ass" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.3.3" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-stat"><i class="fa fa-check"></i><b>4.3.3</b> The test statistic<a href="c-tables.html#ss-tables-chi2test-stat" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.3.4" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-sdist"><i class="fa fa-check"></i><b>4.3.4</b> The sampling distribution of the test statistic<a href="c-tables.html#ss-tables-chi2test-sdist" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.3.5" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-Pval"><i class="fa fa-check"></i><b>4.3.5</b> The P-value<a href="c-tables.html#ss-tables-chi2test-Pval" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="4.3.6" data-path="c-tables.html"><a href="c-tables.html#ss-tables-chi2test-conclusions"><i class="fa fa-check"></i><b>4.3.6</b> Drawing conclusions from a test<a href="c-tables.html#ss-tables-chi2test-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="4.4" data-path="c-tables.html"><a href="c-tables.html#s-tables-summary"><i class="fa fa-check"></i><b>4.4</b> Summary of the chi-square test of independence<a href="c-tables.html#s-tables-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="5" data-path="c-probs.html"><a href="c-probs.html"><i class="fa fa-check"></i><b>5</b> Inference for population proportions<a href="c-probs.html#c-probs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="5.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-intro"><i class="fa fa-check"></i><b>5.1</b> Introduction<a href="c-probs.html#s-probs-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-examples"><i class="fa fa-check"></i><b>5.2</b> Examples<a href="c-probs.html#s-probs-examples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-distribution"><i class="fa fa-check"></i><b>5.3</b> Probability distribution of a dichotomous variable<a href="c-probs.html#s-probs-distribution" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.4" data-path="c-probs.html"><a href="c-probs.html#s-probs-pointest"><i class="fa fa-check"></i><b>5.4</b> Point estimation of a population probability<a href="c-probs.html#s-probs-pointest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.5" data-path="c-probs.html"><a href="c-probs.html#s-probs-test1sample"><i class="fa fa-check"></i><b>5.5</b> Significance test of a single proportion<a href="c-probs.html#s-probs-test1sample" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="5.5.1" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-hypotheses"><i class="fa fa-check"></i><b>5.5.1</b> Null and alternative hypotheses<a href="c-probs.html#ss-probs-test1sample-hypotheses" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.5.2" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-teststatistic"><i class="fa fa-check"></i><b>5.5.2</b> The test statistic<a href="c-probs.html#ss-probs-test1sample-teststatistic" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.5.3" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-samplingd"><i class="fa fa-check"></i><b>5.5.3</b> The sampling distribution of the test statistic and P-values<a href="c-probs.html#ss-probs-test1sample-samplingd" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.5.4" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-conclusions"><i class="fa fa-check"></i><b>5.5.4</b> Conclusions from the test<a href="c-probs.html#ss-probs-test1sample-conclusions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.5.5" data-path="c-probs.html"><a href="c-probs.html#ss-probs-test1sample-summary"><i class="fa fa-check"></i><b>5.5.5</b> Summary of the test<a href="c-probs.html#ss-probs-test1sample-summary" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="5.6" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci"><i class="fa fa-check"></i><b>5.6</b> Confidence interval for a single proportion<a href="c-probs.html#s-probs-1sampleci" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="5.6.1" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-intro"><i class="fa fa-check"></i><b>5.6.1</b> Introduction<a href="c-probs.html#s-probs-1sampleci-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.6.2" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-calc"><i class="fa fa-check"></i><b>5.6.2</b> Calculation of the interval<a href="c-probs.html#s-probs-1sampleci-calc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.6.3" data-path="c-probs.html"><a href="c-probs.html#s-probs-1sampleci-int"><i class="fa fa-check"></i><b>5.6.3</b> Interpretation of confidence intervals<a href="c-probs.html#s-probs-1sampleci-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="5.6.4" data-path="c-probs.html"><a href="c-probs.html#ss-means-ci-vstests"><i class="fa fa-check"></i><b>5.6.4</b> Confidence intervals vs. significance tests<a href="c-probs.html#ss-means-ci-vstests" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="5.7" data-path="c-probs.html"><a href="c-probs.html#s-probs-2samples"><i class="fa fa-check"></i><b>5.7</b> Inference for comparing two proportions<a href="c-probs.html#s-probs-2samples" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="6" data-path="c-contd.html"><a href="c-contd.html"><i class="fa fa-check"></i><b>6</b> Continuous variables: Population and sampling distributions<a href="c-contd.html#c-contd" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="6.1" data-path="c-contd.html"><a href="c-contd.html#s-contd-intro"><i class="fa fa-check"></i><b>6.1</b> Introduction<a href="c-contd.html#s-contd-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="6.2" data-path="c-contd.html"><a href="c-contd.html#s-contd-popdistrs"><i class="fa fa-check"></i><b>6.2</b> Population distributions of continuous variables<a href="c-contd.html#s-contd-popdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="6.2.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-popdistrs-params"><i class="fa fa-check"></i><b>6.2.1</b> Population parameters and their point estimates<a href="c-contd.html#ss-contd-popdistrs-params" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="6.3" data-path="c-contd.html"><a href="c-contd.html#s-contd-probdistrs"><i class="fa fa-check"></i><b>6.3</b> Probability distributions of continuous variables<a href="c-contd.html#s-contd-probdistrs" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="6.3.1" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-general"><i class="fa fa-check"></i><b>6.3.1</b> General comments<a href="c-contd.html#ss-contd-probdistrs-general" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="6.3.2" data-path="c-contd.html"><a href="c-contd.html#ss-contd-probdistrs-normal"><i class="fa fa-check"></i><b>6.3.2</b> The normal distribution as a population distribution<a href="c-contd.html#ss-contd-probdistrs-normal" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="6.4" data-path="c-contd.html"><a href="c-contd.html#s-contd-clt"><i class="fa fa-check"></i><b>6.4</b> The normal distribution as a sampling distribution<a href="c-contd.html#s-contd-clt" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="7" data-path="c-means.html"><a href="c-means.html"><i class="fa fa-check"></i><b>7</b> Analysis of population means<a href="c-means.html#c-means" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="7.1" data-path="c-means.html"><a href="c-means.html#s-means-intro"><i class="fa fa-check"></i><b>7.1</b> Introduction and examples<a href="c-means.html#s-means-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.2" data-path="c-means.html"><a href="c-means.html#s-means-descr"><i class="fa fa-check"></i><b>7.2</b> Descriptive statistics for comparisons of groups<a href="c-means.html#s-means-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="7.2.1" data-path="c-means.html"><a href="c-means.html#ss-means-descr-graphs"><i class="fa fa-check"></i><b>7.2.1</b> Graphical methods of comparing sample distributions<a href="c-means.html#ss-means-descr-graphs" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.2.2" data-path="c-means.html"><a href="c-means.html#ss-means-descr-tables"><i class="fa fa-check"></i><b>7.2.2</b> Comparing summary statistics<a href="c-means.html#ss-means-descr-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="7.3" data-path="c-means.html"><a href="c-means.html#s-means-inference"><i class="fa fa-check"></i><b>7.3</b> Inference for two means from independent samples<a href="c-means.html#s-means-inference" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="7.3.1" data-path="c-means.html"><a href="c-means.html#ss-means-inference-intro"><i class="fa fa-check"></i><b>7.3.1</b> Aims of the analysis<a href="c-means.html#ss-means-inference-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.3.2" data-path="c-means.html"><a href="c-means.html#ss-means-inference-test"><i class="fa fa-check"></i><b>7.3.2</b> Significance testing: The two-sample t-test<a href="c-means.html#ss-means-inference-test" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.3.3" data-path="c-means.html"><a href="c-means.html#ss-means-inference-ci"><i class="fa fa-check"></i><b>7.3.3</b> Confidence intervals for a difference of two means<a href="c-means.html#ss-means-inference-ci" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.3.4" data-path="c-means.html"><a href="c-means.html#ss-means-inference-variants"><i class="fa fa-check"></i><b>7.3.4</b> Variants of the test and confidence interval<a href="c-means.html#ss-means-inference-variants" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="7.4" data-path="c-means.html"><a href="c-means.html#s-means-1sample"><i class="fa fa-check"></i><b>7.4</b> Tests and confidence intervals for a single mean<a href="c-means.html#s-means-1sample" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.5" data-path="c-means.html"><a href="c-means.html#s-means-dependent"><i class="fa fa-check"></i><b>7.5</b> Inference for dependent samples<a href="c-means.html#s-means-dependent" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.6" data-path="c-means.html"><a href="c-means.html#s-means-tests3"><i class="fa fa-check"></i><b>7.6</b> Further comments on significance tests<a href="c-means.html#s-means-tests3" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="7.6.1" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-errors"><i class="fa fa-check"></i><b>7.6.1</b> Different types of error<a href="c-means.html#ss-means-tests3-errors" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.6.2" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-power"><i class="fa fa-check"></i><b>7.6.2</b> Power of significance tests<a href="c-means.html#ss-means-tests3-power" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="7.6.3" data-path="c-means.html"><a href="c-means.html#ss-means-tests3-importance"><i class="fa fa-check"></i><b>7.6.3</b> Significance vs. importance<a href="c-means.html#ss-means-tests3-importance" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-</ul></li>
-<li class="chapter" data-level="8" data-path="c-regression.html"><a href="c-regression.html"><i class="fa fa-check"></i><b>8</b> Linear regression models<a href="c-regression.html#c-regression" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="8.1" data-path="c-regression.html"><a href="c-regression.html#s-regression-intro"><i class="fa fa-check"></i><b>8.1</b> Introduction<a href="c-regression.html#s-regression-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.2" data-path="c-regression.html"><a href="c-regression.html#s-regression-descr"><i class="fa fa-check"></i><b>8.2</b> Describing association between two continuous variables<a href="c-regression.html#s-regression-descr" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="8.2.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-intro"><i class="fa fa-check"></i><b>8.2.1</b> Introduction<a href="c-regression.html#ss-regression-descr-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.2.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-plots"><i class="fa fa-check"></i><b>8.2.2</b> Graphical methods<a href="c-regression.html#ss-regression-descr-plots" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.2.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-assoc"><i class="fa fa-check"></i><b>8.2.3</b> Linear associations<a href="c-regression.html#ss-regression-descr-assoc" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.2.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-descr-corr"><i class="fa fa-check"></i><b>8.2.4</b> Measures of association: covariance and correlation<a href="c-regression.html#ss-regression-descr-corr" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="8.3" data-path="c-regression.html"><a href="c-regression.html#s-regression-simple"><i class="fa fa-check"></i><b>8.3</b> Simple linear regression models<a href="c-regression.html#s-regression-simple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="8.3.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-intro"><i class="fa fa-check"></i><b>8.3.1</b> Introduction<a href="c-regression.html#ss-regression-simple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.3.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-def"><i class="fa fa-check"></i><b>8.3.2</b> Definition of the model<a href="c-regression.html#ss-regression-simple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.3.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-int"><i class="fa fa-check"></i><b>8.3.3</b> Interpretation of the model parameters<a href="c-regression.html#ss-regression-simple-int" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.3.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-est"><i class="fa fa-check"></i><b>8.3.4</b> Estimation of the parameters<a href="c-regression.html#ss-regression-simple-est" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.3.5" data-path="c-regression.html"><a href="c-regression.html#ss-regression-simple-inf"><i class="fa fa-check"></i><b>8.3.5</b> Statistical inference for the regression coefficients<a href="c-regression.html#ss-regression-simple-inf" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="8.4" data-path="c-regression.html"><a href="c-regression.html#s-regression-causality"><i class="fa fa-check"></i><b>8.4</b> Interlude: Association and causality<a href="c-regression.html#s-regression-causality" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.5" data-path="c-regression.html"><a href="c-regression.html#s-regression-multiple"><i class="fa fa-check"></i><b>8.5</b> Multiple linear regression models<a href="c-regression.html#s-regression-multiple" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="8.5.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-intro"><i class="fa fa-check"></i><b>8.5.1</b> Introduction<a href="c-regression.html#ss-regression-multiple-intro" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.5.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-def"><i class="fa fa-check"></i><b>8.5.2</b> Definition of the model<a href="c-regression.html#ss-regression-multiple-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.5.3" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-unchanged"><i class="fa fa-check"></i><b>8.5.3</b> Unchanged elements from simple linear models<a href="c-regression.html#ss-regression-multiple-unchanged" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.5.4" data-path="c-regression.html"><a href="c-regression.html#ss-regression-multiple-beta"><i class="fa fa-check"></i><b>8.5.4</b> Interpretation and inference for the regression coefficients<a href="c-regression.html#ss-regression-multiple-beta" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="8.6" data-path="c-regression.html"><a href="c-regression.html#s-regression-dummies"><i class="fa fa-check"></i><b>8.6</b> Including categorical explanatory variables<a href="c-regression.html#s-regression-dummies" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="8.6.1" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-def"><i class="fa fa-check"></i><b>8.6.1</b> Dummy variables<a href="c-regression.html#ss-regression-dummies-def" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="8.6.2" data-path="c-regression.html"><a href="c-regression.html#ss-regression-dummies-example"><i class="fa fa-check"></i><b>8.6.2</b> A second example<a href="c-regression.html#ss-regression-dummies-example" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="8.7" data-path="c-regression.html"><a href="c-regression.html#s-regression-rest"><i class="fa fa-check"></i><b>8.7</b> Other issues in linear regression modelling<a href="c-regression.html#s-regression-rest" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="9" data-path="c-3waytables.html"><a href="c-3waytables.html"><i class="fa fa-check"></i><b>9</b> Analysis of 3-way contingency tables<a href="c-3waytables.html#c-3waytables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="10" data-path="c-more.html"><a href="c-more.html"><i class="fa fa-check"></i><b>10</b> More statistics…<a href="c-more.html#c-more" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html"><i class="fa fa-check"></i>Appendix<a href="appendix.html#appendix" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#computer-classes"><i class="fa fa-check"></i>Computer classes<a href="appendix.html#computer-classes" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#general-instructions"><i class="fa fa-check"></i>General instructions<a href="appendix.html#general-instructions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#introduction-to-spss"><i class="fa fa-check"></i>Introduction to SPSS<a href="appendix.html#introduction-to-spss" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-2-class-descriptive-statistics-for-categorical-data-and-entering-data"><i class="fa fa-check"></i>WEEK 2 class: Descriptive statistics for categorical data, and entering data<a href="appendix.html#week-2-class-descriptive-statistics-for-categorical-data-and-entering-data" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-3-class-descriptive-statistics-for-continuous-variables"><i class="fa fa-check"></i>WEEK 3 class: Descriptive statistics for continuous variables<a href="appendix.html#week-3-class-descriptive-statistics-for-continuous-variables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-4-class-two-way-contingency-tables"><i class="fa fa-check"></i>WEEK 4 class: Two-way contingency tables<a href="appendix.html#week-4-class-two-way-contingency-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-5-class-inference-for-two-population-means"><i class="fa fa-check"></i>WEEK 5 class: Inference for two population means<a href="appendix.html#week-5-class-inference-for-two-population-means" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-7-class-inference-for-population-proportions"><i class="fa fa-check"></i>WEEK 7 class: Inference for population proportions<a href="appendix.html#week-7-class-inference-for-population-proportions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-8-class-correlation-and-simple-linear-regression-1"><i class="fa fa-check"></i>WEEK 8 class: Correlation and simple linear regression 1<a href="appendix.html#week-8-class-correlation-and-simple-linear-regression-1" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-9-class-simple-linear-regression-and-3-way-tables"><i class="fa fa-check"></i>WEEK 9 class: Simple linear regression and 3-way tables<a href="appendix.html#week-9-class-simple-linear-regression-and-3-way-tables" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-10-class-multiple-linear-regression"><i class="fa fa-check"></i>WEEK 10 class: Multiple linear regression<a href="appendix.html#week-10-class-multiple-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#week-11-class-review-and-multiple-linear-regression"><i class="fa fa-check"></i>WEEK 11 class: Review and Multiple linear regression<a href="appendix.html#week-11-class-review-and-multiple-linear-regression" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#statistical-tables"><i class="fa fa-check"></i>Statistical tables<a href="appendix.html#statistical-tables" class="anchor-section" aria-label="Anchor link to header"></a></a><ul>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-standard-normal-tail-probabilities"><i class="fa fa-check"></i>Table of standard normal tail probabilities<a href="appendix.html#table-of-standard-normal-tail-probabilities" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-critical-values-for-t-distributions"><i class="fa fa-check"></i>Table of critical values for t-distributions<a href="appendix.html#table-of-critical-values-for-t-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-<li class="chapter" data-level="" data-path="appendix.html"><a href="appendix.html#table-of-critical-values-for-chi-square-distributions"><i class="fa fa-check"></i>Table of critical values for chi-square distributions<a href="appendix.html#table-of-critical-values-for-chi-square-distributions" class="anchor-section" aria-label="Anchor link to header"></a></a></li>
-</ul></li>
-</ul></li>
-<li class="divider"></li>
-<li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
-
-</ul>
-
-      </nav>
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">MY451 Introduction to Quantitative Analysis</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
     </div>
 
-    <div class="book-body">
-      <div class="body-inner">
-        <div class="book-header" role="navigation">
-          <h1>
-            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">MY451 Introduction to Quantitative Analysis</a>
-          </h1>
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Course information</a></li>
+<li><a class="" href="c-intro.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="active" href="c-descr1.html"><span class="header-section-number">2</span> Descriptive statistics</a></li>
+<li><a class="" href="c-samples.html"><span class="header-section-number">3</span> Samples and populations</a></li>
+<li><a class="" href="c-tables.html"><span class="header-section-number">4</span> Statistical inference for two-way tables</a></li>
+<li><a class="" href="c-probs.html"><span class="header-section-number">5</span> Inference for population proportions</a></li>
+<li><a class="" href="c-contd.html"><span class="header-section-number">6</span> Continuous variables: Population and sampling distributions</a></li>
+<li><a class="" href="c-means.html"><span class="header-section-number">7</span> Analysis of population means</a></li>
+<li><a class="" href="c-regression.html"><span class="header-section-number">8</span> Linear regression models</a></li>
+<li><a class="" href="c-3waytables.html"><span class="header-section-number">9</span> Analysis of 3-way contingency tables</a></li>
+<li><a class="" href="c-more.html"><span class="header-section-number">10</span> More statistics…</a></li>
+<li><a class="" href="appendix.html">Appendix</a></li>
+</ul>
+
+        <div class="book-extra">
+          <p><a id="book-repo" href="https://github.com/LSE-Methodology/MY451">View book source <i class="fab fa-github"></i></a></p>
         </div>
-
-        <div class="page-wrapper" tabindex="-1" role="main">
-          <div class="page-inner">
-
-            <section class="normal" id="section-">
-<div id="c-descr1" class="section level1 hasAnchor">
-<h1><span class="header-section-number">Chapter 2</span> Descriptive statistics<a href="c-descr1.html#c-descr1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="s-descr1-intro" class="section level2 hasAnchor">
-<h2><span class="header-section-number">2.1</span> Introduction<a href="c-descr1.html#s-descr1-intro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="c-descr1" class="section level1" number="2">
+<h1>
+<span class="header-section-number">2</span> Descriptive statistics<a class="anchor" aria-label="anchor" href="#c-descr1"><i class="fas fa-link"></i></a>
+</h1>
+<div id="s-descr1-intro" class="section level2" number="2.1">
+<h2>
+<span class="header-section-number">2.1</span> Introduction<a class="anchor" aria-label="anchor" href="#s-descr1-intro"><i class="fas fa-link"></i></a>
+</h2>
 <p>This chapter introduces some common descriptive statistical methods. It
 is organised around two dichotomies:</p>
 <ul>
@@ -287,8 +93,10 @@ discussed in detail elsewhere in the coursepack. The chapter concludes
 with some general guidelines for presentation of descriptive tables and
 graphs in Section <a href="c-descr1.html#s-descr1-presentation">2.8</a>.</p>
 </div>
-<div id="s-descr1-examples" class="section level2 hasAnchor">
-<h2><span class="header-section-number">2.2</span> Example data sets<a href="c-descr1.html#s-descr1-examples" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="s-descr1-examples" class="section level2" number="2.2">
+<h2>
+<span class="header-section-number">2.2</span> Example data sets<a class="anchor" aria-label="anchor" href="#s-descr1-examples"><i class="fas fa-link"></i></a>
+</h2>
 <p>Two examples are used to illustrate the methods throughout this chapter:</p>
 <p><em>Example: Country data</em> </p>
 <p>Consider data for 155 countries on three variables:</p>
@@ -312,14 +120,15 @@ kind of variable which might in many analyses be treated instead as an
 effectively continuous, interval-level variable.</p>
 <p><em>Example: Survey data on attitudes towards income redistribution</em></p>
 <p>The data for the second example come from Round 5 of the European Social
-Survey (ESS), which was carried out in 2010.<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> The survey was fielded
+Survey (ESS), which was carried out in 2010.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;ESS Round 5: European Social Survey Round 5 Data (2010). Data file
+edition 2.0. Norwegian Social Science Data Services, Norway - Data
+Archive and distributor of ESS data.&lt;/p&gt;"><sup>2</sup></a> The survey was fielded
 in 28 countries, but here we use only data from 2344 respondents in the
 UK. Two variables are considered:</p>
 <ul>
 <li><p><strong>Sex</strong> of the respondent, coded as 1=Male, 2=Female.</p></li>
-<li><p>Answer to the following survey question:<br />
-<em>“The government should take measures to reduce differences in
-income levels”</em>,<br />
+<li><p>Answer to the following survey question:<br><em>“The government should take measures to reduce differences in
+income levels”</em>,<br>
 with five response options coded as “Agree strongly”=1, “Agree”=2,
 “Neither agree nor disagree”=3, “Disagree”=4, and “Disagree
 strongly”=5. This is a measure of the respondent’s <strong>attitude</strong>
@@ -330,7 +139,9 @@ attitude is ordinal.</p>
 <p>Attitudes towards <em>income redistribution</em> are an example of the broader
 topic of public opinion on welfare state policies. This is a large topic
 of classic and current interest in the social sciences, and questions on
-it have been included in many public opinion surveys.<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> Of key
+it have been included in many public opinion surveys.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;For recent findings, see for example Svallfors, S. (ed.) (2012),
+&lt;em&gt;Contested Welfare States: Welfare Attitudes in Europe and Beyond&lt;/em&gt;.
+Stanford University Press.&lt;/p&gt;"><sup>3</sup></a> Of key
 interest is to explore the how people’s attitudes are associated with
 their individual characteristics (including such factors as age, sex,
 education and income) and the contexts in which they live (for example
@@ -338,10 +149,14 @@ the type of welfare regime adopted in their country). In section
 <a href="c-descr1.html#s-descr1-2cat">2.4</a> below we use descriptive statistics to examine such
 associations between sex and attitude in this sample.</p>
 </div>
-<div id="s-descr1-1cat" class="section level2 hasAnchor">
-<h2><span class="header-section-number">2.3</span> Single categorical variable<a href="c-descr1.html#s-descr1-1cat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="ss-descr1-1cat-distr" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.3.1</span> Describing the sample distribution<a href="c-descr1.html#ss-descr1-1cat-distr" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="s-descr1-1cat" class="section level2" number="2.3">
+<h2>
+<span class="header-section-number">2.3</span> Single categorical variable<a class="anchor" aria-label="anchor" href="#s-descr1-1cat"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ss-descr1-1cat-distr" class="section level3" number="2.3.1">
+<h3>
+<span class="header-section-number">2.3.1</span> Describing the sample distribution<a class="anchor" aria-label="anchor" href="#ss-descr1-1cat-distr"><i class="fas fa-link"></i></a>
+</h3>
 <p>The term <em>distribution</em> is very important in statistics. In this section
 we consider the distribution of a single variable in the observed data,
 i.e. its <em>sample distribution</em>:</p>
@@ -357,8 +172,10 @@ the same concept.</p>
 the sample distribution or some features of it. This can be done in the
 form of tables, graphs or single numbers.</p>
 </div>
-<div id="ss-descr1-1cat-tables" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.3.2</span> Tabular methods: Tables of frequencies<a href="c-descr1.html#ss-descr1-1cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-descr1-1cat-tables" class="section level3" number="2.3.2">
+<h3>
+<span class="header-section-number">2.3.2</span> Tabular methods: Tables of frequencies<a class="anchor" aria-label="anchor" href="#ss-descr1-1cat-tables"><i class="fas fa-link"></i></a>
+</h3>
 <p>When a variable has only a limited number of distinct values, its sample
 distribution can be summarized directly from the definition given above.
 In other words, we simply count and display the number of times each of
@@ -366,16 +183,15 @@ the values appears in the data. One way to do the display is as a table,
 like the ones for region and the democracy index in the country data,
 and attitude in the survey example, which are shown in Tables
 <a href="c-descr1.html#tab:t-region">2.1</a>, <a href="c-descr1.html#tab:t-democ">2.2</a> and <a href="c-descr1.html#tab:t-attitude">2.3</a> respectively.</p>
-<table>
-<caption><span id="tab:t-region">Table 2.1: </span>Frequency distribution of the region variable in the country data.</caption>
-<thead>
-<tr class="header">
+<div class="inline-table"><table class="table table-sm">
+<caption>
+<span id="tab:t-region">Table 2.1: </span>Frequency distribution of the region variable in the country data.</caption>
+<thead><tr class="header">
 <th align="left">Region</th>
 <th align="right">Frequency</th>
 <th align="right">Proportion</th>
 <th align="right">%</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">Africa</td>
@@ -420,31 +236,33 @@ and attitude in the survey example, which are shown in Tables
 <td align="right">100.0</td>
 </tr>
 </tbody>
-</table>
-<table style="width:79%;">
-<caption><span id="tab:t-democ">Table 2.2: </span>Frequency distribution of the democracy index in the country
+</table></div>
+<div class="inline-table"><table style="width:79%;" class="table table-sm">
+<caption>
+<span id="tab:t-democ">Table 2.2: </span>Frequency distribution of the democracy index in the country
 data.</caption>
 <colgroup>
-<col width="16%" />
-<col width="16%" />
-<col width="18%" />
-<col width="9%" />
-<col width="18%" />
+<col width="16%">
+<col width="16%">
+<col width="18%">
+<col width="9%">
+<col width="18%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="left">Democracy
 score</th>
-<th align="center"><br />
+<th align="center">
+<br>
 Frequency</th>
-<th align="center"><br />
+<th align="center">
+<br>
 Proportion</th>
-<th align="right"><br />
+<th align="right">
+<br>
 %</th>
 <th align="right">Cumulative
 %</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">0</td>
@@ -531,19 +349,18 @@ Proportion</th>
 <td align="right"></td>
 </tr>
 </tbody>
-</table>
-<table>
-<caption><span id="tab:t-attitude">Table 2.3: </span>Frequency distribution of responses to a question on attitude
+</table></div>
+<div class="inline-table"><table class="table table-sm">
+<caption>
+<span id="tab:t-attitude">Table 2.3: </span>Frequency distribution of responses to a question on attitude
 towards income redistribution in the survey example.</caption>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="left">Response</th>
 <th align="right">Frequency</th>
 <th align="center">Proportion</th>
 <th align="right">%</th>
 <th align="right">Cumulative %</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">Agree strongly (1)</td>
@@ -588,7 +405,7 @@ towards income redistribution in the survey example.</caption>
 <td align="right"></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Each row of such a table corresponds to one possible value of a
 variable, and the second column shows the number of units with that
 value in the data. Thus there are 48 countries from Africa and 44 from
@@ -612,8 +429,10 @@ the proportions is one, and the sum of the percentages is one hundred
 (because of rounding error, the sum in a reported table may be very
 slightly different, as it is in Table <a href="c-descr1.html#tab:t-democ">2.2</a>).</p>
 </div>
-<div id="ss-descr1-1cat-charts" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.3.3</span> Graphical methods: Bar charts<a href="c-descr1.html#ss-descr1-1cat-charts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-descr1-1cat-charts" class="section level3" number="2.3.3">
+<h3>
+<span class="header-section-number">2.3.3</span> Graphical methods: Bar charts<a class="anchor" aria-label="anchor" href="#ss-descr1-1cat-charts"><i class="fas fa-link"></i></a>
+</h3>
 <p>Graphical methods of describing data (<em>statistical graphics</em>) make use
 of our ability to process and interpret even very large amounts of
 visual information. The basic graph for summarising the sample
@@ -627,17 +446,17 @@ of the variable, and the height of the bar is proportional to the
 frequency of observations in that category. This visual cue allows us to
 make quick comparisons between the frequencies of different categories
 by comparing the heights of the bars.</p>
-<div class="figure"><span style="display:block;" id="fig:f-bars-region"></span>
-<img src="regions.png" alt="Bar chart of regions in the country data." style="height:9.5cm" />
-<p class="caption">Figure 2.1: Bar chart of regions in the country data.</p>
+<div class="float">
+<span style="display:block;" id="fig:f-bars-region"></span>
+<img src="regions.png" style="height:9.5cm" alt="Bar chart of regions in the country data."><div class="figcaption">Figure 2.1: Bar chart of regions in the country data.</div>
 </div>
-<div class="figure"><span style="display:block;" id="fig:f-bars-democ"></span>
-<img src="democ.png" alt="Bar chart of the democracy index in the country data." style="height:9.5cm" />
-<p class="caption">Figure 2.2: Bar chart of the democracy index in the country data.</p>
+<div class="float">
+<span style="display:block;" id="fig:f-bars-democ"></span>
+<img src="democ.png" style="height:9.5cm" alt="Bar chart of the democracy index in the country data."><div class="figcaption">Figure 2.2: Bar chart of the democracy index in the country data.</div>
 </div>
-<div class="figure"><span style="display:block;" id="fig:f-bars-attitude"></span>
-<img src="bar_attitude.png" alt="Bar chart of the attitude variable in the survey data example. Agreement with statement: ``The government should take measures to reduce differences in income levels’’. European Social Survey, Round 5 (2010), UK respondents only." style="height:8cm" />
-<p class="caption">Figure 2.3: Bar chart of the attitude variable in the survey data example. Agreement with statement: ``The government should take measures to reduce differences in income levels’’. European Social Survey, Round 5 (2010), UK respondents only.</p>
+<div class="float">
+<span style="display:block;" id="fig:f-bars-attitude"></span>
+<img src="bar_attitude.png" style="height:8cm" alt="Bar chart of the attitude variable in the survey data example. Agreement with statement: ``The government should take measures to reduce differences in income levels’’. European Social Survey, Round 5 (2010), UK respondents only."><div class="figcaption">Figure 2.3: Bar chart of the attitude variable in the survey data example. Agreement with statement: ``The government should take measures to reduce differences in income levels’’. European Social Survey, Round 5 (2010), UK respondents only.</div>
 </div>
 <p>Some guidelines for drawing bar charts are:</p>
 <ul>
@@ -681,8 +500,10 @@ graphs is the same as that of standard bar charts. However, they are not
 particularly useful as descriptive statistics, since they simply display
 values in the original data without any summarization or simplification.</p>
 </div>
-<div id="ss-descr1-1cat-descriptives" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.3.4</span> Simple descriptive statistics<a href="c-descr1.html#ss-descr1-1cat-descriptives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-descr1-1cat-descriptives" class="section level3" number="2.3.4">
+<h3>
+<span class="header-section-number">2.3.4</span> Simple descriptive statistics<a class="anchor" aria-label="anchor" href="#ss-descr1-1cat-descriptives"><i class="fas fa-link"></i></a>
+</h3>
 <p>Instead of the whole sample distribution, we may want to summarise only
 some individual aspects of it, such as its central tendency or
 variation. Descriptive statistics that are used for this purpose are
@@ -690,10 +511,14 @@ broadly similar for both discrete and continuous variables, so they will
 be discussed together for both in Section <a href="c-descr1.html#s-descr1-nums">2.6</a>.</p>
 </div>
 </div>
-<div id="s-descr1-2cat" class="section level2 hasAnchor">
-<h2><span class="header-section-number">2.4</span> Two categorical variables<a href="c-descr1.html#s-descr1-2cat" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="ss-descr1-2cat-tables" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.4.1</span> Two-way contingency tables<a href="c-descr1.html#ss-descr1-2cat-tables" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="s-descr1-2cat" class="section level2" number="2.4">
+<h2>
+<span class="header-section-number">2.4</span> Two categorical variables<a class="anchor" aria-label="anchor" href="#s-descr1-2cat"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ss-descr1-2cat-tables" class="section level3" number="2.4.1">
+<h3>
+<span class="header-section-number">2.4.1</span> Two-way contingency tables<a class="anchor" aria-label="anchor" href="#ss-descr1-2cat-tables"><i class="fas fa-link"></i></a>
+</h3>
 <p>The next task we consider is how to describe the sample distributions of
 two categorical variables together, and in so doing also summarise the
 association between these variables. The key tool is a table which shows
@@ -702,36 +527,39 @@ also known as a <strong>contingency table</strong>. Table <a href="c-descr1.html
 such a table for the respondents’ sex and attitude in our survey
 example. We use it to introduce the basic structure and terminology of
 contingency tables:</p>
-<table style="width:98%;">
-<caption><span id="tab:t-sex-attitude">Table 2.4: </span><em>``The government should take measures to reduce differences in income levels’’</em>: Two-way table of frequencies of respondents in the survey example,
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<caption>
+<span id="tab:t-sex-attitude">Table 2.4: </span><em>``The government should take measures to reduce differences in income levels’’</em>: Two-way table of frequencies of respondents in the survey example,
 by sex and attitude towards income redistribution. Data: European Social Survey, Round 5, 2010, UK respondents only.</caption>
 <colgroup>
-<col width="11%" />
-<col width="19%" />
-<col width="9%" />
-<col width="19%" />
-<col width="13%" />
-<col width="13%" />
-<col width="9%" />
+<col width="11%">
+<col width="19%">
+<col width="9%">
+<col width="19%">
+<col width="13%">
+<col width="13%">
+<col width="9%">
 </colgroup>
-<thead>
-<tr class="header">
-<th align="left"><br />
+<thead><tr class="header">
+<th align="left">
+<br>
 Sex</th>
 <th align="center">Agree
 strongly</th>
-<th align="center"><br />
+<th align="center">
+<br>
 Agree</th>
 <th align="center">Neither agree
 nor disagree</th>
-<th align="center"><br />
+<th align="center">
+<br>
 Disagree</th>
 <th align="center">Disagree
 strongly</th>
-<th align="right"><br />
+<th align="right">
+<br>
 Total</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">Male</td>
@@ -761,7 +589,7 @@ Total</th>
 <td align="right">2344</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <ul>
 <li><p>Because a table like <a href="c-descr1.html#tab:t-sex-attitude">2.4</a> summarizes the values of
 two variables, it is known as a <strong>two-way</strong> contingency table.
@@ -780,7 +608,8 @@ the vertical divisions (e.g. the survey responses in Table
 <a href="c-descr1.html#tab:t-sex-attitude">2.4</a>) are its <strong>columns</strong>.</p></li>
 <li><p>The size of a contingency table is stated in terms of the numbers of
 its rows and columns. For example, Table <a href="c-descr1.html#tab:t-sex-attitude">2.4</a> is a
-<span class="math inline">\(2\times 5\)</span> (pronounced “two-by-five”) table, because it has two rows and
+<span class="math inline">\(2\times
+5\)</span> (pronounced “two-by-five”) table, because it has two rows and
 five columns. This notation may also be used symbolically, so that
 we may refer generically to <span class="math inline">\(R\times C\)</span> tables which have
 some (unspecified) number of <span class="math inline">\(R\)</span> rows and <span class="math inline">\(C\)</span> columns. The smallest
@@ -826,33 +655,34 @@ also shown for the marginal distributions: for example, 15.6% (i.e. the
 proportion <span class="math inline">\(0.156=366/2344\)</span>) of the respondents strongly agreed with the
 statement. The sum of the proportions over all the cells is 1, as shown
 in the bottom right corner of the table.</p>
-<table style="width:98%;">
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
 <colgroup>
-<col width="17%" />
-<col width="18%" />
-<col width="9%" />
-<col width="18%" />
-<col width="12%" />
-<col width="12%" />
-<col width="9%" />
+<col width="17%">
+<col width="18%">
+<col width="9%">
+<col width="18%">
+<col width="12%">
+<col width="12%">
+<col width="9%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="left">Sex</th>
 <th align="center">Agree
 strongly</th>
-<th align="center"><br />
+<th align="center">
+<br>
 Agree</th>
 <th align="center">Neither agree
 nor disagree</th>
-<th align="center"><br />
+<th align="center">
+<br>
 Disagree</th>
 <th align="center">Disagree
 strongly</th>
-<th align="center"><br />
+<th align="center">
+<br>
 Total</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">Male</td>
@@ -882,13 +712,15 @@ Total</th>
 <td align="center">1.000</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>:(#tab:t-sex-attitude-pr)<em>``The government should take measures to reduce differences in income levels’’</em>: Two-way table of joint proportions of respondents in the survey
 example, with each combination of sex and attitude towards income
 redistribution. Data: European Social Survey, Round 5, 2010, UK respondents only.</p>
 </div>
-<div id="ss-descr1-2cat-cond" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.4.2</span> Conditional proportions<a href="c-descr1.html#ss-descr1-2cat-cond" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-descr1-2cat-cond" class="section level3" number="2.4.2">
+<h3>
+<span class="header-section-number">2.4.2</span> Conditional proportions<a class="anchor" aria-label="anchor" href="#ss-descr1-2cat-cond"><i class="fas fa-link"></i></a>
+</h3>
 <p>A two-way contingency table is symmetric in that it does not distinguish
 between explanatory and response variables. In many applications,
 however, this distinction is useful for interpretation. In our example,
@@ -917,37 +749,39 @@ the conditional proportions have been calculated within the rows. The
 bracketed proportions in the ‘Total’ row are the proportions of the
 <em>marginal</em> distribution of the attitude variable, so they are the same
 as the proportions in the ‘Total’ row of Table <a href="#tab:t-sex-attitude-pr">2.5</a>.</p>
-<table style="width:98%;">
-<caption><span id="tab:t-sex-attitude-row">Table 2.6: </span><em>``The government should take measures to reduce differences in income levels’’</em>: Two-way table of frequencies of respondents in the survey example,
+<div class="inline-table"><table style="width:98%;" class="table table-sm">
+<caption>
+<span id="tab:t-sex-attitude-row">Table 2.6: </span><em>``The government should take measures to reduce differences in income levels’’</em>: Two-way table of frequencies of respondents in the survey example,
 by sex and attitude towards income redistribution. The numbers in
 brackets are proportions within the rows, i.e. conditional proportions
 of attitude given sex. Data: European Social Survey, Round 5, 2010, UK respondents only.</caption>
 <colgroup>
-<col width="15%" />
-<col width="18%" />
-<col width="11%" />
-<col width="18%" />
-<col width="12%" />
-<col width="12%" />
-<col width="9%" />
+<col width="15%">
+<col width="18%">
+<col width="11%">
+<col width="18%">
+<col width="12%">
+<col width="12%">
+<col width="9%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="left">Sex</th>
 <th align="center">Agree
 strongly</th>
-<th align="center"><br />
+<th align="center">
+<br>
 Agree</th>
 <th align="center">Neither agree
 nor disagree</th>
-<th align="center"><br />
+<th align="center">
+<br>
 Disagree</th>
 <th align="center">Disagree
 strongly</th>
-<th align="center"><br />
+<th align="center">
+<br>
 Total</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">Male</td>
@@ -1004,7 +838,7 @@ Total</th>
 <td align="center">(1.0)</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>We could also have calculated conditional proportions within the
 <em>columns</em>, i.e. for sex given attitude. For example, the proportion
 <span class="math inline">\(0.563=206/366\)</span> of all respondents who strongly agreed with the
@@ -1014,8 +848,10 @@ sex varies by attitude. In general, for any two-way table we can
 calculate conditional proportions for both the rows and the columns, but
 typically only one of them is used for interpretation.</p>
 </div>
-<div id="ss-descr1-2cat-assoc" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.4.3</span> Conditional distributions and associations<a href="c-descr1.html#ss-descr1-2cat-assoc" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-descr1-2cat-assoc" class="section level3" number="2.4.3">
+<h3>
+<span class="header-section-number">2.4.3</span> Conditional distributions and associations<a class="anchor" aria-label="anchor" href="#ss-descr1-2cat-assoc"><i class="fas fa-link"></i></a>
+</h3>
 <p>Suppose that we regard one variable in a two-way table as the
 explanatory variable (let us denote it by <span class="math inline">\(X\)</span>) and the other variable as
 the response variable (<span class="math inline">\(Y\)</span>). In our survey example, sex is thus <span class="math inline">\(X\)</span> and
@@ -1072,14 +908,21 @@ associations.</p>
 in their attitudes toward income redistribution. Previous studies
 suggest that such an association exists, and that it takes the form that
 women tend to have higher levels of support than men for
-redistribution.<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> As possible explanations for this pattern, both
+redistribution.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;See, for example, Svallfors (1997), Words of welfare and attitudes
+to redistribution: A comparison of eight western nations, &lt;em&gt;European
+Sociological Review&lt;/em&gt;, 13, 283-304; and Blekesaune and Quadagno
+(2003), Public attitudes towards welfare state policies: A
+comparative analysis of 24 nations, &lt;em&gt;European Sociological Review&lt;/em&gt;,
+19, 415-427.&lt;/p&gt;"><sup>4</sup></a> As possible explanations for this pattern, both
 structural reasons (women tend to have lower incomes than men and to
 rely more on welfare state support) and cultural or psychological ones
 (women are more likely than men to adopt social values of equality and
 caring) have been suggested.</p>
 </div>
-<div id="ss-descr1-2cat-descr" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.4.4</span> Describing an association using conditional proportions<a href="c-descr1.html#ss-descr1-2cat-descr" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-descr1-2cat-descr" class="section level3" number="2.4.4">
+<h3>
+<span class="header-section-number">2.4.4</span> Describing an association using conditional proportions<a class="anchor" aria-label="anchor" href="#ss-descr1-2cat-descr"><i class="fas fa-link"></i></a>
+</h3>
 <p>Two variables presented in a contingency table are associated in the
 sample if the conditional distributions of one of them vary across the
 values of the other. This is the case in our data set: for example, 4.0%
@@ -1133,8 +976,10 @@ generalisation of the conclusions to people outside the sample is a
 question which we will take up in Chapters <a href="c-samples.html#c-samples">3</a> and
 <a href="c-tables.html#c-tables">4</a>.</p>
 </div>
-<div id="ss-descr1-2cat-gamma" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.4.5</span> A measure of association for ordinal variables<a href="c-descr1.html#ss-descr1-2cat-gamma" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-descr1-2cat-gamma" class="section level3" number="2.4.5">
+<h3>
+<span class="header-section-number">2.4.5</span> A measure of association for ordinal variables<a class="anchor" aria-label="anchor" href="#ss-descr1-2cat-gamma"><i class="fas fa-link"></i></a>
+</h3>
 <p>In the previous example the explanatory variable (sex) had 2 categories
 and the response variable (attitude) had 5. A full examination of the
 individual conditional distributions of attitude given sex then involved
@@ -1144,42 +989,55 @@ variable also has several levels, as in the following example:</p>
 <p><em>Example: Importance of short-term gains for investors</em></p>
 <p>Information on the behaviour and expectations of individual investors
 was collected by sending a questionnaire to a sample of customers of a
-U.S. brokerage house.<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a> One of the questions asked the respondents to
+U.S. brokerage house.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;Lewellen, W. G., Lease, R. G., and Schlarbaum, G. G. (1977).
+“Patterns of investment strategy and behavior among individual
+investors”. &lt;em&gt;The Journal of Business&lt;/em&gt;, &lt;strong&gt;50&lt;/strong&gt;, 296–333. The
+published article gave only the total sample size, the marginal
+distributions of sex and age group, and conditional proportions for
+the short-term gains variable given sex and age group. These were
+used to create tables of frequencies separately for men and women
+(assuming further that the age distribution was the same for both),
+and Table &lt;a href="c-descr1.html#tab:t-investors"&gt;2.7&lt;/a&gt; was obtained by combining these. The
+resulting table is consistent with information in the article, apart
+from rounding error.&lt;/p&gt;'><sup>5</sup></a> One of the questions asked the respondents to
 state how much importance they placed on quick profits (short-term
 gains) as an objective when they invested money. The responses were
 recorded in four categories as “Irrelevant”, “Slightly important”,
 “Important” or “Very important”. Table <a href="c-descr1.html#tab:t-investors">2.7</a> shows the
 crosstabulation of this variable with the age of the respondent in four
 age groups.</p>
-<table style="width:97%;">
-<caption><span id="tab:t-investors">Table 2.7: </span>Importance of short-term gains: Frequencies of respondents in the investment example, by age group
+<div class="inline-table"><table style="width:97%;" class="table table-sm">
+<caption>
+<span id="tab:t-investors">Table 2.7: </span>Importance of short-term gains: Frequencies of respondents in the investment example, by age group
 and attitude towards short-term gains as investment goal. Conditional
 proportions of attitude given age group are shown in brackets. The
 value of the <span class="math inline">\(\gamma\)</span> measure of association is <span class="math inline">\(-0.377\)</span>.</caption>
 <colgroup>
-<col width="18%" />
-<col width="19%" />
-<col width="15%" />
-<col width="15%" />
-<col width="15%" />
-<col width="11%" />
+<col width="18%">
+<col width="19%">
+<col width="15%">
+<col width="15%">
+<col width="15%">
+<col width="11%">
 </colgroup>
-<thead>
-<tr class="header">
-<th align="left"><br />
+<thead><tr class="header">
+<th align="left">
+<br>
 Age group</th>
-<th align="right"><br />
+<th align="right">
+<br>
 Irrelevant</th>
 <th align="right">Slightly
 important</th>
-<th align="right"><br />
+<th align="right">
+<br>
 Important</th>
 <th align="right">Very
 important</th>
-<th align="right"><br />
+<th align="right">
+<br>
 Total</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">Under 45</td>
@@ -1254,7 +1112,7 @@ Total</th>
 <td align="right">972</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>Here there are four conditional distributions, one for each age group,
 and each of them is described by four proportions of different levels of
 attitude. There are then many possible comparisons of the kind discussed
@@ -1269,7 +1127,7 @@ comparisons is large. A potentially attractive alternative is then to
 try to summarise the strength of the association between the variables
 in a single number, a <strong>measure of association</strong> of some kind. There are
 many such measures for two-way contingency tables, labelled with a range
-of Greek and Roman letters (e.g. <span class="math inline">\(\phi\)</span>, <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\rho\)</span>,
+of Greek and Roman letters (e.g. <span class="math inline">\(\phi\)</span>, <span class="math inline">\(\lambda\)</span>, <span class="math inline">\(\gamma\)</span>, <span class="math inline">\(\rho\)</span>,
 <span class="math inline">\(\tau\)</span>, V, Q, U and d). The most useful of them are designed for tables
 where both of the variables are measured at the ordinal level, as is the
 case in Table <a href="c-descr1.html#tab:t-investors">2.7</a>. The ordering of the categories can then
@@ -1481,10 +1339,14 @@ introduced in Chapter <a href="c-tables.html#c-tables">4</a>.</p></li>
 </ul>
 </div>
 </div>
-<div id="s-descr1-1cont" class="section level2 hasAnchor">
-<h2><span class="header-section-number">2.5</span> Sample distributions of a single continuous variable<a href="c-descr1.html#s-descr1-1cont" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="ss-descr1-1cont-tab" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.5.1</span> Tabular methods<a href="c-descr1.html#ss-descr1-1cont-tab" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="s-descr1-1cont" class="section level2" number="2.5">
+<h2>
+<span class="header-section-number">2.5</span> Sample distributions of a single continuous variable<a class="anchor" aria-label="anchor" href="#s-descr1-1cont"><i class="fas fa-link"></i></a>
+</h2>
+<div id="ss-descr1-1cont-tab" class="section level3" number="2.5.1">
+<h3>
+<span class="header-section-number">2.5.1</span> Tabular methods<a class="anchor" aria-label="anchor" href="#ss-descr1-1cont-tab"><i class="fas fa-link"></i></a>
+</h3>
 <p>A table of frequencies and proportions or percentages is a concise and
 easily understandable summary of the sample distribution of a
 categorical variable or any variable for which only a small number of
@@ -1497,30 +1359,61 @@ introduced at the beginning of Section <a href="c-descr1.html#s-descr1-examples"
 values among the 155 countries, 66 of these values appear only once, and
 the largest frequency (for 0.8) is five. A frequency table of these
 values would be entirely unenlightening.</p>
-<table>
+<div class="inline-table"><table style="width:49%;" class="table table-sm">
+<caption>
+<span id="tab:t-gdp">Table 2.8: </span>Frequency distribution of GDP per capita in the country data.</caption>
+<colgroup>
+<col width="22%">
+<col width="16%">
+<col width="9%">
+</colgroup>
+<thead><tr class="header">
+<th align="left">GDP
+(thousands of
+dollars)</th>
+<th align="center"><br></th>
+<th align="right"><br></th>
+</tr></thead>
 <tbody>
 <tr class="odd">
-<td>GDP   \</td>
+<td align="left">less than 2.0</td>
+<td align="center">49</td>
+<td align="right">31.6</td>
 </tr>
 <tr class="even">
-<td>(thousands of</td>
+<td align="left">2.0–4.9</td>
+<td align="center">32</td>
+<td align="right">20.6</td>
 </tr>
 <tr class="odd">
-<td>dollars) Frequency %</td>
+<td align="left">5.0–9.9</td>
+<td align="center">29</td>
+<td align="right">18.7</td>
+</tr>
+<tr class="even">
+<td align="left">10.0–19.9</td>
+<td align="center">21</td>
+<td align="right">13.5</td>
+</tr>
+<tr class="odd">
+<td align="left">20.0–29.9</td>
+<td align="center">19</td>
+<td align="right">12.3</td>
+</tr>
+<tr class="even">
+<td align="left">30.0 or more</td>
+<td align="center">5</td>
+<td align="right">3.2</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="center">155</td>
+<td align="right">99.9</td>
 </tr>
 </tbody>
-</table>
-<p>less than 2.0 49 31.6</p>
-<p>2.0–4.9 32 20.6</p>
-<p>5.0–9.9 29 18.7</p>
-<p>10.0–19.9 21 13.5</p>
-<p>20.0–29.9 19 12.3</p>
-<p>30.0 or more 5 3.2</p>
-<p>Total 155 99.9
-———————————-</p>
-<p>: (#tab:t-gdp)Frequency distribution of GDP per capita in the country data.</p>
+</table></div>
 <p>Instead, we can count the frequencies for some <em>intervals</em> of values.
-Table <a href="#tab:t-gdp">2.8</a> shows an example of this for the GDP variable. The
+Table <a href="c-descr1.html#tab:t-gdp">2.8</a> shows an example of this for the GDP variable. The
 frequency on its first line shows that there are 49 countries with GDP
 per capita of less than $2000, the second line that there are 32
 countries with the GDP per capita between $2000 and $4900 (these
@@ -1541,17 +1434,20 @@ Often this is a question of finding the right balance between too few
 categories (losing too much of the original information) and too many
 categories (making the table harder to read).</p>
 </div>
-<div id="ss-descr1-1cont-graphs" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.5.2</span> Graphical methods<a href="c-descr1.html#ss-descr1-1cont-graphs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div id="histograms" class="section level4 unnumbered hasAnchor">
-<h4>Histograms<a href="c-descr1.html#histograms" class="anchor-section" aria-label="Anchor link to header"></a></h4>
-<div class="figure"><span style="display:block;" id="fig:f-hist-gdp"></span>
-<img src="gdp.png" alt="Histogram of GDP per capita in the country data, together with the corresponding frequency polygon." style="width:13.5cm" />
-<p class="caption">Figure 2.4: Histogram of GDP per capita in the country data, together with the
-corresponding frequency polygon.</p>
+<div id="ss-descr1-1cont-graphs" class="section level3" number="2.5.2">
+<h3>
+<span class="header-section-number">2.5.2</span> Graphical methods<a class="anchor" aria-label="anchor" href="#ss-descr1-1cont-graphs"><i class="fas fa-link"></i></a>
+</h3>
+<div id="histograms" class="section level4 unnumbered">
+<h4>Histograms<a class="anchor" aria-label="anchor" href="#histograms"><i class="fas fa-link"></i></a>
+</h4>
+<div class="float">
+<span style="display:block;" id="fig:f-hist-gdp"></span>
+<img src="gdp.png" style="width:13.5cm" alt="Histogram of GDP per capita in the country data, together with the corresponding frequency polygon."><div class="figcaption">Figure 2.4: Histogram of GDP per capita in the country data, together with the
+corresponding frequency polygon.</div>
 </div>
 <p>A <strong>histogram</strong> is the graphical version of a frequency table for a
-grouped variable, like that in Table <a href="#tab:t-gdp">2.8</a>. Figure
+grouped variable, like that in Table <a href="c-descr1.html#tab:t-gdp">2.8</a>. Figure
 <a href="c-descr1.html#fig:f-hist-gdp">2.4</a> shows a histogram for the GDP variable (the histogram
 consists of the bars; the lines belong to a different graph, the
 frequency polygon explained below). The basic idea of a histogram is
@@ -1564,8 +1460,8 @@ number of bars in the histogram is important for the usefulness of the
 graph. If there are too few bars, too much information is obscured; if
 too many, the shape of the histogram may become confusingly irregular.
 Often the number of intervals used for a histogram will be larger than
-what would be sensible for a table like <a href="#tab:t-gdp">2.8</a>. Furthermore,
-intervals like those in Table <a href="#tab:t-gdp">2.8</a> are not even allowed in a
+what would be sensible for a table like <a href="c-descr1.html#tab:t-gdp">2.8</a>. Furthermore,
+intervals like those in Table <a href="c-descr1.html#tab:t-gdp">2.8</a> are not even allowed in a
 histogram, because they are of different widths (of 2, 3, 5, 10 and 10
 units for the first five, and unbounded for the last one). The intervals
 in a histogram must be of equal widths, because otherwise the visual
@@ -1576,8 +1472,9 @@ Figure <a href="c-descr1.html#fig:f-hist-gdp">2.4</a> (less than 2.5, 2.5–less
 to computer packages such as SPSS which use automatic rules for choosing
 sensible intervals.</p>
 </div>
-<div id="frequency-polygons" class="section level4 unnumbered hasAnchor">
-<h4>Frequency polygons<a href="c-descr1.html#frequency-polygons" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="frequency-polygons" class="section level4 unnumbered">
+<h4>Frequency polygons<a class="anchor" aria-label="anchor" href="#frequency-polygons"><i class="fas fa-link"></i></a>
+</h4>
 <p>Figure <a href="c-descr1.html#fig:f-hist-gdp">2.4</a> also shows a <strong>frequency polygon</strong> of the GDP
 variable. This is obtained by drawing lines to connect the mid-points of
 the tops of the bars in a histogram. At each end of the histogram the
@@ -1592,8 +1489,9 @@ easier to produce in standard software such as SPSS. However, frequency
 polygons will later be useful for making comparisons between several
 distributions.</p>
 </div>
-<div id="stem-and-leaf-plots" class="section level4 unnumbered hasAnchor">
-<h4>Stem and leaf plots<a href="c-descr1.html#stem-and-leaf-plots" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="stem-and-leaf-plots" class="section level4 unnumbered">
+<h4>Stem and leaf plots<a class="anchor" aria-label="anchor" href="#stem-and-leaf-plots"><i class="fas fa-link"></i></a>
+</h4>
 <p>A <strong>stem and leaf plot</strong> is a close relative of the histogram, and is
 used for much the same purposes, mostly in small data sets. It is
 easiest to explain through an example, so let us consider the GDP
@@ -1608,8 +1506,9 @@ nearest hundred dollars (as in Table <a href="c-descr1.html#tab:t-countrydata">2
 The last digit (here hundreds of dollars) will determine the <em>leaves</em>
 for the plot, while other digits (here round thousands of dollars) will
 define the <em>stem</em>.</p>
-<table>
-<caption><span id="tab:t-stemgdp">Table 2.9: </span>Stem and leaf plot of GDP per capita in the country data (Stem=thousands of dollars, Leaf=hundreds of dollars).</caption>
+<div class="inline-table"><table class="table table-sm">
+<caption>
+<span id="tab:t-stemgdp">Table 2.9: </span>Stem and leaf plot of GDP per capita in the country data (Stem=thousands of dollars, Leaf=hundreds of dollars).</caption>
 <tbody>
 <tr class="odd">
 <td align="left"><code>0</code></td>
@@ -1764,7 +1663,7 @@ define the <em>stem</em>.</p>
 <td align="left"><code>88</code></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>The left-hand column in <a href="c-descr1.html#tab:t-stemgdp">2.9</a> lists the stem values in the
 data, from smallest (0) to the largest (37). Each data value with the
 same stem is represented on the same line by its leaf, i.e. its last
@@ -1789,8 +1688,9 @@ effectively a synonym for “my spouse has a regular nine-to-five job”.
 Such <em>digit preference</em> is quite common for many variables in surveys,
 and serves as a reminder that our measurements are not always as precise
 as they may appear.</p>
-<table>
-<caption><span id="tab:t-stemhours">Table 2.10: </span>Stem and leaf plot of the reported hours worked last week by the spouses of respondents in a social survey (the data are a sample from data from the U.S. General Survey; observations with less than 12 reported hours have been excluded). The stems and leaves indicate tens of hours and single hours respectively.
+<div class="inline-table"><table class="table table-sm">
+<caption>
+<span id="tab:t-stemhours">Table 2.10: </span>Stem and leaf plot of the reported hours worked last week by the spouses of respondents in a social survey (the data are a sample from data from the U.S. General Survey; observations with less than 12 reported hours have been excluded). The stems and leaves indicate tens of hours and single hours respectively.
 The main disadvantage of a stem and leaf plot is that since every data
 value is shown separately, the plot can only be used when the sample
 size is relatively small. In such cases it is, however, a very useful
@@ -1828,14 +1728,15 @@ page.</caption>
 <td align="left"><code>022</code></td>
 </tr>
 </tbody>
-</table>
-<div class="figure"><span style="display:block;" id="fig:f-boxplot-gdp"></span>
-<img src="box_gdp.png" alt="An annotated box plot of GDP per capita in the country data (n=155)." style="width:13.5cm" />
-<p class="caption">Figure 2.5: An annotated box plot of GDP per capita in the country data (<span class="math inline">\(n=155\)</span>).</p>
+</table></div>
+<div class="float">
+<span style="display:block;" id="fig:f-boxplot-gdp"></span>
+<img src="box_gdp.png" style="width:13.5cm" alt="An annotated box plot of GDP per capita in the country data (n=155)."><div class="figcaption">Figure 2.5: An annotated box plot of GDP per capita in the country data (<span class="math inline">\(n=155\)</span>).</div>
 </div>
 </div>
-<div id="box-plots" class="section level4 unnumbered hasAnchor">
-<h4>Box plots<a href="c-descr1.html#box-plots" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="box-plots" class="section level4 unnumbered">
+<h4>Box plots<a class="anchor" aria-label="anchor" href="#box-plots"><i class="fas fa-link"></i></a>
+</h4>
 <p>A <strong>box plot</strong> differs from the graphs discussed so far in that it does
 not attempt to display the whole distribution, but only certain
 characteristics of it. The quantities included in a box plot are some of
@@ -1853,7 +1754,8 @@ box is thus the interquartile range (IQR), here
 <span class="math inline">\(\text{IQR}=11.4-1.7=9.7\)</span>. The range of values covered by the box
 contains the middle 50% of the observations. Half of the countries
 in this sample have GDPs between $1700 and $11400.</p></li>
-<li><p>The two lines extending from the box on either side are known as the
+<li>
+<p>The two lines extending from the box on either side are known as the
 <strong>whiskers</strong>. Their length is determined as follows:</p>
 <ul>
 <li><p>Calculate the value of 1.5 times the IQR. This is the maximum
@@ -1873,7 +1775,8 @@ allowed for a whisker. Thus the upper whisker could be drawn at
 most to <span class="math inline">\(11.4+14.6=26\)</span>. In this sample there are actually no
 observations of exactly 26, so the whisker ends at the next
 smallest observed value, which is 23.7.</p></li>
-</ul></li>
+</ul>
+</li>
 <li><p>If the mimimum is further than 1.5<span class="math inline">\(\times\)</span>IQR below the first
 quartile, or maximum further than 1.5<span class="math inline">\(\times\)</span>IQR above the third
 quartile, there are still observations which are not in the range
@@ -1908,8 +1811,9 @@ plots are particularly convenient, because it is easy to place two or
 more of them side by side. This will be illustrated later in Section
 <a href="c-means.html#ss-means-descr-graphs">7.2.1</a>.</p>
 </div>
-<div id="other-graphs-for-single-variables" class="section level4 unnumbered hasAnchor">
-<h4>Other graphs for single variables<a href="c-descr1.html#other-graphs-for-single-variables" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="other-graphs-for-single-variables" class="section level4 unnumbered">
+<h4>Other graphs for single variables<a class="anchor" aria-label="anchor" href="#other-graphs-for-single-variables"><i class="fas fa-link"></i></a>
+</h4>
 <p>Other types of graphs that are not described here are also sometimes
 used for displaying distributions. One of them is a <strong>pie chart</strong>, which
 shows the proportions of the levels of a categorical (or grouped
@@ -1923,8 +1827,10 @@ pie charts.</p>
 </div>
 </div>
 </div>
-<div id="s-descr1-nums" class="section level2 hasAnchor">
-<h2><span class="header-section-number">2.6</span> Numerical descriptive statistics<a href="c-descr1.html#s-descr1-nums" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="s-descr1-nums" class="section level2" number="2.6">
+<h2>
+<span class="header-section-number">2.6</span> Numerical descriptive statistics<a class="anchor" aria-label="anchor" href="#s-descr1-nums"><i class="fas fa-link"></i></a>
+</h2>
 <p>The tabular and graphical methods discussed above
 aim to display the whole sample distribution of a variable in an
 understandable form. The methods introduced in this section have a
@@ -1939,8 +1845,10 @@ calculated from the data) with a descriptive purpose. The difference is
 usually unimportant or clear from the context.</p>
 <p>The two salient features of a distribution for which we will define
 descriptive statistics are its <em>central tendency</em> and its <em>variation</em>.</p>
-<div id="ss-descr1-nums-central" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.6.1</span> Measures of central tendency<a href="c-descr1.html#ss-descr1-nums-central" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-descr1-nums-central" class="section level3" number="2.6.1">
+<h3>
+<span class="header-section-number">2.6.1</span> Measures of central tendency<a class="anchor" aria-label="anchor" href="#ss-descr1-nums-central"><i class="fas fa-link"></i></a>
+</h3>
 <p>If you were allowed to know only one feature of the sample distribution
 of a variable, chances are you would ask for something like its most
 typical value, the middle value, or the average value — in short, you
@@ -1948,8 +1856,9 @@ would be interested in a measure of <em>central tendency</em>. We will discuss
 three such measures below: the mode, the median and the mean
 (corresponding, respectively, to the phrases “most typical”, “middle”
 and “average” used above).</p>
-<div id="the-mode" class="section level4 unnumbered hasAnchor">
-<h4>The mode<a href="c-descr1.html#the-mode" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="the-mode" class="section level4 unnumbered">
+<h4>The mode<a class="anchor" aria-label="anchor" href="#the-mode"><i class="fas fa-link"></i></a>
+</h4>
 <p>The <strong>mode</strong> is the value of the variable which occurs most often in the
 data, i.e. the one with the highest frequency. For example, Tables
 <a href="c-descr1.html#tab:t-region">2.1</a> and <a href="c-descr1.html#tab:t-democ">2.2</a> show that the mode of the region
@@ -1972,8 +1881,9 @@ example, it is perfectly possible that all but one value appear once
 each in a sample, and the mode is the value which happens to occur
 twice.</p>
 </div>
-<div id="the-median" class="section level4 unnumbered hasAnchor">
-<h4>The median<a href="c-descr1.html#the-median" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="the-median" class="section level4 unnumbered">
+<h4>The median<a class="anchor" aria-label="anchor" href="#the-median"><i class="fas fa-link"></i></a>
+</h4>
 <p>Suppose that the values of a variable in a sample are first ordered from
 the smallest to the largest. For example, in Table <a href="c-descr1.html#tab:t-countrydata">2.14</a>
 the countries are ordered in this way according to their GDP (starting
@@ -2005,8 +1915,9 @@ the category in which the cumulative percentage reaches or passes 50%.
 For the democracy index this happens for the score of 6, which has a
 cumulative percentage of 50.9%.</p>
 </div>
-<div id="the-mean" class="section level4 unnumbered hasAnchor">
-<h4>The mean<a href="c-descr1.html#the-mean" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="the-mean" class="section level4 unnumbered">
+<h4>The mean<a class="anchor" aria-label="anchor" href="#the-mean"><i class="fas fa-link"></i></a>
+</h4>
 <p>The <strong>mean</strong> is the best-known and most widely used measure of central
 tendency. It is also known as the <strong>average</strong>. To define the mean, we
 need to introduce our first pieces of mathematical notation. Suppose
@@ -2018,7 +1929,9 @@ the letter itself is arbitrary; for example, you may often see <span class="math
 instead of <span class="math inline">\(Y\)</span> when the mean is defined). Individual observations of <span class="math inline">\(Y\)</span>
 are denoted generically by <span class="math inline">\(Y_{i}\)</span>, where the subscript <span class="math inline">\(i\)</span> identifies a
 single subject. The values of <span class="math inline">\(i\)</span> range from <span class="math inline">\(1\)</span> to <span class="math inline">\(n\)</span>, so all of the
-observations in the sample are <span class="math inline">\(Y_{1}, Y_{2}, \dots, Y_{n}\)</span>, e.g. in the country example (with <span class="math inline">\(n=155\)</span>) <span class="math inline">\(Y_{1}, Y_{2}, \dots, Y_{155}\)</span>. The ordering of the observations is arbitrary
+observations in the sample are <span class="math inline">\(Y_{1},
+Y_{2}, \dots, Y_{n}\)</span>, e.g. in the country example (with <span class="math inline">\(n=155\)</span>) <span class="math inline">\(Y_{1},
+Y_{2}, \dots, Y_{155}\)</span>. The ordering of the observations is arbitrary
 here, so it might for example be the order in which they are listed in
 your SPSS data file. The mean <span class="math inline">\(\bar{Y}\)</span> (“Y-bar”) of the observations of
 <span class="math inline">\(Y\)</span> in the sample is defined as
@@ -2072,19 +1985,19 @@ marks of most students are relatively high, there are some students with
 very low marks. A distribution which has no clear skewness in either
 direction, like the distribution of typical weekly working hours in
 panel B of Figure <a href="c-descr1.html#fig:f-skews">2.6</a> is (approximately) <strong>symmetric</strong>.</p>
-<table style="width:99%;">
-<caption><span id="tab:t-countries-sums">Table 2.11: </span>Summary statistics for the three variables in the country data. IQR=interquartile range; s.d.=standard deviation; *: inappropriate for a nominal variable; <span class="math inline">\(\dagger\)</span>: if the democracy index is treated as an interval-level variable.</caption>
+<div class="inline-table"><table style="width:99%;" class="table table-sm">
+<caption>
+<span id="tab:t-countries-sums">Table 2.11: </span>Summary statistics for the three variables in the country data. IQR=interquartile range; s.d.=standard deviation; *: inappropriate for a nominal variable; <span class="math inline">\(\dagger\)</span>: if the democracy index is treated as an interval-level variable.</caption>
 <colgroup>
-<col width="14%" />
-<col width="13%" />
-<col width="28%" />
-<col width="11%" />
-<col width="10%" />
-<col width="9%" />
-<col width="11%" />
+<col width="14%">
+<col width="13%">
+<col width="28%">
+<col width="11%">
+<col width="10%">
+<col width="9%">
+<col width="11%">
 </colgroup>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th></th>
 <th align="right">Measures</th>
 <th align="center">of central</th>
@@ -2092,8 +2005,7 @@ panel B of Figure <a href="c-descr1.html#fig:f-skews">2.6</a> is (approximately)
 <th align="center">Measures</th>
 <th align="center">of</th>
 <th align="center">variation</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td>Variable</td>
@@ -2117,10 +2029,14 @@ panel B of Figure <a href="c-descr1.html#fig:f-skews">2.6</a> is (approximately)
 <td>Democracy index</td>
 <td align="right">0</td>
 <td align="center">6</td>
-<td align="center">5.4<span class="math inline">\(^{\dagger}\)</span></td>
-<td align="center">10<span class="math inline">\(^{\dagger}\)</span></td>
-<td align="center">8<span class="math inline">\(^{\dagger}\)</span></td>
-<td align="center">3.9<span class="math inline">\(^{\dagger}\)</span></td>
+<td align="center">5.4<span class="math inline">\(^{\dagger}\)</span>
+</td>
+<td align="center">10<span class="math inline">\(^{\dagger}\)</span>
+</td>
+<td align="center">8<span class="math inline">\(^{\dagger}\)</span>
+</td>
+<td align="center">3.9<span class="math inline">\(^{\dagger}\)</span>
+</td>
 </tr>
 <tr class="even">
 <td>GDP per capita</td>
@@ -2133,17 +2049,17 @@ and $1900</td>
 <td align="center">$9450</td>
 </tr>
 </tbody>
-</table>
-<div class="figure"><span style="display:block;" id="fig:f-skews"></span>
-<img src="twohists.png" title="fig:" alt="Examples of a negatively skewed and an approximately symmetric sample distribution. Panel A shows the distribution of examination marks for MY451 (2003; n=419), and B shows the distribution of the number of hours a person usually works in their main job in the 3 per cent Individual Sample of Anonymized Records from the 2001 U.K. Census (n=867,016, respondents with hours 0 or not applicable omitted) Source of the data for panel B: Cathie Marsh Centre for Census and Survey Research, University of Manchester, http://www.ccsr.ac.uk/sars/." style="width:13.5cm" />
-<p class="caption">Figure 2.6: Examples of a negatively skewed and an approximately symmetric sample
+</table></div>
+<div class="float">
+<span style="display:block;" id="fig:f-skews"></span>
+<img src="twohists.png" title="fig:" style="width:13.5cm" alt="Examples of a negatively skewed and an approximately symmetric sample distribution. Panel A shows the distribution of examination marks for MY451 (2003; n=419), and B shows the distribution of the number of hours a person usually works in their main job in the 3 per cent Individual Sample of Anonymized Records from the 2001 U.K. Census (n=867,016, respondents with hours 0 or not applicable omitted) Source of the data for panel B: Cathie Marsh Centre for Census and Survey Research, University of Manchester, http://www.ccsr.ac.uk/sars/."><div class="figcaption">Figure 2.6: Examples of a negatively skewed and an approximately symmetric sample
 distribution. Panel A shows the distribution of examination marks for
 MY451 (2003; <span class="math inline">\(n=419\)</span>), and B shows the distribution of the number of
 hours a person usually works in their main job in the 3 per cent
 Individual Sample of Anonymized Records from the 2001 U.K. Census
 (<span class="math inline">\(n=867,016\)</span>, respondents with hours 0 or not applicable omitted) Source of the data for panel B: Cathie Marsh Centre
 for Census and Survey Research, University of Manchester,
-<a href="http://www.ccsr.ac.uk/sars/" class="uri">http://www.ccsr.ac.uk/sars/</a>.</p>
+<a href="http://www.ccsr.ac.uk/sars/" class="uri">http://www.ccsr.ac.uk/sars/</a>.</div>
 </div>
 <p>The mean is almost always further in the direction of skewness than the
 median. That is why the mean of the positively skewed GDP variable is
@@ -2157,11 +2073,13 @@ larger or smaller) from the rest of the data, are known as <strong>outliers</str
 Even a single outlier can, if it is extreme enough, pull the mean far
 towards itself, even beyond the range of all the other observations, as
 in the following example:</p>
-<p><em>Example: A sample with an outlier</em><br />
+<p><em>Example: A sample with an outlier</em><br>
 Suppose that an M.Sc. student, preparing her dissertation on elements of
 social capital in Canada, is examining various measures of community
 activities in a sample of fourty municipalities in the province of
-Manitoba.<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> As part of an initial description of these communities,
+Manitoba.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;This is a random sample of municipalities, obtained for this
+illustration from the 2001 census data provided by Statistics Canada
+at &lt;a href="http://www.statcan.gc.ca" class="uri"&gt;http://www.statcan.gc.ca&lt;/a&gt;.&lt;/p&gt;'><sup>6</sup></a> As part of an initial description of these communities,
 she wants to summarize their populations, which are</p>
 <p>5, 79, 143, 226, 303, 317, 384, 417, 448, 505, 524, 525, 538, 619, 621,
 629, 637, 760, 801, 906, 955, 959, 964, 1047, 1111, 1152, 1457, 1491,
@@ -2181,8 +2099,10 @@ basically because it is only influenced by the fact that 619,554 is
 bigger than the mid-point of the data, but not by how much bigger it is.</p>
 </div>
 </div>
-<div id="ss-descr1-nums-variation" class="section level3 hasAnchor">
-<h3><span class="header-section-number">2.6.2</span> Measures of variation<a href="c-descr1.html#ss-descr1-nums-variation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="ss-descr1-nums-variation" class="section level3" number="2.6.2">
+<h3>
+<span class="header-section-number">2.6.2</span> Measures of variation<a class="anchor" aria-label="anchor" href="#ss-descr1-nums-variation"><i class="fas fa-link"></i></a>
+</h3>
 <p>A measure of central tendency is not a complete summary of a
 distribution, in that there can be distributions which have the same
 central tendency but which are different in some other respect. To
@@ -2204,8 +2124,9 @@ its values. Using them on an ordinal variable is thus subject to similar
 cautions as for the mean above. These measures of variation are entirely
 inappropriate for nominal-level variables. There are some measures which
 can be used for such variables, but they are not described here.</p>
-<table>
-<caption><span id="tab:t-classmarks">Table 2.12: </span>A hypothetical examples of test marks of students in three classes.</caption>
+<div class="inline-table"><table class="table table-sm">
+<caption>
+<span id="tab:t-classmarks">Table 2.12: </span>A hypothetical examples of test marks of students in three classes.</caption>
 <tbody>
 <tr class="odd">
 <td align="left">Class 1:</td>
@@ -2220,14 +2141,15 @@ can be used for such variables, but they are not described here.</p>
 <td align="left">1 2 2 3 4 4 4 8 8 9 9 10 10 10</td>
 </tr>
 </tbody>
-</table>
-<div id="range" class="section level4 unnumbered hasAnchor">
-<h4>Range<a href="c-descr1.html#range" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+</table></div>
+<div id="range" class="section level4 unnumbered">
+<h4>Range<a class="anchor" aria-label="anchor" href="#range"><i class="fas fa-link"></i></a>
+</h4>
 <p>The <strong>range</strong> of a variable is simply the difference between its largest
 and smallest observed values (the <strong>maximum</strong> and <strong>minimum</strong> in
 statistical terminology). In the class example above,</p>
-<p>Class 1: Range <span class="math inline">\(= 6-6 =0\)</span><br />
-Class 2: Range <span class="math inline">\(= 8-4 =4\)</span><br />
+<p>Class 1: Range <span class="math inline">\(= 6-6 =0\)</span><br>
+Class 2: Range <span class="math inline">\(= 8-4 =4\)</span><br>
 Class 3: Range <span class="math inline">\(= 10-1 =9\)</span></p>
 <p>The measure is largest for Class 3 and smallest for Class 1, so it seems
 to capture the differences in variation suggested by an initial look at
@@ -2239,8 +2161,9 @@ identical), and all of the measures described here have that property.</p>
 range of the democracy score (if we cautiously treat it as an
 interval-level variable) is 10-0=10.</p>
 </div>
-<div id="interquartile-range" class="section level4 unnumbered hasAnchor">
-<h4>Interquartile range<a href="c-descr1.html#interquartile-range" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="interquartile-range" class="section level4 unnumbered">
+<h4>Interquartile range<a class="anchor" aria-label="anchor" href="#interquartile-range"><i class="fas fa-link"></i></a>
+</h4>
 <p>The range is often not a particularly useful measure of variation,
 because it depends <em>only</em> on the two extremes of the data. It is thus
 very sensitive to outliers. If, for example, there is one large outlier,
@@ -2274,16 +2197,19 @@ measure of variation (often used together with the median as measure of
 central tendency) when there are serious outliers or when the
 distribution is very skewed.</p>
 <p>For the class example the interquartile ranges are</p>
-<p>Class 1: IQR <span class="math inline">\(= 6-6 =0\)</span><br />
-Class 2: IQR <span class="math inline">\(= 7-5 =2\)</span><br />
+<p>Class 1: IQR <span class="math inline">\(= 6-6 =0\)</span><br>
+Class 2: IQR <span class="math inline">\(= 7-5 =2\)</span><br>
 Class 3: IQR <span class="math inline">\(= 9.25-2.75 =6.5\)</span></p>
-<p>These are again in the expected order.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> For the country data, the
+<p>These are again in the expected order.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;There is no need to worry about how the quartile values 9.25 and
+2.75 for class 3 were calculated. Different software packages may in
+fact do that slightly differently; these values are from SPSS.&lt;/p&gt;"><sup>7</sup></a> For the country data, the
 first and third quartiles for GDP are 1.7 and 11.4 respectively, and
 IQR=11.4-1.7=9.7. For the democracy score the quartiles are 1 and 9, and
 IQR=8.</p>
 </div>
-<div id="standard-deviation" class="section level4 unnumbered hasAnchor">
-<h4>Standard deviation<a href="c-descr1.html#standard-deviation" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div id="standard-deviation" class="section level4 unnumbered">
+<h4>Standard deviation<a class="anchor" aria-label="anchor" href="#standard-deviation"><i class="fas fa-link"></i></a>
+</h4>
 <p>The most commonly used measure of variation is based on the
 <strong>deviations</strong> <span class="math display">\[Y_{i}-\bar{Y}\]</span> where <span class="math inline">\(Y_{i}\)</span> again denotes an
 individual observation of a variable, and <span class="math inline">\(\bar{Y}\)</span> is its mean. A
@@ -2291,19 +2217,18 @@ deviation is the difference between an individual observation and the
 average value in the sample. Table <a href="c-descr1.html#tab:t-sdex">2.13</a> shows the deviations for
 Class 3 in the class example, together with the other calculations
 discussed below. Here a negative deviation indicates that an observation
-is smaller than the mean of 6 (e.g. <span class="math inline">\(1-6=-5\)</span>), and a positive deviation
+is smaller than the mean of 6 (e.g. <span class="math inline">\(1-6=-5\)</span>), and a positive deviation
 that an observation is larger than the mean (e.g. <span class="math inline">\(10-6=+4\)</span>).</p>
-<table>
-<caption><span id="tab:t-sdex">Table 2.13: </span>Calculating the standard deviation of test marks for Class 3 in the
+<div class="inline-table"><table class="table table-sm">
+<caption>
+<span id="tab:t-sdex">Table 2.13: </span>Calculating the standard deviation of test marks for Class 3 in the
 class example at the beginning of Section <a href="c-descr1.html#ss-descr1-nums-variation">2.6.2</a>.</caption>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="left">Student</th>
 <th align="right"><span class="math inline">\(Y_{i}\)</span></th>
 <th align="right"><span class="math inline">\(Y_{i}-\bar{Y}\)</span></th>
 <th align="right"><span class="math inline">\((Y_{i}-\bar{Y})^{2}\)</span></th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">1</td>
@@ -2408,13 +2333,14 @@ class example at the beginning of Section <a href="c-descr1.html#ss-descr1-nums-
 <td align="right"><span class="math inline">\(s=\sqrt{11.69}=3.4\)</span></td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>The deviations are clearly related to variation, as a sample with little
 variation will have small deviations (most observations are close to the
 mean) and one with a lot of variation will have many large deviations
 (many observations are far from the mean). All that remains is to
 aggregate them in some sensible way into a single number.</p>
-<p>An inappropriate summary of the deviations is their mean, i.e. <span class="math inline">\(\sum (Y_{i}-\bar{Y})/n\)</span>. In the class example this turns out to be zero (see
+<p>An inappropriate summary of the deviations is their mean, i.e. <span class="math inline">\(\sum
+(Y_{i}-\bar{Y})/n\)</span>. In the class example this turns out to be zero (see
 the second column of Table <a href="c-descr1.html#tab:t-sdex">2.13</a>), and not by coincidence. It can
 be shown that the mean of the deviations is in fact zero for any set of
 numbers. This happens because positive and negative deviations will
@@ -2431,7 +2357,8 @@ perfectly sensible measure of variation, but it is not very commonly
 used. This is largely because absolute values are mathematically rather
 difficult to work with, and this would make MAD very inconvenient for
 more sophisticated analyses, where measures of variation will also be
-needed.<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a> Instead, we eliminate the signs of the deviations by using
+needed.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content="&lt;p&gt;In mathematical terms, the difficulty is that the absolute value
+function has no derivative at zero.&lt;/p&gt;"><sup>8</sup></a> Instead, we eliminate the signs of the deviations by using
 their squares <span class="math inline">\((Y_{i}-\bar{Y})^{2}\)</span>, i.e. by multiplying each deviation
 by itself (c.f. the third column of Table <a href="c-descr1.html#tab:t-sdex">2.13</a> for an
 illustration). These are used to calculate the <strong>variance</strong>, denoted
@@ -2469,7 +2396,7 @@ most revealing descriptive uses of the standard deviation are in
 comparisons between samples, like in the class example above. The
 following is a real example of this kind, where variation was in fact of
 more interest than central tendency:</p>
-<p><em>Example: Variation in rates of economic growth</em><br />
+<p><em>Example: Variation in rates of economic growth</em><br>
 In an article titled “Dancing in step” on November 13th 2004, <em>The
 Economist</em> discussed a set of data (collected by the J. P. Morgan Chase
 bank) on the annual growth rates (in percentage points) of the Gross
@@ -2512,16 +2439,18 @@ distribution of the democracy index in the country data (c.f. Figure
 central tendency or variation, so it is an illustration of why it is
 always sensible to also examine the whole distribution of a variable
 using frequency tables or graphical methods.</p>
-<div class="figure"><span style="display:block;" id="fig:f-classbars"></span>
-<img src="classbars.png" alt="Bar charts of the test marks in the class example at the beginning of Section 2.6.2 for Classes 2 (on the left) and 3 (on the right)." style="height:8.3cm" />
-<p class="caption">Figure 2.7: Bar charts of the test marks in the class example at the beginning of Section <a href="c-descr1.html#ss-descr1-nums-variation">2.6.2</a> for Classes 2 (on the left) and 3 (on the
-right).</p>
+<div class="float">
+<span style="display:block;" id="fig:f-classbars"></span>
+<img src="classbars.png" style="height:8.3cm" alt="Bar charts of the test marks in the class example at the beginning of Section 2.6.2 for Classes 2 (on the left) and 3 (on the right)."><div class="figcaption">Figure 2.7: Bar charts of the test marks in the class example at the beginning of Section <a href="c-descr1.html#ss-descr1-nums-variation">2.6.2</a> for Classes 2 (on the left) and 3 (on the
+right).</div>
 </div>
 </div>
 </div>
 </div>
-<div id="s-descr1-2cont" class="section level2 hasAnchor">
-<h2><span class="header-section-number">2.7</span> Associations which involve continuous variables<a href="c-descr1.html#s-descr1-2cont" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="s-descr1-2cont" class="section level2" number="2.7">
+<h2>
+<span class="header-section-number">2.7</span> Associations which involve continuous variables<a class="anchor" aria-label="anchor" href="#s-descr1-2cont"><i class="fas fa-link"></i></a>
+</h2>
 <p>Bivariate descriptive methods which are designed for situations where at
 least one of the two variables is continuous are not described here but
 in later sections:</p>
@@ -2539,8 +2468,10 @@ associations in this case is to group the explanatory variable into a
 categorical variable and then apply the methods of Section
 <a href="c-descr1.html#s-descr1-2cat">2.4</a>.</p>
 </div>
-<div id="s-descr1-presentation" class="section level2 hasAnchor">
-<h2><span class="header-section-number">2.8</span> Presentation of tables and graphs<a href="c-descr1.html#s-descr1-presentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="s-descr1-presentation" class="section level2" number="2.8">
+<h2>
+<span class="header-section-number">2.8</span> Presentation of tables and graphs<a class="anchor" aria-label="anchor" href="#s-descr1-presentation"><i class="fas fa-link"></i></a>
+</h2>
 <p>The purpose of statistical tables and graphs is to communicate
 information correctly, clearly and effectively. If they do not do that,
 that is, if they leave the reader misled, confused or uninformed, they
@@ -2603,8 +2534,7 @@ necessary to see percentages with more than one decimal place, if
 even that.</p></li>
 </ul>
 <p>With graphs, it is always useful to bear in mind Wainer’s principle:</p>
-<p><strong>The aim of good data graphics is to</strong><br />
-<strong>display data accurately and clearly</strong></p>
+<p><strong>The aim of good data graphics is to</strong><br><strong>display data accurately and clearly</strong></p>
 <p>The way to produce <em>bad</em> graphs is thus to break some part of this, for
 example by (1) not showing much data, (2) showing much that is not data,
 (3) showing the data inaccurately, or (4) obscuring the data. Graphs
@@ -2632,11 +2562,11 @@ pay for such “features” as colourful but pointless graphs. Indeed, many
 if not most of the graph styles provided by, say, Excel (exploding pie
 charts, doughnuts, cones, pyramids and so on) are entirely useless for
 accurate presentation of data.</p>
-<div class="figure"><span style="display:block;" id="fig:f-yuk"></span>
-<img src="threeD.png" alt="An example of an unacceptable graph: a bar chart with a pseudo three-dimensional effect. The data are the same as in Figure 2.1." style="height:8cm" />
-<p class="caption">Figure 2.8: An example of an unacceptable graph: a bar chart with a pseudo
+<div class="float">
+<span style="display:block;" id="fig:f-yuk"></span>
+<img src="threeD.png" style="height:8cm" alt="An example of an unacceptable graph: a bar chart with a pseudo three-dimensional effect. The data are the same as in Figure 2.1."><div class="figcaption">Figure 2.8: An example of an unacceptable graph: a bar chart with a pseudo
 three-dimensional effect. The data are the same as in Figure
-<a href="c-descr1.html#fig:f-bars-region">2.1</a>.</p>
+<a href="c-descr1.html#fig:f-bars-region">2.1</a>.</div>
 </div>
 <p>An objection sometimes offered to such a severe rule is that bad graphs
 “look good”. This can be answered in two ways. First, a statistical
@@ -2665,12 +2595,12 @@ also that the graph distinguishes between the lines for different
 countries by using different types of line. Different colours can of
 course be used instead, but their differences will become obscured if
 the graph is photocopied or printed in black and white.</p>
-<div class="figure"><span style="display:block;" id="fig:f-houseprices"></span>
-<img src="houseprices.png" alt="An example of an informative graph: house prices in three countries between 1993 and 2003, indexed to 100 in 1993. Source: The Economist, June 26th, 2004. The numbers were estimated from the graph in the magazine, so they are approximate." style="width:10cm" />
-<p class="caption">Figure 2.9: An example of an informative graph: house prices in three countries
+<div class="float">
+<span style="display:block;" id="fig:f-houseprices"></span>
+<img src="houseprices.png" style="width:10cm" alt="An example of an informative graph: house prices in three countries between 1993 and 2003, indexed to 100 in 1993. Source: The Economist, June 26th, 2004. The numbers were estimated from the graph in the magazine, so they are approximate."><div class="figcaption">Figure 2.9: An example of an informative graph: house prices in three countries
 between 1993 and 2003, indexed to 100 in 1993. Source: <em>The Economist</em>, June 26th, 2004. The numbers
 were estimated from the graph in the magazine, so they are
-approximate.</p>
+approximate.</div>
 </div>
 <p>In addition to such modest but sensible and useful basic graphs, you may
 sometimes encounter inspired examples of special graphs which manage to
@@ -2690,8 +2620,10 @@ News, and a colourful effort that Tufte has called possibly “the worst
 graphic ever to find its way into print”. Clearly not all pictures tell
 us as much as a thousand words.</p>
 </div>
-<div id="s-descr1-app" class="section level2 hasAnchor">
-<h2><span class="header-section-number">2.9</span> Appendix: Country data<a href="c-descr1.html#s-descr1-app" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="s-descr1-app" class="section level2" number="2.9">
+<h2>
+<span class="header-section-number">2.9</span> Appendix: Country data<a class="anchor" aria-label="anchor" href="#s-descr1-app"><i class="fas fa-link"></i></a>
+</h2>
 <p>The data used for illustration throughout this chapter are given in
 Table <a href="c-descr1.html#tab:t-countrydata">2.14</a>. The variables are defined as follows:</p>
 <ul>
@@ -2701,7 +2633,10 @@ America, 6=Oceania. The list of regions and the assignment of
 countries to regions are those used by the UN Statistics Division
 (see &lt;unstats.un.org/unsd/methods/m49/m49.htm&gt;).</p></li>
 <li><p><strong>democracy</strong> is a measure of institutionalised democracy by the
-Polity IV project.<a href="#fn9" class="footnote-ref" id="fnref9"><sup>9</sup></a> The values refer to each country’s
+Polity IV project.<a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;Monty G. Marshall and Keith Jaggers (2002). &lt;em&gt;Polity IV Dataset&lt;/em&gt;.
+&lt;span class="math display"&gt;\[Computer file; version p4v2002\]&lt;/span&gt; College Park, MD: Center for
+International Development and Conflict Management, University of
+Maryland.&lt;/p&gt;'><sup>9</sup></a> The values refer to each country’s
 classification in 2002. The variable has an 11-point scale from 0
 (lowest level of democracy) to 10 (highest). Countries coded as
 being in the state of “interruption” or “interregnum” have
@@ -2714,10 +2649,9 @@ slightly different years for different countries.</p></li>
 </ul>
 <p>The data set contains those 155 countries for which recent data on all
 of the three variables were available at the time the example created.</p>
-<table>
+<div class="inline-table"><table class="table table-sm">
 <caption><span id="tab:t-countrydata">Table 2.14: </span></caption>
-<thead>
-<tr class="header">
+<thead><tr class="header">
 <th align="left">Country</th>
 <th align="right">R</th>
 <th align="right">D</th>
@@ -2730,8 +2664,7 @@ of the three variables were available at the time the example created.</p>
 <th align="right">R</th>
 <th align="right">D</th>
 <th align="right">GDP</th>
-</tr>
-</thead>
+</tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">Norway</td>
@@ -3462,112 +3395,77 @@ of the three variables were available at the time the example created.</p>
 <td align="right"></td>
 </tr>
 </tbody>
-</table>
+</table></div>
+</div>
+</div>
+
+  <div class="chapter-nav">
+<div class="prev"><a href="c-intro.html"><span class="header-section-number">1</span> Introduction</a></div>
+<div class="next"><a href="c-samples.html"><span class="header-section-number">3</span> Samples and populations</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#c-descr1"><span class="header-section-number">2</span> Descriptive statistics</a></li>
+<li><a class="nav-link" href="#s-descr1-intro"><span class="header-section-number">2.1</span> Introduction</a></li>
+<li><a class="nav-link" href="#s-descr1-examples"><span class="header-section-number">2.2</span> Example data sets</a></li>
+<li>
+<a class="nav-link" href="#s-descr1-1cat"><span class="header-section-number">2.3</span> Single categorical variable</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ss-descr1-1cat-distr"><span class="header-section-number">2.3.1</span> Describing the sample distribution</a></li>
+<li><a class="nav-link" href="#ss-descr1-1cat-tables"><span class="header-section-number">2.3.2</span> Tabular methods: Tables of frequencies</a></li>
+<li><a class="nav-link" href="#ss-descr1-1cat-charts"><span class="header-section-number">2.3.3</span> Graphical methods: Bar charts</a></li>
+<li><a class="nav-link" href="#ss-descr1-1cat-descriptives"><span class="header-section-number">2.3.4</span> Simple descriptive statistics</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#s-descr1-2cat"><span class="header-section-number">2.4</span> Two categorical variables</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ss-descr1-2cat-tables"><span class="header-section-number">2.4.1</span> Two-way contingency tables</a></li>
+<li><a class="nav-link" href="#ss-descr1-2cat-cond"><span class="header-section-number">2.4.2</span> Conditional proportions</a></li>
+<li><a class="nav-link" href="#ss-descr1-2cat-assoc"><span class="header-section-number">2.4.3</span> Conditional distributions and associations</a></li>
+<li><a class="nav-link" href="#ss-descr1-2cat-descr"><span class="header-section-number">2.4.4</span> Describing an association using conditional proportions</a></li>
+<li><a class="nav-link" href="#ss-descr1-2cat-gamma"><span class="header-section-number">2.4.5</span> A measure of association for ordinal variables</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#s-descr1-1cont"><span class="header-section-number">2.5</span> Sample distributions of a single continuous variable</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ss-descr1-1cont-tab"><span class="header-section-number">2.5.1</span> Tabular methods</a></li>
+<li><a class="nav-link" href="#ss-descr1-1cont-graphs"><span class="header-section-number">2.5.2</span> Graphical methods</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#s-descr1-nums"><span class="header-section-number">2.6</span> Numerical descriptive statistics</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#ss-descr1-nums-central"><span class="header-section-number">2.6.1</span> Measures of central tendency</a></li>
+<li><a class="nav-link" href="#ss-descr1-nums-variation"><span class="header-section-number">2.6.2</span> Measures of variation</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#s-descr1-2cont"><span class="header-section-number">2.7</span> Associations which involve continuous variables</a></li>
+<li><a class="nav-link" href="#s-descr1-presentation"><span class="header-section-number">2.8</span> Presentation of tables and graphs</a></li>
+<li><a class="nav-link" href="#s-descr1-app"><span class="header-section-number">2.9</span> Appendix: Country data</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+<li><a id="book-source" href="https://github.com/LSE-Methodology/MY451/blob/master/02-MY451-descr1.Rmd">View source <i class="fab fa-github"></i></a></li>
+          <li><a id="book-edit" href="https://github.com/LSE-Methodology/MY451/edit/master/02-MY451-descr1.Rmd">Edit this page <i class="fab fa-github"></i></a></li>
+        </ul>
+</div>
+    </nav>
+</div>
 
 </div>
-</div>
-<div class="footnotes">
-<hr />
-<ol start="2">
-<li id="fn2"><p>ESS Round 5: European Social Survey Round 5 Data (2010). Data file
-edition 2.0. Norwegian Social Science Data Services, Norway - Data
-Archive and distributor of ESS data.<a href="c-descr1.html#fnref2" class="footnote-back">↩</a></p></li>
-<li id="fn3"><p>For recent findings, see for example Svallfors, S. (ed.) (2012),
-<em>Contested Welfare States: Welfare Attitudes in Europe and Beyond</em>.
-Stanford University Press.<a href="c-descr1.html#fnref3" class="footnote-back">↩</a></p></li>
-<li id="fn4"><p>See, for example, Svallfors (1997), Words of welfare and attitudes
-to redistribution: A comparison of eight western nations, <em>European
-Sociological Review</em>, 13, 283-304; and Blekesaune and Quadagno
-(2003), Public attitudes towards welfare state policies: A
-comparative analysis of 24 nations, <em>European Sociological Review</em>,
-19, 415-427.<a href="c-descr1.html#fnref4" class="footnote-back">↩</a></p></li>
-<li id="fn5"><p>Lewellen, W. G., Lease, R. G., and Schlarbaum, G. G. (1977).
-“Patterns of investment strategy and behavior among individual
-investors”. <em>The Journal of Business</em>, <strong>50</strong>, 296–333. The
-published article gave only the total sample size, the marginal
-distributions of sex and age group, and conditional proportions for
-the short-term gains variable given sex and age group. These were
-used to create tables of frequencies separately for men and women
-(assuming further that the age distribution was the same for both),
-and Table <a href="c-descr1.html#tab:t-investors">2.7</a> was obtained by combining these. The
-resulting table is consistent with information in the article, apart
-from rounding error.<a href="c-descr1.html#fnref5" class="footnote-back">↩</a></p></li>
-<li id="fn6"><p>This is a random sample of municipalities, obtained for this
-illustration from the 2001 census data provided by Statistics Canada
-at <a href="http://www.statcan.gc.ca" class="uri">http://www.statcan.gc.ca</a>.<a href="c-descr1.html#fnref6" class="footnote-back">↩</a></p></li>
-<li id="fn7"><p>There is no need to worry about how the quartile values 9.25 and
-2.75 for class 3 were calculated. Different software packages may in
-fact do that slightly differently; these values are from SPSS.<a href="c-descr1.html#fnref7" class="footnote-back">↩</a></p></li>
-<li id="fn8"><p>In mathematical terms, the difficulty is that the absolute value
-function has no derivative at zero.<a href="c-descr1.html#fnref8" class="footnote-back">↩</a></p></li>
-<li id="fn9"><p>Monty G. Marshall and Keith Jaggers (2002). <em>Polity IV Dataset</em>.
-<span class="math display">\[Computer file; version p4v2002\]</span> College Park, MD: Center for
-International Development and Conflict Management, University of
-Maryland.<a href="c-descr1.html#fnref9" class="footnote-back">↩</a></p></li>
-</ol>
-</div>
-            </section>
+</div> <!-- .container -->
 
-          </div>
-        </div>
-      </div>
-<a href="c-intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="c-samples.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
-    </div>
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>MY451 Introduction to Quantitative Analysis</strong>" was written by Jouni Kuha, Department of Methodology, London School of Economics and Political Science. </p>
   </div>
-<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
-<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
-<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
-<script>
-gitbook.require(["gitbook"], function(gitbook) {
-gitbook.start({
-"sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
-"linkedin": false,
-"weibo": false,
-"instapaper": false,
-"vk": false,
-"whatsapp": false,
-"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-},
-"fontsettings": {
-"theme": "white",
-"family": "sans",
-"size": 2
-},
-"edit": {
-"link": "https://github.com/LSE-Methodology/MY451/edit/master/02-MY451-descr1.Rmd",
-"text": "Edit"
-},
-"history": {
-"link": null,
-"text": null
-},
-"view": {
-"link": null,
-"text": null
-},
-"download": ["Coursepack-MY451.pdf", "Coursepack-MY451.epub"],
-"search": {
-"engine": "fuse",
-"options": null
-},
-"toc": {
-"collapse": "section"
-}
-});
-});
-</script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
@@ -3579,7 +3477,22 @@ gitbook.start({
     script.src = src;
     document.getElementsByTagName("head")[0].appendChild(script);
   })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
 </script>
 </body>
-
 </html>
