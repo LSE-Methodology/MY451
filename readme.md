@@ -1,5 +1,8 @@
 # MY451 Coursepack source
 
+[![Render and deploy](https://github.com/LSE-Methodology/MY451/actions/workflows/deploy_bookdown.yml/badge.svg?branch=master)](https://github.com/LSE-Methodology/MY451/actions/workflows/deploy_bookdown.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/lse-methodology-my451/deploy-status)](https://app.netlify.com/sites/lse-methodology-my451/deploys)
+
 Source for the course pack and main text of **MY451 — Introduction to Quantitative Analysis**, taught in the Department of Methodology at the London School of Economics and Political Science.
 
 Published at: <https://lse-methodology.github.io/MY451/>
