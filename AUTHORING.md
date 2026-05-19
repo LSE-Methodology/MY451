@@ -1,6 +1,13 @@
 # Authoring guide
 
-Quick reference for editing the MY451 course pack. The source is [Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) processed by [bookdown](https://bookdown.org/). Use any editor you like — RStudio is convenient because it knows how to render `.Rmd` files, but a plain text editor is fine since there is no R code in these chapters.
+Quick reference for editing the MY451 course pack. The source is [Pandoc-flavored Markdown](https://pandoc.org/MANUAL.html) processed by [bookdown](https://bookdown.org/). There is no R code in these chapters, so any text editor works.
+
+## Recommended editors
+
+- **[Visual Studio Code](https://code.visualstudio.com/)** is the easiest general-purpose choice. The built-in Markdown support handles `.Rmd` files fine; for richer support, install the [R extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) (syntax-aware editing for `.Rmd`) or the [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension. VS Code's Git integration also covers the commit/push workflow needed to publish.
+- **[RStudio](https://posit.co/download/rstudio-desktop/)** is a good alternative if you already use R. It opens `.Rmd` files natively, can preview the book locally with the "Build Book" button (which calls `bookdown::render_book("index.Rmd")`), and includes Git integration.
+
+Either editor is fine — pick whichever you are more comfortable with.
 
 ## Headings
 
