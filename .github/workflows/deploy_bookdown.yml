@@ -19,8 +19,10 @@ jobs:
         run: Rscript -e 'install.packages("tinytex")'
       - name: Setup tinytex
         run: Rscript -e 'tinytex::install_tinytex()'
-      - name: Install rmarkdown
-        run: Rscript -e 'install.packages(c("rmarkdown","bookdown"))'
+      - name: Install R packages
+        run: Rscript -e 'install.packages(c("rmarkdown","bookdown","downlit","bslib","xml2"))'
+      - name: Install required LaTeX packages
+        run: Rscript -e 'tinytex::tlmgr_install(c("chapterbib","footmisc","eepic"))'
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
       - uses: actions/upload-artifact@v4
