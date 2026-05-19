@@ -1,3 +1,13 @@
+bookdown::bs4_book:
+  theme:
+    primary: "#005A9C"
+  repo:
+    base: https://github.com/LSE-Methodology/MY451
+    branch: master
+  css: style.css
+  split_bib: true
+  pandoc_args:
+    - "--default-image-extension=png"
 bookdown::pdf_book:
   latex_engine: pdflatex
   citation_package: natbib
@@ -8,18 +18,5 @@ bookdown::pdf_book:
   includes:
     in_header: preamble.tex
 bookdown::epub_book:
-  pandoc_args:
-    - "--default-image-extension=png"
-bookdown::gitbook:
-  css: style.css
-  config:
-    toc:
-      collapse: section
-      before: |
-        <li><a href="./">MY451 Introduction to Quantitative Analysis</a></li>
-      after: |
-        <li><a href="https://github.com/rstudio/bookdown">Published with bookdown</a></li>
-    edit:
-      link: https://github.com/LSE-Methodology/MY451/edit/master/%s
   pandoc_args:
     - "--default-image-extension=png"
